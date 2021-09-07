@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integration &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="More CUPS" href="More_CUPS.html" />
+    <link rel="prev" title="Language" href="Bi_language.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Integration
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Integration
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summing-numbers-with-mnist">
+     Summing numbers with MNIST
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#misc-stuff">
+     Misc stuff
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="integration">
+<h1>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>Integration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>This chapter would explore the ways to integrate Bi with Neuro networks and other systems.</p>
+<p>There are probably numerous was to integrate systems like Neuro Networks, Numenta Grok, general Programming languages. Currently we will look into only one of them.</p>
+<p>The easiest way to use any system with Bi is via ATOMS. What do I mean ?
+Let’s take for example neuro network that does classification. The end result of classification is a LABEL, which in Bi lingo corresponds to a SYMBOL/ATOM. So we can just use this label directly in Bi.</p>
+<div class="section" id="summing-numbers-with-mnist">
+<h2>Summing numbers with MNIST<a class="headerlink" href="#summing-numbers-with-mnist" title="Permalink to this headline">¶</a></h2>
+<p>Lets take the simple example of summing numbers.
+We will use MNIST image database of handwritten digits as input and as a result we expect the sum of the numbers respresented by those two images.</p>
+<p>Here is the work-flow :</p>
+<ul class="simple">
+<li><p>Train NN on the MNIST database to recognize the numbers represented by the images.</p></li>
+<li><p>Pick randomly two images of a two numbers</p></li>
+<li><p>Pass them trough the NN and get back the recognized numbers as ATOMS</p></li>
+<li><p>Sum the numbers (via Bi program)</p></li>
+</ul>
+<p>Good so far … except v0.1 does not support arithmetic, but don’t fret we will think of something and at the same time learn some Prolog/Bi. What’s not to like ;)</p>
+<p>The Bi/Prolog program will look like this :</p>
+<div class="highlight-prolog notranslate"><div class="highlight"><pre><span></span><span class="nf">next</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">).</span>
+<span class="nf">next</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">).</span>
+
+<span class="nf">prev</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span><span class="nv">B</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">next</span><span class="p">(</span><span class="nv">B</span><span class="p">,</span><span class="nv">A</span><span class="p">).</span>
+<span class="nf">sum</span><span class="p">(</span><span class="nv">S</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nv">S</span><span class="p">).</span>
+<span class="nf">sum</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span><span class="nv">B</span><span class="p">,</span><span class="nv">S</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">next</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span><span class="nv">A1</span><span class="p">),</span> <span class="nf">prev</span><span class="p">(</span><span class="nv">B</span><span class="p">,</span><span class="nv">B1</span><span class="p">),</span> <span class="nf">sum</span><span class="p">(</span><span class="nv">A1</span><span class="p">,</span><span class="nv">B1</span><span class="p">,</span><span class="nv">S</span><span class="p">).</span>
+</pre></div>
+</div>
+<p>Because we can’t do arithmetic we start with definition of successors for the numbers between 0 .. 20. That will be the maximum sum we can have. BTW this app is simply illustration of how to integrate the two systems, not an attempt to implement arithmetic.</p>
+<p>I provided a class that implements the whole integration, once we are done with this tutorial look at the code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../test&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">integrate</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using Theano backend.
+</pre></div>
+</div>
+</div>
+</div>
+<p>On initialization the class will load the MNIST database so that we can pick images for input for the NN.</p>
+<p>Also it will load the pre-compiled Convolution NN model. (You can also run the training separately by running mnist_cnn.py, but it takes close to one hour, that is why I precompiled it for you. BTW it uses Keras NN framework, which can work on top of Theano or TensorFlow).</p>
+<p>And third by default we will use <a class="reference internal" href="More_CUPS.html"><span class="doc std std-doc">CUPInteger</span></a> module to handle the number-atoms. You can switch it off if you want by passing a flag : <strong>cupi=False</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span> <span class="o">=</span> <span class="n">Integrate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using &lt;ints&gt; .....
+loading MNIST model and weights ...
+loading MNIST ...
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now lets get back to the code. To simulate summation, we need first to learn to count.
+This as you saw is done by adding the successor numbers as facts in the KDB. Lets try and see if it works :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">eng</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;next&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;Next&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Next&#39;: &#39;6&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again don’t forget we use string that starts with Upper_case for variables.</p>
+<p>Next step is to learn to count backwards. We will do that by creating a rule that reuses the successor-facts we already added, namely :</p>
+<p><code class="docutils literal notranslate"><span class="pre">prev(A,B)</span> <span class="pre">:-</span> <span class="pre">next(B,A).</span></code></p>
+<p>This as we discussed relies on <strong>Unification</strong>.</p>
+<p>Lets test it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">eng</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;prev&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;Prev&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Prev&#39;: &#39;4&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>BTW because of the way unification work we could used <strong>next</strong> to do the same thing, but <strong>prev</strong> is more semantically clear. Do you see Unification works both ways, not like assignment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">eng</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;next&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Prev&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Prev&#39;: &#39;4&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally <strong>sum</strong> is a recursive clause, build in two parts.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">S</span><span class="p">)</span><span class="o">.</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">S</span><span class="p">)</span> <span class="p">:</span><span class="o">-</span> <span class="nb">next</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">A1</span><span class="p">),</span> <span class="n">prev</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">B1</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span><span class="n">B1</span><span class="p">,</span><span class="n">S</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>First one is the condition that limits the recursion, it has to be physically before the main body, because of the way SDL resolution works … the search direction in the KDB is TOP =&gt; DOWN and within the rule-clause is LEFT =&gt; RIGHT.</p>
+<p>The first two terms in <strong><code class="docutils literal notranslate"><span class="pre">sum(X,Y,Z)</span></code></strong> are the two inputs, the third one is there to collect the result.
+The hint is coming from unification. Once the second term hit ZERO the first term unifies with the third.
+Lets say the sum is 7, then the final call will look like <strong><code class="docutils literal notranslate"><span class="pre">sum(7,0,S)</span></code></strong> which have to unify with <strong><code class="docutils literal notranslate"><span class="pre">sum(S,0,S)</span></code></strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">eng</span><span class="o">.</span><span class="n">unify</span><span class="p">((</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span> <span class="p">),</span> <span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">),</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;S&#39;: &#39;7&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s look at the second rule. What it does in essence is to find the successor of the first number and the predecessor of the second number. In English this means that we will increase the first number until the second reaches ZERO.</p>
+<p>The last clause is the recursive call to the same rule-clause this time with the new numbers, until we hit the limiting condition i.e. the second number becomes ZERO.</p>
+<p>Lets try it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">eng</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;Result&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Result&#39;: &#39;4&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="misc-stuff">
+<h2>Misc stuff<a class="headerlink" href="#misc-stuff" title="Permalink to this headline">¶</a></h2>
+<p>Now that we know how the summation works, lets explore the other parts we need for our small project.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">digit2img</span><span class="p">(</span><span class="mi">6</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Integration_19_0.png" src="../../_images/Integration_19_0.png" />
+</div>
+</div>
+<p>The <strong>.digit2img()</strong> call picks randomly an image for the specified digit from the MNIST database. There are many different images of every digit. We will simulate handwriting by selecting different images.</p>
+<p>Because <strong>.digit2img()</strong> returns numpy array, we can use <strong>.imshow()</strong> to display the image as I’ve shown up above.</p>
+<p>The final thing we need for our task is based on an image to decipher which digit it is. That is the work for the trained NN model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">digit2img</span><span class="p">(</span><span class="mi">6</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets view the routine of the whole process :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+	<span class="c1">#given two digits, do the whole process :</span>
+	<span class="c1">#   - convert digit --&gt; image</span>
+	<span class="c1">#   - recognize the image as digit</span>
+	<span class="c1">#   - sum the digits using Bi</span>
+	<span class="c1">#        digits are recognized as atoms</span>
+	<span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span> <span class="p">:</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;calc&gt; v1:</span><span class="si">%s</span><span class="s2">, v2:</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">))</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;first pick image that represent the values (randomly)&quot;</span><span class="p">)</span>
+		<span class="n">img1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digit2img</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+		<span class="n">img2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">digit2img</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;second: pass trough ConvNN&#39;</span><span class="p">)</span>
+		<span class="n">d1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img1</span><span class="p">)</span>
+		<span class="n">d2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img2</span><span class="p">)</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;predicted&gt; d1:</span><span class="si">%s</span><span class="s2">, d2:</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">))</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;... now sum them using Bi lang&#39;</span><span class="p">)</span>
+		<span class="n">mgu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">)</span>
+		<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">result&gt; </span><span class="si">%s</span><span class="s2"> + </span><span class="si">%s</span><span class="s2"> = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">mgu</span><span class="p">[</span><span class="s1">&#39;Sum&#39;</span><span class="p">]))</span>
+
+</pre></div>
+</div>
+<p>Lets try it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">it</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>calc&gt; v1:3, v2:4
+first pick image that represent the values (randomly)
+second: pass trough ConvNN
+predicted&gt; d1:3, d2:4
+... now sum them using Bi lang
+
+	result&gt; 3 + 4 = 7
+</pre></div>
+</div>
+</div>
+</div>
+<p>That is all folks !!!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bi"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="Bi_language.html" title="previous page">Language</a>
+    <a class='right-next' id="next-link" href="More_CUPS.html" title="next page">More CUPS</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

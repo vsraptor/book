@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segmented memory (Classifier) &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Temporal memory" href="temporal_memory.html" />
+    <link rel="prev" title="TM design" href="tm_design.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="segmented-memory-classifier">
+<h1><strong>Segmented memory (Classifier)</strong><a class="headerlink" href="#segmented-memory-classifier" title="Permalink to this headline">¶</a></h1>
+<p>This module is not included the HTM theory it just popped up as I was implementing the Temporal memory.</p>
+<p>We said CC can be implemented as a 3D array with a shape <strong>( num-of-segments, num-of-mCols, nbits-per-iSDP )</strong>. Segmented memory is the same <strong>shape = (nsegs,rows,isdp)</strong>.</p>
+<p>Because this module is used to implement TM it accepts two inputs /<em>In TM case we store transitions, S1 =&gt; S2</em>/.
+So If we exclude the <strong>time</strong> component from the equation, the <em>transition</em> becomes a <em>classification</em>.</p>
+<p>We get two birds with one stone :)</p>
+<p>Input one in this case is the predictor(<strong>P0</strong>) and two the predicted(<strong>P1</strong>).</p>
+<p><strong>The update</strong> works by first figuring out which segment to use first dimension … later on this.</p>
+<p>Then use P1 to find indexes of the rows /second dimension/ where to store the P0 pattern /third dimension/.</p>
+<p><strong>The prediction</strong> on the other hand works by comparing P0 to every row and every segment and calculating the similarity, then doing a sum across the rows and finally picking 2% of the row-indexes with the biggest sum. The so called Winners-Take-All algorithm.
+This then becomes the prediction.</p>
+<p>Now about the segment selection mechanism.</p>
+<p>Originally all segments are empty, so in this case we pick one at random and store the iSDP.
+If on the other hand all segments are full, we pick the most similar, “thin” the segment-iSDP with the data-iSDP and store the result back.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> segs[seg,row,:] = isdp.thin(isdp.union(segs[seg,row,:], input_data), nbits=40)
+</pre></div>
+</div>
+<p>Later in comparison stage all the rules of how similarity on thinned vectors degrade apply.</p>
+<p>It is equally easy instead of THINNING to use UNION, but this would not preserve sparsity and because we use iSDP, rather than binary SDP it will require us to increase the size of the 3rd dimension.
+Even then we have to do thinning but at increased number of ‘bits’ i.e. lower sparsity (higher density).
+The code change to do that is easy if we need it.
+Let say the UNION should be allowed to grow to twice the current sparsity of 40bits i.e. 80</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> segs[seg,row,:] = isdp.thin(isdp.union(segs[seg,row,:], input_data), nbits=80)
+</pre></div>
+</div>
+<p>It is better instead to add more segments, at least logically it seems so, haven’t tested it.</p>
+<p>At the end of the day, SegmentedMemory is defacto a CLASSIFIER.</p>
+<blockquote>
+<div><p><strong>This is still research project and I’ve done limited testing and everything. Keep this in mind.</strong></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;../../ilib&#39;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">isegmented_memory</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">ilexicon</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">vsize</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span> <span class="n">spa</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">iLexicon</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="n">vsize</span><span class="p">,</span><span class="n">spaOnbits</span><span class="o">=</span><span class="n">spa</span><span class="p">)</span>
+<span class="n">segm</span> <span class="o">=</span> <span class="n">iSegmentedMemory</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">vsize</span><span class="p">,</span><span class="n">spa</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Generate symbols from ‘a’ to ‘z’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">az</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>One shot learning …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">b</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">c</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">best_match</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="p">))</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">b</span><span class="p">))</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z
+z
+z
+</pre></div>
+</div>
+</div>
+</div>
+<p>First the case of different symbols predicting same symbol, seems to work ;)</p>
+<p>Next lets try one symbol predicting different results. As expected the prediction would vary and will depend on how the thinning worked.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">d</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">d</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">d</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">d</span><span class="p">))</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">best_top</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">d</span><span class="p">),</span> <span class="n">topn</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y
+[&#39;y&#39;, &#39;x&#39;, &#39;z&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>we can also predict top-n best candidates.</p>
+<p>Finally can we predict “ourselves”, seems so :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">f</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f
+</pre></div>
+</div>
+</div>
+</div>
+<p>if we did not train for something we will get random result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">sym</span><span class="p">]))</span> <span class="k">for</span> <span class="n">sym</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;z&#39;, &#39;z&#39;, &#39;z&#39;, &#39;y&#39;, &#39;z&#39;, &#39;f&#39;, &#39;x&#39;, &#39;z&#39;, &#39;z&#39;, &#39;z&#39;, &#39;z&#39;, &#39;f&#39;, &#39;f&#39;, &#39;z&#39;, &#39;z&#39;, &#39;x&#39;, &#39;z&#39;, &#39;x&#39;, &#39;z&#39;, &#39;x&#39;, &#39;z&#39;, &#39;x&#39;, &#39;x&#39;, &#39;x&#39;, &#39;z&#39;, &#39;x&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">segm</span><span class="o">.</span><span class="n">mem_map</span><span class="p">(</span><span class="n">segs</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">lex</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0009 :   *   d0017 c0044   *   a0008
+0031 :   *     *     *   d0037   *  
+0055 : d0029   *     *   a0008   *  
+0064 :   *     *     *     *   d0037
+0076 :   *     *     *     *   d0037
+0077 :   *     *     *   f0077   *  
+0079 :   *     *     *     *   f0077
+0084 : f0077   *     *     *     *  
+0086 :   *     *     *     *   f0077
+0093 :   *     *     *     *   d0037
+0100 :   *     *     *     *   d0037
+0121 :   *   c0044 b0017 d0037 a0008
+0145 : f0077   *     *     *     *  
+0162 :   *     *     *     *   d0037
+0164 :   *     *     *   f0077   *  
+0170 :   *     *     *   d0037   *  
+0180 : f0077   *     *     *     *  
+0187 :   *     *     *     *   f0077
+0203 :   *     *     *   c0037 b0017
+0237 :   *     *   d0037   *     *  
+0246 : a0008 c0044   *     *   b0017
+0254 :   *     *   d0037   *     *  
+0267 :   *     *     *   d0037   *  
+0273 :   *   d0037   *     *     *  
+0290 :   *     *     *     *   d0037
+0298 :   *     *     *     *   d0037
+0313 :   *   c0037 a0008   *     *  
+0334 : d0037 c0044 a0008   *   b0017
+0338 :   *     *   f0077   *     *  
+0355 :   *     *     *     *   d0037
+0374 :   *   d0037   *     *     *  
+0375 :   *     *     *     *   d0037
+0399 : d0037   *     *     *     *  
+0406 : f0077   *     *     *     *  
+0407 : b0044   *   d0037 a0008   *  
+0426 :   *   b0029   *     *   a0008
+0427 :   *     *   d0037   *     *  
+0448 :   *   a0008 c0044 b0017   *  
+0472 :   *   d0037   *     *     *  
+0493 :   *   d0037   *     *     *  
+
+40
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">add_items</span><span class="p">([</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="s1">&#39;fruit&#39;</span><span class="p">,</span> <span class="s1">&#39;vegie&#39;</span><span class="p">,</span> <span class="s1">&#39;chair&#39;</span><span class="p">,</span><span class="s1">&#39;table&#39;</span><span class="p">,</span><span class="s1">&#39;unknown&#39;</span><span class="p">])</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">apple</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">fruit</span><span class="p">)</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">orange</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">fruit</span><span class="p">)</span>
+<span class="n">segm</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">chair</span><span class="p">,</span> <span class="n">pred</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">unknown</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">best_match</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">apple</span><span class="p">))</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">orange</span><span class="p">))</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">segm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">chair</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fruit
+fruit
+unknown
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">segm</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seg-Shape (segs,vsize,bits) : (5, 500, 10), Segments : 5
+Sparsity/bits: 0.02/10
+Match-thresh: 0.1, vsize: 500
+Mem: 0.05 MB, used:3%/840, total:25000
+Capacity: ~250 patterns, pat/mem:5242.88
+		
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/ihtm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="tm_design.html" title="previous page"><strong>TM design</strong></a>
+    <a class='right-next' id="next-link" href="temporal_memory.html" title="next page">Temporal memory</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

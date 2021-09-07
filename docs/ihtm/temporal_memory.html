@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temporal memory &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What is Bi" href="../bi/What_is_Bi.html" />
+    <link rel="prev" title="Segmented memory (Classifier)" href="segmented_memory.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="temporal-memory">
+<h1>Temporal memory<a class="headerlink" href="#temporal-memory" title="Permalink to this headline">¶</a></h1>
+<p>Temporal cycle is a two step process :</p>
+<ol class="simple">
+<li><p>some neurons are depolarized by the laterally connected neurons which were active in the previous cycle</p></li>
+<li><p>next the feed-forward signal activates any depolarized neuron in every 1-column <strong>OR</strong> if there is no depolarized neuron inside the column activate all the neurons (column burst).</p></li>
+<li><p>repeat</p></li>
+</ol>
+<ul class="simple">
+<li><p>Step 1 is the prediction phase, which is equivalent to the predict process in Segmented Memory.</p></li>
+<li><p>Step 2 is equivalent train phase.</p></li>
+</ul>
+<p><img alt="VOS" src="../../_images/variable_order.jpeg" /></p>
+<p>But what is different about TM ?</p>
+<p>The difference is that TM has to support variable-markov-order sequences i.e. simply storing transitions we did it in Segmented memory wont cut it, we need to store higher dimension transition as I mentioned earlier.
+But those HDT does not come out of nowhere they have to be created trough interaction of the ‘neurons’ in TM cycle.</p>
+<p>I do that in a very clever way. ;)</p>
+<p>Any item in the image above can be interpreted as an SDP:SDR in three different ways in two cases as 1D array and one as 2D array.</p>
+<ol class="simple">
+<li><p>the 2D array is a binary copy of TM, an array-cell for every neuron with value of 1 or 0.</p></li>
+<li><p>if you reshape it as 1D array, f.e. a shape of 2000x5 can be transformed to 1D array with size 10000.</p></li>
+<li><p>The other way is to sum over the columns and then for all sums &gt; 1, set cell to 1 and the rest to zero. This 1D array will be of size 2000.</p></li>
+</ol>
+<ul class="simple">
+<li><p>case 1 can be used as a time-step snapshot of TM</p></li>
+<li><p>case 2 as SDP with vsize=10000 and sparsity=0.004. This is the high order representation of a symbol from case 3</p></li>
+<li><p>case 3 as SDP with vsize=2000 and sparsity=0.02. This can be used as predicted output.</p></li>
+</ul>
+<p>How do I use those representations ?</p>
+<p>I still use the Segmented Memory to store the transitions, but I also created three helper buffers to recreate the TM cycle. I call them : <strong>now</strong>, <strong>before</strong> and <strong>predicted</strong>.</p>
+<p><img alt="TM" src="../../_images/tm.svg" /></p>
+<p>Here is how it goes :</p>
+<ol class="simple">
+<li><p><strong>DATA + PREDICTED =&gt; NOW</strong></p></li>
+</ol>
+<p>DATA(1D) is merged with PREDICTED(2D) and the result is stored in NOW(2D).</p>
+<p>PREDICTED holds the last predicted/depolarized cells and the DATA is the incoming SDP where every cell which is ONE specifies a <strong>column</strong> that has to either burst OR activate one of the cells in that column.</p>
+<p>The non-bursted cells are directly copied and in the bursted columns the correct cell is found via the mechanism described below in the NOTE.</p>
+<p>This is the mechanism by which the DATA(1D) SDP is transformed into higher dimension SDP.
+F.e. 2000 =&gt; 2000x5 or 10000 depending how you look at it.</p>
+<ol class="simple">
+<li><p>Learn : <strong>BEFORE * NOW =&gt; MEMORY</strong></p></li>
+</ol>
+<p>This is the step where we save the TRANSITION into memory.
+The BEFORE buffer represent time “t-1” and NOW time “t” and also specifies at which rows to save the SDP currently held in BEFORE.</p>
+<ol class="simple">
+<li><p><strong>BEFORE + MEMORY =&gt; PREDICTED</strong></p></li>
+</ol>
+<p>This process is what you would expect following the same logic as SegMem. The difference is that the input is higher dimension. In this case BEFORE buffer act as a selector.</p>
+<ol class="simple">
+<li><p><strong>NOW =&gt; BEFORE</strong></p></li>
+</ol>
+<p>Last step is to just copy the NOW buffer into BEFORE. Remember NOW will be overridden in the next cycle.</p>
+<p>One thing to take into account is that all those buffers are in iSDP format, so memory-wise it uses the same amount memory as the DATA iSDP, the difference is in the <strong>vsize</strong>.</p>
+<blockquote>
+<div><p><strong>Note</strong>: In my implementation I skip the actual bursting of the columns, instead I do a virtual bursting, where for every such column I use the Segmented Memory(bit_learn() method) mechanism to find which cell in the column will “activate” and do that in NOW.
+On previous iterations I did the full mechanism, but the code was longer and probably slower and I had to burst and then un-burst all the cells in the column except the one that had to become active.
+At the next step the position in the memory where to store the pattern is already selected.</p>
+</div></blockquote>
+<p>?? feedback or additional inputs … change in learn and predict .. more segments (layers) OR just pass thinned SDR</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/ihtm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="segmented_memory.html" title="previous page"><strong>Segmented memory (Classifier)</strong></a>
+    <a class='right-next' id="next-link" href="../bi/What_is_Bi.html" title="next page">What is Bi</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

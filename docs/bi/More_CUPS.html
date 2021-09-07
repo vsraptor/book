@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More CUPS &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="More OPS" href="More_Operations.html" />
+    <link rel="prev" title="Integration" href="Integration.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   More CUPS
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   More CUPS
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cup-integer">
+     CUP Integer
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-do-you-use-cupinteger-in-bi">
+       How do you use CUPInteger in Bi ?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="more-cups">
+<h1>More CUPS<a class="headerlink" href="#more-cups" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>More CUPS<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>I was learning about Boolean algebra and trying to figure if there are some way that knowledge will help me with Bi.
+As I was playing with it I discovered yet another property of SDP space.</p>
+<blockquote>
+<div><p>When you map (XOR) vectors with different sparsity/density, an interesting thing happen. If at least one of the vectors is 50% sparse after the operation the result is always vector with 50% sparsity i.e. mapping operation not only preserves similarity but in a sense converts any vector to SDP.</p>
+</div></blockquote>
+<p>What this means from practical perspective is that we can encode any data type integers, reals, dates, etc… in 10000 bit vector with whatever sparsity, after that we can just map it to become SDP.
+(I’m still exploring the constraints and ramifications of this discovery, but in the meantime I built a module to provide limited-range Integers)</p>
+<p><strong>First the problem :</strong></p>
+<p>Lexicon CUP is nice and all, but for every new atom you have to allocate 10_000 bits plus the supporting data structures. Memory footprint by itself won’t be a big deal, but the bigger the lexicon become the slower the cleanup-operation becomes (.best_match()).
+One option is to implement different type of memory. Kaneva SDM for example, but this type of memory does not return symbol-name as Lexicon does, but only the cleaned SDP.</p>
+<p>So the discovery I made opens a second possibility.</p>
+<p><strong>The idea goes like this</strong> :</p>
+<p>You have data in your own format which you want to integrate as atoms/symbols. What you can do is convert this data somehow to 10_000 bit binary without regard to sparsity and then map it to SDP space.
+I’ve already played with Encoders when implementing <a class="reference external" href="http://ifni.co/bbHTM.html">bbHTM</a>, so I could leverage that code.
+Lets diagram the idea :</p>
+<p>[Data-type] –&gt; [Encoder] –&gt; [MAPIT] –&gt; [SDP space]</p>
+<p>[SDP Space] –&gt; [UNMAP] –&gt; [Decode/BestMatch] –&gt; [Data-type]</p>
+<p>Keep in mind that the reverse process can go trough Decode or if we have noisy vector trough .best_match()
+The interesting nuance is if we just need <strong>decoding</strong> we can simply use Encoder/Decoder.
+Otherwise if we work with noisy vectors it can also play a role of Cleanup memory(CUP).</p>
+<p>I will call this CUP a <strong>MAPPER</strong> (Encoding/Decoding/Cleanup).</p>
+<div class="section" id="cup-integer">
+<h2>CUP Integer<a class="headerlink" href="#cup-integer" title="Permalink to this headline">¶</a></h2>
+<p>Instead of creating symbol/atom for every number in the range in the CUP memory physically, we will map them virtually to part of the SDP space and will “intercept” CUP methods to make it behave like one.</p>
+<p>In the case of <strong>CUPInteger</strong> internally <strong>ScalarEncoder</strong> generates on demand binary vector where chunk of sequential bits represent different numbers. Then this vector is mapped to part of SDP space. In esence no memory is allocated to store the number-symbol, but it is simply encoded/decoded by the encoder-algorithm.</p>
+<p>You can have multiple CUPInteger active at the same time, but because they are mapped trough different “map-symbol” they will be different/orthogonal even if they happen to represent the same range of numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dyn_atoms</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">CUPInteger</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Scalar encoder: min:0, max:100, w:5000, buckets:5000, nb:10000
+</pre></div>
+</div>
+</div>
+</div>
+<p>.encode() and the .decode() are the standard Encoder methods.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<p>To work in SDP space use those instead. Which <strong>encodes</strong> and then <strong>maps</strong> the value. (BTW: In this specific case even unmapped the encoded values will work in Bi, but I’m coding this for the general case of MAPPER).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">.</span><span class="n">decode_sdp</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">encode_sdp</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also treat it like <strong>CUP</strong> i.e.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0001001011001111001101010100111101001001101000111111110110111010100000101001011101011100011101101111...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">33</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;33&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s simulate a noisy vector :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">noisy</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+<span class="n">sdp</span><span class="o">.</span><span class="n">flip_bits</span><span class="p">(</span><span class="n">noisy</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span> <span class="c1"># add noise</span>
+<span class="k">print</span> <span class="s2">&quot;distance : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span> <span class="o">%</span> <span class="n">noisy</span><span class="p">)</span>
+<span class="n">i</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">noisy</span><span class="p">)</span>  <span class="c1">#resolve the noisy vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>distance : 500
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;33&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Two things to see here, the <strong>.best_match()</strong> does not decode the SDP directly, because as we already know cleanup operations expects noisy vectors. So in this case <strong>.bm()</strong> will search (noisy vectors can’t be directly matched against encoded vector) in the <strong>mapped space</strong> for the closest match.
+What this also means is in some cases the match will be approximate i.e. false negatives are possible.
+To avoid this we have to select to represent smaller ranges of Integers. In our current case 0-100.</p>
+<p>Second <strong>.best_match()</strong> returns a string i.e. symbol not integer.</p>
+<p>So lets repeat use <strong>encode_sdp/decode_sdp</strong> for clean SDPs and <strong>get|bm</strong> for noisy SDPs.</p>
+<p>I tested CUPInteger for false negatives.
+In the following image darker color means higher number of false negatives, after taking 100_000 samples (test/cup_integer.py).</p>
+<ul class="simple">
+<li><p>X-axis : represent increasing integer-range</p></li>
+<li><p>Y-axis : represent increasing noise</p></li>
+</ul>
+<p><img alt="alt text" src="../../_images/cup_integer.png" /></p>
+<p>In case you want it to behave as real integer even ONE false negative is unacceptable.
+We can see that range of 0-300 fail to recognize the number 5 times out of 100_000 (i.e. 0.00005%) if we flip 2000 bits.</p>
+<div class="section" id="how-do-you-use-cupinteger-in-bi">
+<h3>How do you use CUPInteger in Bi ?<a class="headerlink" href="#how-do-you-use-cupinteger-in-bi" title="Permalink to this headline">¶</a></h3>
+<p>Very easy.. just pass an instance of it when creating KDB. F.e. :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	ints = CUPInteger(vmax=100)
+	kdb = KDB(items=50, cups=[ints])
+</pre></div>
+</div>
+<p>Normally if you don’t use CUPInteger you can still use number-atoms, but as I said earlier this will create additional Lexicon entries (i.e. require more memory).</p>
+<p>When you pass CUPInteger instance, the <strong>KDB</strong> now will lookup this new CUP in addition to the default ones and if it resolves the number to atom, will not create a new entry in atom-lexicon (<em>KDB.avivi_atom() and .bm_soa()</em>).</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bi"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="Integration.html" title="previous page">Integration</a>
+    <a class='right-next' id="next-link" href="More_Operations.html" title="next page">More OPS</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

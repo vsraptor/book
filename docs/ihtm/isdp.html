@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iSDP : indexed Semantic Distributed Pointers aka Symbols &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MED" href="misc.html" />
+    <link rel="prev" title="SDP:SDR vs SDP:BSC" href="sdp_explained.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   iSDP : indexed Semantic Distributed Pointers aka Symbols
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overlap-vs-similarity">
+     Overlap vs similarity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-operations">
+   BASIC Operations
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#union">
+     UNION
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenation">
+     Concatenation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context-dependent-thining-cdt">
+     Context Dependent Thining (CDT)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-operations">
+     More operations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#permutation-shift">
+       Permutation/Shift
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequence">
+   Sequence
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="isdp-indexed-semantic-distributed-pointers-aka-symbols">
+<h1>iSDP : indexed Semantic Distributed Pointers aka Symbols<a class="headerlink" href="#isdp-indexed-semantic-distributed-pointers-aka-symbols" title="Permalink to this headline">¶</a></h1>
+<p>Before we start, let me mention that the <a class="reference external" href="http://isdp.py">isdp.py</a> module has two interfaces : low level functions in <strong>isdp</strong> and Object oriented in <strong>iSDP()</strong>.</p>
+<p>iSDP class uses isdp functions for the basic functionality.
+As I already mentioned the whole project is based on indexed SDP:SDR, not on binary SDP:SDR.
+An iSDP is a numpy array which holds the indexes of the bits of a binary that have a value of ONE.
+(It is literally extending the numpy array class.)</p>
+<p>In addition it also has a attribute called <strong>“vsize”</strong> which sets the virtual size of the binary i.e. what is the maximum possible value of a index.</p>
+<p><strong>spa</strong> and <strong>spa_nbits</strong> reflect the sparsity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;../../ilib&#39;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">isdp</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can create iSDP vector by specifying the virtual-size (vsize), and as a second parameter <strong>vsn</strong> pass a value (which can be a list of numbers, numpy array or another iSDP), sparsity % (as a float number) OR number of bits which are 1s (as an integer).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">val</span><span class="o">.</span><span class="n">vsize</span>
+<span class="k">print</span> <span class="n">val</span><span class="o">.</span><span class="n">spa</span>
+<span class="k">print</span> <span class="n">val</span><span class="o">.</span><span class="n">spa_nbits</span>
+<span class="k">print</span> <span class="n">val</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+0.02
+20
+15:124:159:190:227:230:279:293:364:431:449:497:572:700:743:751:771:775:847:947
+</pre></div>
+</div>
+</div>
+</div>
+<p>Shows us which bits are ON and the maximum is 1000.</p>
+<p>So we can create symbols and apply operations and transformations on them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">circle</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">rectangle</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="overlap-vs-similarity">
+<h2>Overlap vs similarity<a class="headerlink" href="#overlap-vs-similarity" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways of figuring how similar two symbols are !</p>
+<p>The first one is <strong>OVERLAP</strong> which is the count of 1-bits that are common between the symbols.</p>
+<p>Definitionaly it is <strong>count(A AND B)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">/</span> <span class="n">circle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>… the overlap between the newly created symbols is ZERO or very small, which is what we may expect. We can generate new symbols all day long but the overlap between any two of them is guaranteed to be small as long as the SDP is big enough and sparse enough.</p>
+<blockquote>
+<div><p>Said it another way the symbols are <strong>ORTOGONAL</strong></p>
+</div></blockquote>
+<p>The second way to check similarity is to divide the OVERLAP to the count of the bits of one of the operands (left one in our case)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  sim = olap(a,b) / count_ones(a)
+</pre></div>
+</div>
+<p>this type of similarity is percentage rather than a number. Also it is asymetric if the operands have different sparsity.</p>
+<p>More on this in a moment…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">//</span> <span class="n">circle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.050
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="basic-operations">
+<h1>BASIC Operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h1>
+<p>There are three basic operations we can apply on SDP:SDR’s : <em>union, concatenation and thinning</em></p>
+<p>Here are what distinguish them :</p>
+<ol class="simple">
+<li><p><strong>UNION</strong> : as the name implies this op combines all the 1-bits. This is logical <strong>OR</strong> operation. What is important to remember about it is that <strong>vsize</strong> is preserved but the <strong>sparsity</strong> decreases (i.e. the SDP becomes more dense, more 1-bits)</p></li>
+<li><p><strong>CONCATENATION</strong> : joins the SDP’s, but also shifts the bits positions, so that every operand “moves” to the right in a sense in its own segment. Result, <strong>vsize</strong> increases and the <strong>sparsity</strong> stays the same.</p></li>
+<li><p><strong>THINNING</strong> : picks randomly bits from the operands with equal probability. <strong>vsize</strong> and <strong>sparsity</strong> stay the same. The other option is to use Context Dependent Thinning (CDT) isdp.cdt().</p></li>
+</ol>
+<p>Lets look in more detail :</p>
+<div class="section" id="union">
+<h2>UNION<a class="headerlink" href="#union" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span> <span class="o">=</span> <span class="n">square</span> <span class="o">|</span> <span class="n">circle</span>
+<span class="k">print</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">figure</span><span class="o">.</span><span class="n">vsize</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa_nbits</span>
+<span class="k">print</span> <span class="n">circle</span> <span class="o">/</span> <span class="n">figure</span> <span class="c1">#overlap</span>
+<span class="k">print</span> <span class="n">circle</span> <span class="o">//</span> <span class="n">figure</span>  <span class="c1">#similarity</span>
+<span class="k">print</span> <span class="n">figure</span> <span class="o">/</span> <span class="n">circle</span>
+<span class="k">print</span> <span class="n">figure</span> <span class="o">//</span> <span class="n">circle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7:11:80:81:100:128:160:219:248:253:255:260:264:345:355:463:488:494:607:612:630:632:634:639:641:652:655:670:680:693:777:821:874:885:906:907:908:952:979
+1000 0.039 39
+20
+1.0
+20
+0.512820512821
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see the density went up from 0.02 to 0.04 (number of 1-bits from 20 to 40) i.e. sparsity went down.</p>
+<p>Then we check how similar one of the included operand is to the union :</p>
+<ul class="simple">
+<li><p>case 1 : ‘circle’ is included fully in the ‘figure’ SDP, so when it is on the left side the similarity is 100% with olap 20 bits</p></li>
+<li><p>case 2 : the other way around how similar is ‘figure’ to a ‘circle’, just 50%, the olap is still 20 bits</p></li>
+</ul>
+<p>this is what I meant when I said similarity is asymmetric i.e. how much a ‘circle’ is a ‘figure’ in comparison to how much a ‘figure’ is a ‘circle’.</p>
+<p>It totally make sense because human Concepts are the same way. Euclidean and cosine distance used in NN are not natural they are symmetric.</p>
+</div>
+<div class="section" id="concatenation">
+<h2>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span> <span class="o">=</span> <span class="n">square</span> <span class="o">+</span> <span class="n">circle</span>
+<span class="k">print</span> <span class="s2">&quot;square: &quot;</span><span class="p">,</span> <span class="n">square</span>
+<span class="k">print</span> <span class="s2">&quot;circle: &quot;</span><span class="p">,</span> <span class="n">circle</span>
+<span class="k">print</span> <span class="s2">&quot;figure: &quot;</span><span class="p">,</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">figure</span><span class="o">.</span><span class="n">vsize</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa_nbits</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>square:  7:11:81:100:219:248:264:345:488:607:630:632:634:639:641:655:670:777:821:906
+circle:  80:128:160:219:253:255:260:355:463:494:612:652:680:693:874:885:907:908:952:979
+figure:  7:11:81:100:219:248:264:345:488:607:630:632:634:639:641:655:670:777:821:906:1080:1128:1160:1219:1253:1255:1260:1355:1463:1494:1612:1652:1680:1693:1874:1885:1907
+1908:1952:1979
+
+2000 0.02 40
+</pre></div>
+</div>
+</div>
+</div>
+<p>So as I mentioned the vsize increased, the sparsity stays the same … but the circle part of the concatenation was shifted by 1000 bits.</p>
+<p>One drawback of this operation is that you can not compare the result with the constituents SDP’s because now they have different sizes ;(</p>
+</div>
+<div class="section" id="context-dependent-thining-cdt">
+<h2>Context Dependent Thining (CDT)<a class="headerlink" href="#context-dependent-thining-cdt" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span> <span class="o">=</span> <span class="n">square</span> <span class="o">*</span> <span class="n">circle</span>
+<span class="k">print</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">figure</span><span class="o">.</span><span class="n">vsize</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa_nbits</span>
+<span class="k">print</span> <span class="n">circle</span> <span class="o">/</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">circle</span> <span class="o">//</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">figure</span> <span class="o">//</span> <span class="n">circle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81:100:128:160:219:248:253:255:264:345:355:494:634:639:670:693:777:821:885:979
+1000 0.02 20
+10
+0.5
+0.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hmmm … CDT what the heck is this ?</p>
+<p>(read any paper by Dmitri A. Rachkovskij to understand more)</p>
+<p>The idea is to preserve the sparsity and the vsize. The consequence is that we can only pick part of the bits of the operands, in our case we are picking bits randomly (isdp.thin()).</p>
+<p>Functionally you can think of it as a sort of compression. The number of bits that ends up in the result is proportional to the number of the items to be thinned i.e. <strong>1/n</strong>.</p>
+<p>The SDP:SDR does not have bind operation as purported by the VSA ‘specs’, thinning in some ways is better and in some ways worse.</p>
+<p><strong>Binding</strong> ‘mutates’ the operands so that you have to use a ‘reverse-bind’ operation to check if an item is part of the binding.</p>
+<p>That is good when you need to build structures with the same components or Key:Value pairs, but is opaque and requires unwinding.</p>
+<p>Thinning is more ‘holistic’ i.e. you can see items directly w/o additional operation, but if you want to ‘mutate’ items like in binding you have to permute the vectors before ‘thinning’. You can not directly build Key:Value pairs.</p>
+<blockquote>
+<div><p>Abstraction: Binding allows easy Dicts, Thinning allows easy Sets.</p>
+</div></blockquote>
+<p>So pick your poison :)</p>
+<p>Allow me to make one additional remark, HTM theory sort of rebukes the need of binding. In fact the idea of symbol BINDING has puzzled alot of people, because it doesn’t make sense when you think of how the way the brain work.
+Possible solution is POOLING, SPATIAL and TEMPORAL.</p>
+<p>Let try another way of doing thinning :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">union</span> <span class="o">=</span> <span class="n">square</span> <span class="o">|</span> <span class="n">circle</span> <span class="o">|</span> <span class="n">rectangle</span>
+<span class="n">figure</span> <span class="o">=</span> <span class="n">union</span> <span class="o">&lt;&lt;</span> <span class="mf">0.02</span> <span class="c1">#thinning shrink the spa_nbits</span>
+<span class="c1"># or : figure = union &lt;&lt; 20</span>
+<span class="k">print</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="s1">&#39;union : &#39;</span><span class="p">,</span> <span class="n">union</span><span class="o">.</span><span class="n">vsize</span><span class="p">,</span> <span class="n">union</span><span class="o">.</span><span class="n">spa</span><span class="p">,</span> <span class="n">union</span><span class="o">.</span><span class="n">spa_nbits</span>
+<span class="k">print</span> <span class="s1">&#39;figure: &#39;</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">vsize</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa</span><span class="p">,</span> <span class="n">figure</span><span class="o">.</span><span class="n">spa_nbits</span>
+<span class="k">print</span> <span class="n">circle</span> <span class="o">/</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">figure</span> <span class="o">/</span> <span class="n">circle</span>
+<span class="k">print</span> <span class="n">circle</span> <span class="o">//</span> <span class="n">figure</span>
+<span class="k">print</span> <span class="n">figure</span> <span class="o">//</span> <span class="n">circle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>80:81:128:145:160:253:255:345:425:494:607:612:630:692:777:806:821:885:906:908
+union :  1000 0.058 58
+figure:  1000 0.02 20
+9
+9
+0.45
+0.45
+</pre></div>
+</div>
+</div>
+</div>
+<p>The left-shift <strong>&lt;&lt;</strong> operator can be used to thin a symbol to specific sparsity (instead of using isdp.thin())</p>
+<p>And we also see that the part of the items are proportional i.e. 1/3 =~ 0.33% similarity</p>
+<p>Those were the 3 basics ops, lets see what else we can do.</p>
+</div>
+<div class="section" id="more-operations">
+<h2>More operations<a class="headerlink" href="#more-operations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="permutation-shift">
+<h3>Permutation/Shift<a class="headerlink" href="#permutation-shift" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">square</span>
+<span class="k">print</span> <span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="mi">10</span>
+<span class="k">print</span> <span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="o">-</span><span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7:11:81:100:219:248:264:345:488:607:630:632:634:639:641:655:670:777:821:906
+17:21:91:110:229:258:274:355:498:617:640:642:644:649:651:665:680:787:831:916
+997:1:71:90:209:238:254:335:478:597:620:622:624:629:631:645:660:767:811:896
+</pre></div>
+</div>
+</div>
+</div>
+<p>Currently I implemented only <strong>shift</strong> which is a kind of permutation.</p>
+<p>Permutation is used when we want to obfuscate a symbol.</p>
+<p>F.e. let say we want to build key:value pairs :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">slot_father</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">slot_son</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">father</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">son</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+
+<span class="n">vader</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">luke</span> <span class="o">=</span> <span class="n">iSDP</span><span class="p">(</span><span class="n">vsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">vsn</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+
+<span class="c1">#key:value</span>
+<span class="n">parent</span> <span class="o">=</span> <span class="n">vader</span> <span class="o">&gt;&gt;</span> <span class="n">slot_father</span>
+<span class="n">child</span> <span class="o">=</span> <span class="n">luke</span> <span class="o">&gt;&gt;</span> <span class="n">slot_son</span>
+
+<span class="k">print</span> <span class="s2">&quot;vader is parent ?&quot;</span> 
+<span class="k">print</span> <span class="n">vader</span> <span class="ow">in</span> <span class="n">parent</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">vader</span> <span class="o">&gt;&gt;</span> <span class="n">slot_father</span><span class="p">)</span> <span class="ow">in</span> <span class="n">parent</span>
+
+<span class="k">print</span> <span class="s2">&quot;family = ((father,vader), (son,luke))&quot;</span> 
+<span class="n">family1</span> <span class="o">=</span> <span class="n">parent</span> <span class="o">|</span> <span class="n">child</span>
+<span class="k">print</span> <span class="n">vader</span> <span class="ow">in</span> <span class="n">family1</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">vader</span> <span class="o">&gt;&gt;</span> <span class="n">slot_father</span><span class="p">)</span> <span class="ow">in</span> <span class="n">family1</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">vader</span> <span class="o">&gt;&gt;</span> <span class="n">slot_father</span><span class="p">)</span> <span class="o">//</span> <span class="n">family1</span>
+<span class="k">print</span> <span class="n">family1</span><span class="o">.</span><span class="n">spa</span>
+
+<span class="k">print</span> <span class="s2">&quot;family = (&lt;father, vader&gt;, &lt;son,luke&gt;)&quot;</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">father</span> <span class="o">*</span> <span class="n">vader</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">son</span> <span class="o">*</span> <span class="n">luke</span>
+<span class="n">family2</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">|</span> <span class="n">p2</span>
+
+<span class="k">print</span> <span class="n">vader</span> <span class="ow">in</span> <span class="n">family2</span>
+<span class="k">print</span> <span class="n">vader</span> <span class="o">//</span> <span class="n">family2</span>
+<span class="k">print</span> <span class="n">family1</span><span class="o">.</span><span class="n">spa</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vader is parent ?
+False
+True
+family = ((father,vader), (son,luke))
+False
+True
+1.0
+0.04
+family = (&lt;father, vader&gt;, &lt;son,luke&gt;)
+True
+0.55
+0.04
+</pre></div>
+</div>
+</div>
+</div>
+<p>OR a list with repeated elements …</p>
+</div>
+</div>
+</div>
+<div class="section" id="sequence">
+<h1>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">ary</span> <span class="o">=</span> <span class="p">(</span><span class="n">circle</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">rectangle</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">square</span>
+
+<span class="k">print</span> <span class="n">square</span>  <span class="ow">in</span> <span class="n">ary</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ary</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ary</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">square</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>I’ve build a Sequence class for which you can learn more in the Lexicon part of the documentation</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/ihtm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="sdp_explained.html" title="previous page">SDP:SDR vs SDP:BSC</a>
+    <a class='right-next' id="next-link" href="misc.html" title="next page">MED</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

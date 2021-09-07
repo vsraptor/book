@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Integration" href="Integration.html" />
+    <link rel="prev" title="Bi Framework" href="Bi_framework.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Language
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-decision">
+   The decision
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design">
+   Design
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#knowledge-database-kdb">
+     Knowledge database (KDB)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#engine-interpreter">
+   Engine (Interpreter)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parser">
+     Parser
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components-in-action">
+     Components in action
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#performance">
+     Performance
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="language">
+<h1>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-decision">
+<h1>The decision<a class="headerlink" href="#the-decision" title="Permalink to this headline">¶</a></h1>
+<p>Knowing large binary spaces, how to do operations in them and building structures may be the base for building high cognition and a good start, but is not enough to enable productive exploration of the possibilities.</p>
+<p>We need tools to solve more complex problems.
+First I played around with python abit, look into <strong>[lib/bi_struct.py]</strong>, but the more I experimented the more I thought it is not enough. I needed more symbolic approach I needed something which can be grounded from the get go on VSA (Vector Symbolic Architecture), so I started exploring Prolog.
+I had familiarity with it for some time.
+First I tried with some non-obvious tasks to get the feel of symbolic manipulation capabilities, then after creating a <a class="reference external" href="https://github.com/vsraptor/producton_system">Production system</a> in less than 150 lines of code, I saw how grammatically simple it could be, I was hooked.</p>
+<p><em>So it was decided I would implement Prolog like system on top of VSA.</em></p>
+<hr class="docutils" />
+<p>I had to start with the smallest possible core, but still show the potential.
+After some fiddling the result is VERSION 0.1, which consist of :</p>
+<ul class="simple">
+<li><p>Using only tiny-tuple, so no hierarchical structures yet. Would have to wait for 0.2</p></li>
+<li><p>Unification : finding most-general-unifier</p></li>
+<li><p>SLD Prolog algorithm : this is the backtracking search process of Prolog</p></li>
+<li><p>no arithmetic, requires hierarchical structures, so v0.2</p></li>
+<li><p>so far syntax is almost 100% Prolog</p></li>
+</ul>
+</div>
+<div class="section" id="design">
+<h1>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h1>
+<p>Version 0.1 is build on 3 components :</p>
+<ul class="simple">
+<li><p>knowledge database</p></li>
+<li><p>engine</p></li>
+<li><p>parser</p></li>
+</ul>
+<p>As I said so far I’m using only tiny-tuples.</p>
+<p>Initially I always try to implement all the components as much as possible as standalone units.
+It is easier to test and extend them when I’m still unsure of the potential functionality and is easier to replace.</p>
+<div class="section" id="knowledge-database-kdb">
+<h2>Knowledge database (KDB)<a class="headerlink" href="#knowledge-database-kdb" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of KDB is to store, process and manipulate relational facts and rule-clauses.
+(I use the name rule-clause, to distinguish it in the future from production rules, which we may need to use if my idea to merge both works out).</p>
+<p>Any tiny-tuple represent a predicate which is nothing more than a relation consisting of <em>functor</em> and <em>terms</em> and looks like this :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">functor(term1,</span> <span class="pre">term2,</span> <span class="pre">...,</span> <span class="pre">term14)</span></code></strong></p>
+<p>for example :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">child(luke,</span> <span class="pre">vader)</span></code></strong></p>
+<p>in SDP format it is represented by the following expression :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">$0</span> <span class="pre">*</span> <span class="pre">child</span> <span class="pre">+</span> <span class="pre">$1</span> <span class="pre">*</span> <span class="pre">luke</span> <span class="pre">+</span> <span class="pre">$2</span> <span class="pre">*</span> <span class="pre">vader</span></code></strong></p>
+<p>that is stored in a single SDP, of maximum 13 bind-pairs (2 are reserved for internal use if I need them) where dollar symbols play the role of a slot number. In this case we have to know the slot-symbols in advance, so we can unpack the structure easily.
+All the symbols participating in the expression/predicate are stored into cleanup-lex-memories, thus we can do full reconstruction.</p>
+<p>That’s good for storing facts and predicates, but to perform actions we need to handle rule-clauses.</p>
+<p>General <strong>Bi</strong> clause looks like this :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">son(X,Y)</span> <span class="pre">:-</span> <span class="pre">child(X,Y),</span> <span class="pre">male(X).</span></code></strong></p>
+<p><em>X is son of Y if X is child of Y and X is also male</em></p>
+<p>which is nothing more than a bunch of predicates. So this particular clause can be stored in 3 SDP’s, one for every predicate in the format we mentioned above.</p>
+<p>The role to store and handle all those clauses and related CUPs is the job of the Knowledge Database (KDB)</p>
+<p><img alt="how it look" src="../../_images/kdb.png" /></p>
+</div>
+</div>
+<div class="section" id="engine-interpreter">
+<h1>Engine (Interpreter)<a class="headerlink" href="#engine-interpreter" title="Permalink to this headline">¶</a></h1>
+<p>The engine role is to implement Unification and search mechanism (I want to replace it with more general search at some point).</p>
+<p><em>What is unification ?</em></p>
+<p>Manna from the sky :). No kidding… it is the ultimate shoehorn.</p>
+<p>In <strong>Bi</strong> as in <strong>Prolog</strong> variables start with uppercase, otherwise the term is atom (symbol in VSA lingo).</p>
+<p>Let say we have two relations :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">male(X)</span></code></strong> and  <strong><code class="docutils literal notranslate"><span class="pre">male(luke)</span></code></strong></p>
+<p>the goal is to find X by matching/unifying the two relations.
+Said in proper math lingo, finding the <strong>most general unifier (MGU)</strong>.</p>
+<p>We start by matching the functors, in this case they are both <strong>male</strong>, so we can continue and match the first terms, one is variable the other is value/atom :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">X</span> <span class="pre">:</span> <span class="pre">luke</span> <span class="pre">}</span></code></strong></p>
+<p>that is our MGU, we now know that <strong><code class="docutils literal notranslate"><span class="pre">X=luke</span></code></strong>.</p>
+<p>If we had to unify the following predicates :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">male(X)</span></code></strong> and  <strong><code class="docutils literal notranslate"><span class="pre">male(Y)</span></code></strong></p>
+<p>the <strong>MGU</strong> will be :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">X</span> <span class="pre">:</span> <span class="pre">Y</span> <span class="pre">}</span></code></strong></p>
+<p>which is still valid as long as X and Y are not unified already with contradicting values/atoms, which they are not. But if we had the following one :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">male(vedar)</span></code></strong> and  <strong><code class="docutils literal notranslate"><span class="pre">male(luke)</span></code></strong></p>
+<p>the unification should fail, because <em>vedar</em> and <em>luke</em> are different symbols/atoms/persons.</p>
+<p>The terms we can match can be more complex, consider for example :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">son(X,</span> <span class="pre">vader)</span></code></strong> and  <strong><code class="docutils literal notranslate"><span class="pre">son(luke,</span> <span class="pre">Y)</span></code></strong></p>
+<blockquote>
+<div><p><strong><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">X</span> <span class="pre">:</span> <span class="pre">luke,</span> <span class="pre">Y</span> <span class="pre">:</span> <span class="pre">vader</span> <span class="pre">}</span></code></strong></p>
+</div></blockquote>
+<p>or better yet :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">p1(X,</span> <span class="pre">p2(atom1))</span></code></strong> and  <strong><code class="docutils literal notranslate"><span class="pre">p1(atom2,</span> <span class="pre">Y)</span></code></strong></p>
+<blockquote>
+<div><p><strong><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">X</span> <span class="pre">:</span> <span class="pre">atom2,</span> <span class="pre">Y</span> <span class="pre">:</span> <span class="pre">p2(atom1)</span> <span class="pre">}</span></code></strong></p>
+</div></blockquote>
+<p><strong><code class="docutils literal notranslate"><span class="pre">p1(X,</span> <span class="pre">p2(atom1))</span></code></strong> and  <strong><code class="docutils literal notranslate"><span class="pre">p1(atom2,</span> <span class="pre">p2(Y))</span></code></strong></p>
+<blockquote>
+<div><p><strong><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">X</span> <span class="pre">:</span> <span class="pre">atom2,</span> <span class="pre">Y</span> <span class="pre">:</span> <span class="pre">atom1</span> <span class="pre">}</span></code></strong></p>
+</div></blockquote>
+<p>and so on … the unification can become very complex. The <strong>MGU</strong> tells us what replacements we have to make so that the two predicates look the same.</p>
+<p>So far all the unifications were one-off, what if we had a way to make this a process. What do I mean ?</p>
+<p>Let’s imagine we can build a database with thousands of facts and rules representing relations, now if we could unify against the whole database we can find solutions to complex problems. We just provide the relations and then unification guided by some mechanism can do the job for us.</p>
+<p>The core of Prolog relies on this process.
+The mechanism is depth-first tree search with backtracking and is called SLD resolution.</p>
+<p>Let say that we ask the question : <em>Who is the son of Vader ?</em></p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">son(X,vader)</span></code></strong></p>
+<p>The interpreter start by looping trough the database until it finds rule with a head <code class="docutils literal notranslate"><span class="pre">son(A,B)</span></code>, which may look like :</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">son(A,B)</span> <span class="pre">:-</span> <span class="pre">child(A,B),</span> <span class="pre">male(A)</span></code></strong>.</p>
+<p>Then unification is applied which results in <strong>MGU { X : A, B : vader }</strong>.
+After that the body of the rule is processed from left to right passing and updating the MGU accordingly. Every predicate of the body becomes a sub-goal which follow the same procedure. If all sub-goals succeed the original query succeeds.</p>
+<p>If for some reason sub-goal unification fails the interpreter goes one step back and retries the previous sub-goal again (this is called backtracking), but this time the database-search continues forward from position it reached the last time, not from the beginning. If it reaches the end of the database then the subgoal fails.</p>
+<p>During this process the interpreter keeps track of the MGU at every sub-goal in a stack (choice-points) and on retry it restores the MGU replacing the failed-one.</p>
+<p>One additional complication of the algorithm is the need to localize and un-localize variables, so that the variables are valid only within the clause scope of execution.
+F.e. the example above the MGU will more correctly be (the one in the curly brackets):</p>
+<blockquote>
+<div><p>unify&gt; [‘son’, ‘L0_1’, ‘vader’] [‘son’, ‘L1_1’, ‘L1_2’] , {‘L0_1’: ‘L1_1’, ‘L1_2’: ‘vader’}</p>
+</div></blockquote>
+<p>where the first number in the localized name is the level (of the sub-goal) and second is the variable relative position from the beginning of the rule-clause.</p>
+<p>The whole process is one giant unification directed by the SLD mechanism.</p>
+<hr class="docutils" />
+<p>Few words about the :</p>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>The unification is implemented by the mutually-recursive methods <strong>.unify()</strong> and <strong>.unify_vars()</strong>.</p>
+<p>The SLD algorithm by the mutually-recursive methods <strong>.solve()</strong> and <strong>.solve_goals()</strong>.</p>
+<p>And backtracking via the generator <strong>.kdb.backtrack()</strong> in <strong>.solve_goals()</strong>.</p>
+<p>The thing that took me the most time to implement and was the most frustrating was <em>LOCALIZATION</em>.
+If you don’t want variable names to “leak” and disrupt the unification process you have to localize the variables at entering new clause during execution. It is the same idea in normal languages where variables have a scope of validity.</p>
+<p>As I said the algorithm uses <em>STACK</em> to store intermediate results of unification (choice points), so that backtracking mechanism can retry a goal if the previous chain of search failed.</p>
+</div>
+<div class="section" id="parser">
+<h2>Parser<a class="headerlink" href="#parser" title="Permalink to this headline">¶</a></h2>
+<p>Initially I used <a class="reference external" href="http://www.acooke.org/lepl/">LEPL</a> for parsing, but it is not supported for a long time, so I switched to <a class="reference external" href="https://github.com/erezsh/lark">LARK</a>.
+The current grammar is very simple and you can understand it easily, look below.</p>
+<p>The only tricky part is to distinguish between predicate and struct. Their definitions may look similar, but struct can be a term, where predicate does not.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	?start : _clause_list
+
+	int  : /[0-9]+/
+	atom : /[a-z][0-9a-zA-z_!?]*/
+	var  : /[A-Z][0-9a-zA-z_]*/
+	functor : atom
+
+	_clause_list : clause+
+	head : predicate
+	body : _predicates &quot;.&quot;
+	fact : predicate &quot;.&quot;
+	clause : fact | head &quot;:-&quot; body
+
+	predicate : atom | functor &quot;(&quot; terms &quot;)&quot; | assignment | expr
+	_predicates : predicate (&quot;,&quot; predicate)*
+	?term : int | atom | var | struct
+	terms : term (&quot;,&quot; term)*
+	struct : functor &quot;(&quot; terms &quot;)&quot;
+
+	?assignment : var &quot;=&quot; term
+
+	?var_int : var | int
+	expr : var &quot;is&quot; sum
+	?sum : var_int &quot;+&quot; var_int
+
+	%import common.WS
+	%ignore WS
+</pre></div>
+</div>
+</div>
+<div class="section" id="components-in-action">
+<h2>Components in action<a class="headerlink" href="#components-in-action" title="Permalink to this headline">¶</a></h2>
+<p>We will proceed in the same order.</p>
+<p>For KDB from functional standpoint you only need to know about <strong>.add_clause(head, [body])</strong>, which is used to add fact or rule-clauses to the database and <strong>.backtrack()</strong> generator which helps implementing Backtracking.</p>
+<p>The arguments to .add_clause() are dicts with the format you can see below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kdb</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">KDB</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">add_clause</span><span class="p">({</span><span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="s1">&#39;fact&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">k</span><span class="o">.</span><span class="n">listing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0&gt; fact.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">add_clause</span><span class="p">({</span><span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;terms&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;luke&#39;</span><span class="p">]</span> <span class="p">})</span>
+<span class="n">k</span><span class="o">.</span><span class="n">add_clause</span><span class="p">({</span><span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;terms&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;luke&#39;</span><span class="p">,</span> <span class="s1">&#39;vader&#39;</span><span class="p">]</span> <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">k</span><span class="o">.</span><span class="n">listing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0&gt; fact.
+1&gt; male(luke).
+2&gt; child(luke,vader).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">add_clause</span><span class="p">({</span><span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="s1">&#39;son&#39;</span><span class="p">,</span> <span class="s1">&#39;terms&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">]</span> <span class="p">},</span> <span class="p">[{</span><span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="s1">&#39;child&#39;</span><span class="p">,</span> <span class="s1">&#39;terms&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">]</span> <span class="p">},</span> <span class="p">{</span><span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;terms&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span> <span class="p">}])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">k</span><span class="o">.</span><span class="n">listing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0&gt; fact.
+1&gt; male(luke).
+2&gt; child(luke,vader).
+3&gt; son(@1,@2) :- child(@1,@2), male(@1).
+</pre></div>
+</div>
+</div>
+</div>
+<p>But lets not forget that all symbols/atoms are SDP vectors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">atoms</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           fact : 1101111110110110100111010010000111001011111100110011111111100010101111110100000000010110001011001001... ...
+           male : 1101111101100110010111010110110011001010001011101011011011001010101011101110110010101000001111110100... ...
+           luke : 1101111011100000000110110100001001000111101001011011110110011001110111001111010101001110100100001001... ...
+          child : 0101010011000000001101011010011100000010111010001000011001000000010101010110001011110110111000010111... ...
+          vader : 0110101110000111011010010011010111111100110110100011100101110011110110011111000010111001111000011100... ...
+            son : 1000001101010100001100011110101111011110000111111000001000011101010011001010111000111111001001110011... ...
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next is the Engine.
+Let’s load for our experiments the Star Wars genealogy database.
+This also demonstrates how to use all the parts together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bi_engine</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">bi_parser</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1">#first create the Knowledge DB</span>
+<span class="n">kdb</span> <span class="o">=</span> <span class="n">KDB</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="c1"># .. create a parser and instruct it to write whatever is parsed to the KDB</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">BiParser</span><span class="p">(</span><span class="n">kdb</span><span class="o">=</span><span class="n">kdb</span><span class="p">,</span> <span class="n">write2db</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># .. parse the file</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;../test/sw_bi_db.pl&#39;</span><span class="p">)</span>
+<span class="c1"># create engine that serves the kdb</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">BiEngine</span><span class="p">(</span><span class="n">kdb</span><span class="o">=</span><span class="n">kdb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">kdb</span><span class="o">.</span><span class="n">listing</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0&gt; female(leia).
+1&gt; male(luke).
+2&gt; male(vader).
+3&gt; male(kylo).
+4&gt; female(padme).
+5&gt; male(han).
+6&gt; male(ruwee).
+7&gt; female(jobal).
+8&gt; female(shmi).
+9&gt; child(luke,vader).
+10&gt; child(leia,vader).
+11&gt; child(leia,padme).
+12&gt; child(kylo,leia).
+13&gt; child(kylo,han).
+14&gt; child(luke,padme).
+15&gt; child(padme,ruwee).
+16&gt; child(padme,jobal).
+17&gt; child(vader,shmi).
+18&gt; son(@1,@2) :- child(@1,@2), male(@1).
+19&gt; daughter(@1,@2) :- female(@1), child(@1,@2).
+20&gt; ds(@1,@2) :- daughter(@1,@2).
+21&gt; ds(@1,@2) :- son(@1,@2).
+22&gt; grandchild(@1,@2) :- child(@1,@3), child(@3,@2).
+23&gt; gc_ds(@1,@2) :- ds(@1,@3), ds(@3,@2).
+24&gt; gcm(@1,@2) :- grandchild(@1,@2), male(@1).
+25&gt; rgcm(@1,@2) :- male(@1), grandchild(@1,@2).
+26&gt; bgcm(@1,@2) :- male(@1), grandchild(@1,@2), male(@1).
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Unification part can be experimented w/o the need to touch the rest of the Engine, like this :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([</span><span class="s1">&#39;atom&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;atom2&#39;</span><span class="p">],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([</span><span class="s1">&#39;atom&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;atom&#39;</span><span class="p">],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <em>First</em> and <em>Second</em> arguments are the expressions to be unified, the third one is the current substitutions (MGU) (remember .unify() is called recursively, so that they accumulate).
+Getting back empty dictionary means unification is successful, but there is no substitutions to be done to match the two expressions.</p>
+<p>We use <strong>UPPER CASE</strong> to specify <strong>Variables</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([</span><span class="s1">&#39;X&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;atom&#39;</span><span class="p">],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;atom&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to match LISTS we just use lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;atom2&#39;</span><span class="p">,</span> <span class="s1">&#39;atom3&#39;</span><span class="p">]]],</span> <span class="p">[[</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">]],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;atom&#39;, &#39;Y&#39;: [&#39;atom2&#39;, &#39;atom3&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;atom2&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;atom3&#39;</span><span class="p">]]]],</span> <span class="p">[[</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">]],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;atom&#39;, &#39;Y&#39;: [&#39;Z&#39;, &#39;atom2&#39;, [&#39;atom3&#39;]]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to unify structures for example <strong>predicates</strong> we pass them as a <strong>tuples</strong>, where the first element is always the <strong>functor</strong>. If the functors do not match the unification fails.
+Note the difference with a list, which does not require the first element to be functor, because the list is just a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([</span> <span class="p">(</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span> <span class="p">],</span> <span class="p">[(</span><span class="s1">&#39;male&#39;</span><span class="p">,</span><span class="s1">&#39;Luke&#39;</span><span class="p">)],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;Luke&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">unify</span><span class="p">([</span> <span class="p">(</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">)</span> <span class="p">],</span> <span class="p">[(</span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="s1">&#39;Leia&#39;</span><span class="p">)],</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Did you notice that .unify() supports hierarchical structures.
+But we can’t use them in v0.1 because KDB does not support them yet. There are different ways to make them available, but I haven’t decided yet what will be the best way.</p>
+<p>Once you have a KDB loaded you can do queries against it f.e. :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;male&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;luke&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;son&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;kylo&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Y&#39;: &#39;leia&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;daughter&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;leia&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;daughter&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;ruwee&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;padme&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;grandchild&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;vader&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;kylo&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;grandchild&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;X&#39;: &#39;luke&#39;, &#39;Y&#39;: &#39;shmi&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again the thing to keep in mind is that all those symbols we are so used to work with are binary vectors they are just temporally brought to life to do the unification.</p>
+</div>
+<div class="section" id="performance">
+<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h2>
+<p>The need to do multiple <strong>.best_match()</strong> calls during unpacking of a predicates to do unification (.unify_sdp()) makes the process very very slow, almost unusable for practical purposes. That is why I use Memoization to speed up the process of resolving noisy SDP’s to symbols in the <strong>kdb.bm_soa()</strong> method /best-match symbol or atom, loops trough all the active CUPs to resolve the symbol/.</p>
+<p>This Memoization is done via python decorator. I implemented several of them :</p>
+<ul class="simple">
+<li><p><strong>&#64;fast</strong> : this make the call fastest, but does not have limit of how much the cache grows.</p></li>
+<li><p><strong>&#64;low_mem</strong> : this uses <em>experimental</em> Bit-sampled hashing, to lower memory usage.
+The memory requirements are smaller the speed is slower than &#64;fast, because there is additional
+time required to do the bit sampling. This method also grows the cache indefinetly, but by less.</p></li>
+<li><p><strong>&#64;lru(cache_size=100)</strong> : This is the slowest of the three, because it needs to do alot of bookkeeping.
+<strong>Last recently used</strong> algorithm expunges the elements as the limit on the cache size is reached, which guarantees that the cache won’t grow forever.</p></li>
+</ul>
+<p>I’m also experimenting with bit-sample hashing lexicon (<strong>BSHLex</strong> class). The idea is to hash the 10_000 bit SDP with 1000-2000 bit sample, so that we can speedup the cleanup process. The results as of the writing of this article are still inconclusive, but encouraging. If it works out it can boost speed of <strong>.best_match()</strong> by alot.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bi"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="Bi_framework.html" title="previous page">Bi Framework</a>
+    <a class='right-next' id="next-link" href="Integration.html" title="next page">Integration</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

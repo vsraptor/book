@@ -1,0 +1,1156 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bi Framework &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Language" href="Bi_language.html" />
+    <link rel="prev" title="What is Bi" href="What_is_Bi.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bi Framework
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation">
+   REPRESENTATION
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-vs-distributed">
+     Local vs Distributed
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dense-vs-sparse">
+     Dense vs Sparse
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#similarity">
+     Similarity
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kanerva-bsc-binary-spatter-code">
+     Kanerva : BSC (Binary Spatter Code)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-operations">
+   Basic operations
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instantiating-a-new-symbol-binding-and-bundling">
+     Instantiating a new Symbol, Binding(*) and Bundling(+).
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bsc-bundle-even-anomaly">
+       BSC, bundle-even anomaly ?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping-and-permutation">
+     Mapping (*) and Permutation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleanup-memory">
+     Cleanup memory
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#structures">
+     Structures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tiny-tuple">
+       Tiny tuple
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sequences">
+       Sequences
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hierarchical-and-relational-structures">
+       Hierarchical and relational structures
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="bi-framework">
+<h1>Bi Framework<a class="headerlink" href="#bi-framework" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>*After this overview the next step is to take dive into basic theoretical aspects before we start implementing anything *.</p>
+<p>I said that <strong>Bi</strong> is based on large distributed vectors. This layer is superficially below <strong>Symbolic</strong> level that is why it is dubbed <strong>SUB-SYMBOLIC</strong> level.</p>
+<p>Most programing languages are generally based on alphabetic-discrete-symbols, for Bi at the moment that is the second layer where most of the implementation resides.
+In the future I want to move as much as possible down to the <strong>SUB-SYMBOLIC</strong> layer.</p>
+</div>
+<div class="section" id="representation">
+<h1>REPRESENTATION<a class="headerlink" href="#representation" title="Permalink to this headline">¶</a></h1>
+<p>I call my atomic structure <strong>Semantic Distributed Pointer (SDP)</strong> which is <em>10_000 bits binary</em> to differentiate from Nengo/NEF <strong>SP</strong>. (Still they resemble SP in many ways).</p>
+<p>Rather than just calling them <strong>HyperVectors</strong> (as per Kanerva), the name <strong>SDP</strong> more closely describes the use in Bi.. But no worry, both are Ok.</p>
+<p>Also to be distinguished by Numenta binary <strong>Sparse Distributed Representation (SDR)</strong>. Which is normaly 2048 bits and is sparse, <strong>SDP</strong> is not.</p>
+<p>Plus I reserve the right for <strong>SDP</strong> some day to be also real-valued if the need arise ( search : <em>HRR - Holographic Reduced Representations</em>, for more info ).</p>
+<div class="section" id="local-vs-distributed">
+<h2>Local vs Distributed<a class="headerlink" href="#local-vs-distributed" title="Permalink to this headline">¶</a></h2>
+<p>Information in computers is stored locally, that is, in records with fields.
+For example let say we want to encode the colors : red, violet, orange and green.
+If we use local representation we have to use 4 bits, one for each ‘feature’.</p>
+<p>In Local representation one unit is used per concept. This is common also in neural nets.</p>
+<p>The alternative is to distribute information from many sources over shared units.
+Thus our previous color example we could use 2 or 3 bits to represent those colors, using multiple overlapping bits for representing a ‘feature’.</p>
+</div>
+<div class="section" id="dense-vs-sparse">
+<h2>Dense vs Sparse<a class="headerlink" href="#dense-vs-sparse" title="Permalink to this headline">¶</a></h2>
+<p>Representation could also be Dense or Sparse.</p>
+<p>For example Numenta Grok SDR uses 2048 bit binary, 2% sparse representation i.e. 2% of bits are ONE the rest are ZERO.</p>
+<p>SDP on the other hand are Dense : 10000 bit binary with 50% sparsity.</p>
+<p>SDP are sparse in a different sense, they sparsely occupy the space they are allowed to occupy, as you will see in a minute.</p>
+</div>
+<div class="section" id="similarity">
+<h2>Similarity<a class="headerlink" href="#similarity" title="Permalink to this headline">¶</a></h2>
+<p>The other feature of vectors which is of utmost importance is the similarity between vectors.
+Real-valued vectors normally employ geometrical measures like Euclidean distance.
+In our case we are interested in binary vectors. Here again SDR and SDP differ.</p>
+<p>SDR uses “Overlap” i.e. <strong>count_ones(A AND B)</strong></p>
+<p>*SDP uses “Hamming distance” i.e. <strong>count_ones(A XOR B)</strong> *</p>
+</div>
+<div class="section" id="kanerva-bsc-binary-spatter-code">
+<h2>Kanerva : BSC (Binary Spatter Code)<a class="headerlink" href="#kanerva-bsc-binary-spatter-code" title="Permalink to this headline">¶</a></h2>
+<p>In <strong>Bi</strong> at the base of it all are binary hyper-vectors or in Bi lingo <strong>Semantic Distributed Pointers (SDP)</strong>.
+In the current implementation an SDP hyper-vector is <strong>10_000</strong> bits binary vector (size can be changed easily, but according to Kanerva that is the optimal size and who m’I to opine).</p>
+<p><em>Why binary ?</em></p>
+<p>I’ve been pursuing binary approach to machine intelligence (I make distinction between MI and AI) for a long time, because it is no brainer.
+Simplifies implementation and when people finally awake from “real-valued” hegemony ;), we will see some tremendous CPU acceleration in MI programs.
+Can you imagine there is not even software CPU optimized libraries for large bitarrays in almost any computer language !!! I’ve checked ;(. BTW FYI computers are machines build on binary !! go figure …</p>
+<p><em>Why so big ?</em></p>
+<p>The reason is that at those sizes we get the required characteristics for doing clever stuff.</p>
+<p>The main characteristic of large vector spaces is <strong>ORTHOGONALITY</strong>. (<em>Very important</em>).
+(If you don’t know what orthogonal means, think “perpendicular” in 2D space).</p>
+<blockquote>
+<div><p>If we <em>randomly create 10_000 bits vector, where every bit has 50/50 chance of being 0 or 1</em>, we are guaranteed that any time we do that the vector will be nearly orthogonal to all the previously created vectors. Wow, isn’t that amazing ? ( <em>Kanerva mentioned somewhere that this is valid even if you create millions of vectors</em> )</p>
+</div></blockquote>
+<p>(<em>Or we can talk about normally distributed real-valued vectors, with 100-300 dimensions : HRR</em>).</p>
+<p>This is HUGE, think about that for a minute ?!!</p>
+<p>Every time we create new <strong>SDP</strong> it is guaranteed it will be far away from any previously created one. Perfect for defining new terms (data atoms, symbols), to which we can attach new meaning.</p>
+<p>Lets do the following thought experiment …</p>
+<p>Imagine a sphere and you are at the north pole point. If we assign that <strong>point</strong> the meaning of the word “car”.
+Closer to the north pole will be points more similar to “car”. F.e. “sport car”, “mazda”, “blue car”, “car with 3 wheels”, “bus”, rather than concepts like “chair”, “sky”, “grass” or “computer” which will be further away.</p>
+<p>The majority of the points on the sphere will be on the equator i.e. all car-unrelated terms.
+In fact the points around the equator are <strong>99.XX%</strong> of all the points, that is why they are so orthogonal. But not to worry, even less than 1% of 2^10_000 points is huge number i.e. you can still have billions of them to represent things similar to “car”.</p>
+<p>In <strong>10_000</strong> bit space only billionth of the points are within <strong>4700 bits</strong> range and another billionth further than <strong>5300 bit</strong> away i.e. majority of points are between 4700 and 5300 bits hamming distance. (99.7% to be more precise).</p>
+<p>Make any point/concept your north-pole and you will see the same distribution comparative to this new position.</p>
+<p>From this metaphor we can see the benefit of highly <strong>orthogonal</strong> spaces. (BTW in reality the space is hypercube).</p>
+<p>Creating the knowledge “point” (SDP) is the most basic operation we can do to instantiate new meaning/knowledge/data-point/symbol. It is our starting point from where everything blossoms. At the same time being distributed and large guarantees that it will be noise resistant.</p>
+<p>In traditional programming languages when two pointers point to the same place we say they are identical, but if we change even a single bit they become totally different things, not so with SDP, similar vectors imply similar meanings. The SDP is both the pointer/address and the content/meaning at the same time.</p>
+<p><em>So Semantic Distributed Pointer (SDP) it is.</em></p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bi</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Now that we are aware of the properties of large vector spaces let see what we can do with them.</em></p>
+<blockquote>
+<div><p><strong>Note:</strong> Once you become familiar with the framework I implore you to also play with <strong>sdp.nbits</strong> by making it smaller number, in <strong><a class="reference external" href="http://bi.py">bi.py</a></strong> file. This will speed the processing by alot. I’ve been able to make my tests work even with sdp.nbits = 1000, probably 2000 and up is better. One drawback will be that tiny-tuples will not allow 15 terms anymore (i.e. lower noise resistance, but may be the speedup is worth it), this will be a problem if you use large predicates. So test it and give me feedback.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="basic-operations">
+<h1>Basic operations<a class="headerlink" href="#basic-operations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="instantiating-a-new-symbol-binding-and-bundling">
+<h2>Instantiating a new Symbol, Binding(*) and Bundling(+).<a class="headerlink" href="#instantiating-a-new-symbol-binding-and-bundling" title="Permalink to this headline">¶</a></h2>
+<p>Instantiating a new symbol like we said already is done by randomly generating a vector in 10_000 bit space. We are guaranteed by the properties of the space
+that this new vector will be at approximate distance of ~5000 bits from all the other existing vectors, ergo new concept.
+We do that by calling :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">car</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">car</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0101110011000101011010101110011011101111100101101001100111111110001111101001010101001101011111000011...
+</pre></div>
+</div>
+</div>
+</div>
+<p>The second basic operation is <strong>Binding</strong> where we combine two vectors in a new one :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+<span class="n">red</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+<span class="n">color_red</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">red</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>or we can just do :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">color_red</span> <span class="o">=</span> <span class="n">color</span> <span class="o">*</span> <span class="n">red</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Binding in SDP is implemented as Exclusive-OR(XOR) operation.</p>
+<p>(if you write modules, I would recomend you using <a class="reference external" href="http://sdp.xxx">sdp.xxx</a>() interface)</p>
+<blockquote>
+<div><p>One consequence of binding is that the new SDP is again <strong>~50% away</strong> from all the existing vectors.</p>
+</div></blockquote>
+<p>lets check :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">color_red</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">color_red</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="n">color_red</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4995
+4926
+5011
+</pre></div>
+</div>
+</div>
+</div>
+<p>See all symbols are ~50% away of each other … orthogonal.</p>
+<p>Now we can inspect the content of the bounded vector by probing it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">probe</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">color_red</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>guess which vector <strong>‘rv’</strong> will be close to : <em>color, red or car</em> ?</p>
+<p>We do that by checking the hamming distance between the target vectors :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="n">car</span><span class="p">)</span> 
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span> 
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="n">red</span><span class="p">)</span> <span class="c1"># i.e. color * color_red =&gt; red </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4978
+4999
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>i.e. <strong>rv</strong> is similar to vector <strong>red</strong>, in this case equivalent (that wont be the case most of the time).</p>
+<p>Vectors at distance below <strong>sdp.true_thresh = 42%</strong> of 10000 are assumed similar i.e. any vector at most <strong>4200 bits away</strong> is assumed close. (this threshold can be changed across the system if needed)</p>
+<p>You can also check the distance this way, let’s do it with ‘red’ this time :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">rv</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">probe</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">color_red</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">rv</span> <span class="o">%</span> <span class="n">car</span> <span class="c1"># % same as sdp.dist()</span>
+<span class="k">print</span> <span class="n">rv</span> <span class="o">%</span> <span class="n">color</span> <span class="c1"># i.e. red * color_red =&gt; color </span>
+<span class="k">print</span> <span class="n">rv</span> <span class="o">%</span> <span class="n">red</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5011
+0
+4999
+</pre></div>
+</div>
+</div>
+</div>
+<p>What we see from this is that <strong>Bind</strong> operation is bidirectional i.e. if we think of the pair as variable-value then we can extract value by providing the variable and vs-versa. (In literature those are also called role-filler).
+In computer languages you can not get the variable name from the value.</p>
+<p><em>That was Bind what about Bundle ?</em></p>
+<p><strong>Bundling</strong> also called <em>superposition, set composition, merge, union</em> … etc, is the operation by which we still combine vectors.
+The difference this time is that resulting <strong>SDP</strong> is closer to the operands i.e. not orthogonal.
+<em>Bundling is implemented as thresholded-sum</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">car_color</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span><span class="n">car</span><span class="p">,</span> <span class="n">color</span><span class="p">])</span>
+<span class="k">print</span> <span class="n">car_color</span> <span class="o">%</span> <span class="n">car</span> <span class="c1">#close</span>
+<span class="k">print</span> <span class="n">car_color</span> <span class="o">%</span> <span class="n">color</span> <span class="c1">#close</span>
+<span class="k">print</span> <span class="n">car_color</span> <span class="o">%</span> <span class="n">red</span> <span class="c1">#far-away</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2486
+2525
+4968
+</pre></div>
+</div>
+</div>
+</div>
+<p>see <strong>‘car_color’</strong> is now closer to ‘car’ and ‘color’, but still far away from ‘red’.
+But the main goal of using <strong>Bundle</strong> as the name implies is to bundle items together and create <strong>STRUCTURE</strong>. F.e. :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">vechicle</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="c1">#new symbol</span>
+<span class="n">machine</span> <span class="o">=</span> <span class="n">vechicle</span> <span class="o">*</span> <span class="n">car</span> <span class="o">+</span> <span class="n">color</span> <span class="o">*</span> <span class="n">red</span> <span class="c1">#create bundle of bind-pairs i.e. struct</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>this very much resembles how we build structures (with fields) in other languages. The difference though is that the resulting SDP is the <strong>same size</strong> as any of its components, instead of growing in size as we add more fields and data (up to a point then it get too “noisy”). It is a sort of on the fly compression and behaves like a holographic image.</p>
+<p>You can stuff up to 15 items this way before you start getting problems recognizing the constituents.
+(Empirically tested rather than mathematically proven. I call this tiny-tuple, but you will hear more about it later).</p>
+<p>Lets poke the bear :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># machine = vechicle * car + color * red</span>
+<span class="n">is_car</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">probe</span><span class="p">(</span><span class="n">vechicle</span><span class="p">,</span> <span class="n">machine</span><span class="p">)</span> <span class="c1">#extract &quot;car&quot; via &quot;vechicle&quot; from &quot;machine&quot;</span>
+
+<span class="c1"># now that this is structure the distance is no longer 0, but still &lt;42%</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">is_car</span><span class="p">,</span> <span class="n">car</span><span class="p">)</span> 
+
+<span class="k">print</span> <span class="n">red</span> <span class="o">%</span> <span class="p">(</span><span class="n">color</span> <span class="o">*</span> <span class="n">machine</span><span class="p">)</span> <span class="c1">#in one go, this time using &quot;color&quot; to get &quot;red&quot;.</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">sim</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">color</span> <span class="o">*</span> <span class="n">machine</span><span class="p">)</span> <span class="c1"># boolean : are the items similar?</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">sim</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="n">color</span> <span class="o">*</span> <span class="n">machine</span><span class="p">)</span> <span class="c1"># nope</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2533
+2485
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we can still extract data from structure with single operation. This is very important.</p>
+<p>The interesting part of the whole exercise is that in all the manipulations we did the size of the vectors (SDP) did not change as we built structures.
+In comparison in traditional programming languages structures like dicts/hashes and arrays need ever more space as we add elements, up to a point of course. The other difference is what we are storing is symbols, which forces us to think in different way. We don’t store Strings and Numbers and Dictionaries in our brains. Storing and using SYMBOLS on the other hand is more plausible approximation of how the brain works.</p>
+<div class="section" id="bsc-bundle-even-anomaly">
+<h3>BSC, bundle-even anomaly ?<a class="headerlink" href="#bsc-bundle-even-anomaly" title="Permalink to this headline">¶</a></h3>
+<p>Because the way Bundling is implemented i.e. “Thresholded Sum”, bundling <strong>even</strong> number of symbols is “noisy”.
+When we are thresholding even number of bits and the numbers of ZEROs is equal to the number of ONEs the process is non deterministic, we randomly select 0 or 1.</p>
+<p>For this reason it is preferable if you have the option to bundle odd number of items.
+BTW this is a problem of binary representation. Real valued vectors do not have this problem.</p>
+<p>Next we have :</p>
+</div>
+</div>
+<div class="section" id="mapping-and-permutation">
+<h2>Mapping (*) and Permutation<a class="headerlink" href="#mapping-and-permutation" title="Permalink to this headline">¶</a></h2>
+<p>Another important operations are <strong>Mapping and Permutation</strong>.</p>
+<p><em>Mapping maps a vector/symbol to different part of SDP space at the same time preserving <strong>SIMILARITY</strong>.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># machine = vechicle * car + color * red</span>
+<span class="k">print</span> <span class="s2">&quot;original : &quot;</span><span class="p">,</span> <span class="n">color_red</span> <span class="o">%</span> <span class="n">machine</span> <span class="c1">#how far away are the symbols</span>
+
+<span class="n">mmap</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>  <span class="c1">#create the map</span>
+<span class="n">m_machine</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">mapit</span><span class="p">(</span><span class="n">machine</span><span class="p">,</span> <span class="n">mmap</span><span class="p">)</span>
+<span class="n">m_color_red</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">mapit</span><span class="p">(</span><span class="n">color_red</span><span class="p">,</span> <span class="n">mmap</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s2">&quot;mapped : &quot;</span><span class="p">,</span> <span class="n">m_color_red</span> <span class="o">%</span> <span class="n">m_machine</span> <span class="c1">#how far away are the mapped symbols</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>original :  2485
+mapped :  2485
+</pre></div>
+</div>
+</div>
+</div>
+<p>Internally <strong>sdp.bind(), sdp.probe(), sdp.unbind(), sdp.mapit(), sdp.unmap()</strong> for SDP are implemented using <strong>XOR</strong>, but that is true only for binary representation.
+Not so for other Holographic Reduced Representation (HRR), so better use the correct function to make your intentions semantically clear.</p>
+<p><em>Permutation is simply swapping bits around. As we did with mapping we have to generate the permutation matrix first.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">pmx</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand_perm_mx</span><span class="p">()</span> <span class="c1">#create the permutaion matrix </span>
+<span class="n">vechicle_car</span> <span class="o">=</span> <span class="n">vechicle</span> <span class="o">*</span> <span class="n">car</span> <span class="c1">#bind-pair used in machine, so that they are similar</span>
+
+<span class="n">p_machine</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="n">machine</span><span class="p">,</span> <span class="n">pmx</span><span class="p">)</span>
+<span class="n">p_vcar</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="n">vechicle_car</span><span class="p">,</span> <span class="n">pmx</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s2">&quot;original : &quot;</span><span class="p">,</span> <span class="n">vechicle_car</span> <span class="o">%</span> <span class="n">machine</span>
+<span class="k">print</span> <span class="s2">&quot;permuted : &quot;</span><span class="p">,</span> <span class="n">p_vcar</span> <span class="o">%</span> <span class="n">p_machine</span> <span class="c1">#permutaton also keeps the similarity</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>original :  2533
+permuted :  2533
+</pre></div>
+</div>
+</div>
+</div>
+<p>A cheaper way to do permutation is to simply <strong>shift</strong> the bits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">car</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">car</span> <span class="o">%</span> <span class="p">(</span> <span class="n">sdp</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">sdp</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># permute forth&amp;back</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0101110011000101011010101110011011101111100101101001100111111110001111101001010101001101011111000011...
+0001011100110001010110101011100110111011111001011010011001111111100011111010010101010011010111110000...
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Did you saw that you can reverse roll, the same goes for permutation via <strong>sdp.inv_permute()</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">machine</span> <span class="o">%</span> <span class="n">sdp</span><span class="o">.</span><span class="n">inv_permute</span><span class="p">(</span><span class="n">p_machine</span><span class="p">,</span> <span class="n">pmx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>NOTE: Big benefit of what we discussed so far is that you can reason about those operation Algebraically, because they support for the most part :
+Associativity, Commutativity … etc. Read papers on the Internet for details.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><em>Now the drawback of VSA from performance standpoint :</em></p>
+</div>
+<div class="section" id="cleanup-memory">
+<h2>Cleanup memory<a class="headerlink" href="#cleanup-memory" title="Permalink to this headline">¶</a></h2>
+<p>For the <strong>VSA (Vector symbolic architechture)</strong> to work, we need one more crucial element, normally not needed in the other architectures.</p>
+<p>The so called <strong>Cleanup memory</strong>.</p>
+<p><em>Why would you need such thing and what is it ?</em></p>
+<p>Like we said higher cognition requires us to be able to build structures by composing symbols.
+In the absence of any other information it is not possible to tell whether some arbitrary vector represents a composite entity, an atomic entity, or nothing at all.</p>
+<p>Also when we want to peek in those structures because we are dealing with distributed information we have to pry out the constituents.
+As a result we get noisy vectors like we already saw. We have to cleanup those vectors by comparing them to a memory that holds more pristine representations.</p>
+<p>So the purpose of <strong>Cleanup memory (CUP)</strong> is to provide clean-reference-vectors, so we can de-noise vectors that result from operations on SDP’s.</p>
+<p>There could be many types of cleanup memories.</p>
+<p>The iconic Cleanup memory is Kanerva-SDM (Sparse distributed memory).
+Back in the day I implemented SDM with Perl/PDL, but I’m not planing to do that in Bi project until I get more robust system working. BTW it should not be hard to integrate if needed.</p>
+<p>In the current Bi framework i built more prosaic <strong>CUP</strong> namely a <strong>Lexicon</strong>. Lexicon is a one-to-one cleanup memory, where each data item correspons to a separate-item in the memory. It is not very plausable to how the brain store information, but its simpler implementation allows me to start implementing VSA.</p>
+<p><strong>Lexicon</strong> behaves like normal dictionary when accessing symbols (with efficient SDP storage), you give it a symbol name and you get back SDP.</p>
+<p>But that is not what cleanup memory is about. What is expected from CUP is given a <strong>noisy vector</strong> is to get back the nearest clean SDP.</p>
+<p><strong>Lexicon</strong> extends that by returning the <strong>symbol name</strong> of the nearest SDP, instead.
+You can always fetch the SDP by name if you need. The operation I mentioned is called <strong>.best_match()</strong>.</p>
+<p>We need the symbol name instead of SDP, so that we can integrate it into upper level algorithms as you will see later. My goal is overtime as I understand the system better to move as much as possible to the lower level.</p>
+<p>Lets see it in action :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lexicon</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">lex</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;car&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is different ways to access the SDP by symbol-name :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;car&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">d</span><span class="o">.</span><span class="n">g</span><span class="p">(</span><span class="s1">&#39;car&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">d</span><span class="o">.</span><span class="n">g</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;car&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1010101100100001010111010010110010100100111110111000101110001100101000011000111111001111111110001011...
+1010101100100001010111010010110010100100111110111000101110001100101000011000111111001111111110001011...
+1010101100100001010111010010110010100100111110111000101110001100101000011000111111001111111110001011...
+1010101100100001010111010010110010100100111110111000101110001100101000011000111111001111111110001011...
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets add more symbols and build a structure out of them :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">add_items</span><span class="p">([</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;shape&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">])</span>
+<span class="n">d</span><span class="o">.</span><span class="n">lex</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;blue&#39;: 3,
+ &#39;car&#39;: 0,
+ &#39;circle&#39;: 5,
+ &#39;color&#39;: 1,
+ &#39;red&#39;: 2,
+ &#39;shape&#39;: 4,
+ &#39;square&#39;: 6}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;shape&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">]</span> <span class="c1">#create struct</span>
+<span class="n">d</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;object1&#39;</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span> <span class="c1">#add the struct to lexicon for future use</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have several symbols in the lexicon, lets access/extract information from the struct by cleaning it up against the <strong>lexicon</strong>. The same thing we did with SDP variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">d</span><span class="o">.</span><span class="n">best_match</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;shape&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">d</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">obj</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">d</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>circle
+red
+object1
+</pre></div>
+</div>
+</div>
+</div>
+<p>The best-match is very expensive operation that is why as you would see later i employed different tactics to make overall system speed better.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            car : 1010101100100001010111010010110010100100111110111000101110001100101000011000111111001111111110001011... ...
+          color : 0010110100010001000101010100001010100011001100100001001100001011100000010000010001011000010111101110... ...
+            red : 0001000001100011110000000011010101111001011010010100010001111111110011100110111001110101101011011101... ...
+           blue : 0001011000110110011101110010001000001110110011111110010010011111010101001100001111111111001100110010... ...
+          shape : 0010100011011111101101001111010100100101001111001001101111010000101000010001111010110101100100010001... ...
+         circle : 1101010001001100100000010010010001111110111101001110100001010000000011011101001111011001001010110011... ...
+         square : 1010100010111101111101110111010101001101110001110000100001011011001000000010001100001110101001100101... ...
+        object1 : 0111110011110010100101010111011111011010010110010111011101100000101011110110110101101100101110110011... ...
+</pre></div>
+</div>
+</div>
+</div>
+<p>As I mentioned already all the SDP are stored compactly as a bitarray and will dynamically grow to accommodate new entries.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="structures">
+<h2>Structures<a class="headerlink" href="#structures" title="Permalink to this headline">¶</a></h2>
+<p>With operations we learned so far and the knowledge how to use CUP’s we have the basic process of how to build structures by composition and decomposition. Let see some examples :</p>
+<div class="section" id="tiny-tuple">
+<h3>Tiny tuple<a class="headerlink" href="#tiny-tuple" title="Permalink to this headline">¶</a></h3>
+<p>I tested experimentally how many pairs-of-binds maximum can be bundled in a single SDP with 100% success  extracting the items. The number is 15.</p>
+<p>So I call this structure <strong>tiny-tuple</strong>. Here is how it looks visually.</p>
+<p><code class="docutils literal notranslate"><span class="pre">a1</span> <span class="pre">*</span> <span class="pre">b1</span> <span class="pre">+</span> <span class="pre">a2</span> <span class="pre">*</span> <span class="pre">b2</span> <span class="pre">+</span> <span class="pre">a3</span> <span class="pre">*</span> <span class="pre">b3</span> <span class="pre">+</span> <span class="pre">....</span> <span class="pre">+</span> <span class="pre">a15</span> <span class="pre">*</span> <span class="pre">b15</span></code></p>
+<p>Version 0.1 of Bi-language is wholly based only on tiny-tuple, no other structure is used yet.</p>
+</div>
+<div class="section" id="sequences">
+<h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
+<p>There are many ways to represent sequences.</p>
+<p>If we use the symbol <strong>*&gt;</strong> to signify permutation and <strong>&lt;*</strong> inverse permutation then here is one way to encode sequence.</p>
+<blockquote>
+<div><p>seq = a *&gt; b + b *&gt; c + c *&gt; d + d *&gt; e + … ;  X &lt;* seq , return next element in seq</p>
+</div></blockquote>
+<p>You can manually do this chaining, but for easy testing I have build simple extension for ipython that you can use to experiment quickly some ideas before coding them down. (By default this extension creates for you symbols &#64;a to &#64;z. To create new symbol use double <strong>at</strong> i.e. &#64;&#64;new_sym)
+So we will first load the extension then create the sequence :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> bi_ip_ext
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> @seq = @a *&gt; @b + @b *&gt; @c + @c *&gt; @d
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@seq = @a *&gt; @b + @b *&gt; @c + @c *&gt; @d
+Value
+ +- val True
+ `- vtype &#39;bool&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can query it. Again using best-match to cleanup/find the symbol.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> bm: (@a &lt;* @seq)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bm: (@a &lt;* @seq)
+Value
+ +- val &#39;b&#39;
+ `- vtype &#39;string&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> bm: (@b &lt;* @seq)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bm: (@b &lt;* @seq)
+Value
+ +- val &#39;c&#39;
+ `- vtype &#39;string&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> bm: (@c &lt;* @seq)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bm: (@c &lt;* @seq)
+Value
+ +- val &#39;d&#39;
+ `- vtype &#39;string&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> bm: (@d &lt;* @seq)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bm: (@d &lt;* @seq)
+Value
+ +- val None
+ `- vtype &#39;string&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This example illustrate something you have to have in mind when building structures.
+If you were observant you may have asked yourself, why on earth would I need to use permutation, couldn’t we just use normal binding.
+We can’t ! because if you look again symbols in the sequence repeat, for example we have bind pairs <strong>a * b</strong> and <strong>b * c</strong>, where <strong>b</strong> is in both pairs.
+So how do we know when we probe with <strong>b</strong> which pair are we querying.
+To emulate one-directional binding we use permutation <strong>a *&gt; b</strong>, this way bounded pair behave more like variable-value binding.</p>
+<p>You can also use <strong>sdp.roll()</strong> to do the same thing, because the ipython-extension use only one and the same permutation matrix for all  <strong>*&gt;</strong> cases you are better experimenting with roll.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> @seq2 = @a 5&gt; @b + @b 5&gt; @c + @c 5&gt; @d
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@seq2 = @a 5&gt; @b + @b 5&gt; @c + @c 5&gt; @d
+Value
+ +- val True
+ `- vtype &#39;bool&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">do</span> bm: (@a &lt;5 @seq2)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bm: (@a &lt;5 @seq2)
+Value
+ +- val &#39;b&#39;
+ `- vtype &#39;string&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value(...)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are other ways to represent sequence :</p>
+<ul class="simple">
+<li><p>seq = a + a * b + a * b * c …; ==&gt; probe(a), probe(ab) …</p></li>
+<li><p>seq = 1 * a + 2 * b + 3 * c + 4 * d + … ; can be seen as tiny-tuple too</p></li>
+</ul>
+<p>Of course all those representations suffer from the same limitations of how many bind pairs you can stuff in single SDP … 15 !
+To solve this problem we need to build hierarchies.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="hierarchical-and-relational-structures">
+<h3>Hierarchical and relational structures<a class="headerlink" href="#hierarchical-and-relational-structures" title="Permalink to this headline">¶</a></h3>
+<p>Instead of trying to put all our eggs in single SDP we can spread the structure in many SDP’s.
+We can do that by building interdependent SDP’s i.e. build hierarchy.</p>
+<p>For example a sequence may look like this :</p>
+<blockquote>
+<div><p>seq = ab + ab * cd; ab = a + a * b ; cd = c + c * d</p>
+</div></blockquote>
+<p>One additional decision we have to make when building hierarchical structure is to decide if we are going to use single Cleanup memory(CUP) or multiple. If we use multiple how do we split them, based on hierarchy level, scope, both … other ?</p>
+<p>Lists can also be represented as hierarchy.</p>
+<p>Version 0.2 will be all about hierarchical structures.
+One of the reasons I decided to go with Prolog-like interpreter is the intrinsic handling of relational and hierarchical structures, for languages as Python they are outside realm.</p>
+<p>Currently Bi engine Unification process is capable of handling hierarchical structures, the parser may require some small modifications to handle expressions, the problem is the Knowledge DB.
+There are many options of how to build up hierarchiacal structures, that is why I postponed it for later.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bi"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="What_is_Bi.html" title="previous page">What is Bi</a>
+    <a class='right-next' id="next-link" href="Bi_language.html" title="next page">Language</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

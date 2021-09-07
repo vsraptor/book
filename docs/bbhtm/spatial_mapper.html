@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spatial mapper &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="2D binary map" href="bmap2D.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Spatial mapper
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatial-pooler-mapper">
+   Spatial Pooler/Mapper !
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lets-test-it">
+     Lets test it
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elaborations">
+       Elaborations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusions">
+     Conclusions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="spatial-mapper">
+<h1>Spatial mapper<a class="headerlink" href="#spatial-mapper" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib/test&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">data_test</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="spatial-pooler-mapper">
+<h1>Spatial Pooler/Mapper !<a class="headerlink" href="#spatial-pooler-mapper" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p><em>In the main article we discussed somewhat the <strong>Spatial pooler</strong>, the thing is that the more I read about it and the more I ask about it on the mailing list, the more I got confused … You too! Welcome to the club.</em></p>
+<p><em>The implementation in the papers seem understandable, but nobody can tell me what the goals or expected behavior is. Or may be I’m too dumb to grasp them :/ .</em></p>
+<p>(Because I don’t want to confuse what Numenta may expresses as <strong>Spatial pooler</strong> and what I will purpose here, I will use a different term instead : <strong>Spatial mapper</strong>. If it happens later that my interpretation is close to what Numenta call SP, then I will update the document).</p>
+<p><em>I was building and tossing away SP implementation after implementation … on the surface every one of them looked feasable, but there were always some nagging feeling that something was not right !!</em></p>
+<p><em>I was going nowhere, then an idea struck me. What if ….. And this is the theme of this article. Excited ??</em></p>
+<hr class="docutils" />
+<p>The <strong>Spatial mapper</strong> that I developed on abstract level looks at the problem of spatial patterns from different vantage point. That said we need a redefinition of our goals to solve this problem.
+Here are our new goals :</p>
+<ul class="simple">
+<li><p><strong>The Data is king</strong> : We need to represent as best as possible the specific real data we receive with the available bits (columns).</p></li>
+<li><p>We need to make the output <strong>SDR stable</strong>, but adjust for new data as it comes in. Adapt.</p></li>
+<li><p>Solve the <strong>“size-mismatch-impedance”</strong> problem i.e. allow easy connections between Encoders, TM and so on.. even when their input and output sizes do not match. Act as a plumbing between TM’s.</p></li>
+</ul>
+<p>Let’s think abit, we receive a stream of SDRs and then we have to output consistent SDRs that go into Temporal Memory.
+The input SDR to TM has a size of <strong>n</strong>, the space described by binary string of this size contains <strong>2^n</strong> possible values. This is humongous amount of possibilities.
+But the interesting part is that during the lifetime of a the signal most probably TM will receive/use only very small number of those possible combinations AND even when the number of combinations is bigger, if we have adaptive system which can change slowly as the data variability change i.e. make the output stabler then we will be OK.</p>
+<p>As we discussed previously the input enters the <strong>TM region</strong> trough the columns vertically. Every column is single bit from the input-SDR.</p>
+<p>Here is the breakthrough idea that finally broke my impasse :)</p>
+<p>Let’s assume a SDR with size 100 bits and let say we want to process signal of 1000 time steps <strong>(t)</strong> i.e. total of 1000 values.
+The size of the space we use to represent every one of those values is 2^100, but in reality we would use only 1000 of those at most (if there are no repetitions). So question one is what we can do to conserve “bits”.
+Second we will need a metric to compare SDRs!
+For this purpose we may use <em>overlap</em> as we did for TM or <em>hamming distance</em>. In this case we would use <strong>hamming distance</strong>.
+(Hamming distance is so underrated in HTM theory ;) )</p>
+<p>Next, what if for every one of the 100 bits (of our new representation) we create an bit-string <strong>(Y)</strong> of size <strong>n</strong> and use them as sort of “seekers” in this huge space to “chase”” the values coming into, using hamming distance to decide how close we are to the value-bitstring <strong>(X)</strong>.</p>
+<p>We pass the values <em>{ x1,x2,x3 … xt }</em> to the Spatial mapper one by one and then on every time step we adjust closest <strong>y-SDRs</strong> a little bit so that they become even closer (as measured by hamming distance).</p>
+<p>Mnemonically this learning process will looks like this :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span> <span class="p">:</span>
+  <span class="n">win</span> <span class="o">=</span> <span class="n">find_closest_ys</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">win</span> <span class="p">:</span>
+    <span class="n">adjust</span> <span class="n">y</span> <span class="n">towards</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>and visually it looks like the picture shown below.</p>
+<img src='imgs/hamming_space.svg' height=400px width=400px align=left> 
+<p>The dots represent the data. Every time new value pops up the closest circles move towards it. It is important to highlight that only the <em>closest circles</em> have to move, not all of them.</p>
+<p>What I just explained closely resembles what is known in Computer science as Self-organized Maps (aka SOM).
+The general difference again is that SOM is mostly used with real-valued data (remember NN) and here we use binaries, SOM uses euclidean distance to measure closeness here we use hamming distance.</p>
+<p>The other requirement we have is find a way to predict/convert the value from Encoder for example in usable form for the TM.
+It will work like this :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#calculate HD between the datum and all the bit-SDRs</span>
+<span class="k">for</span> <span class="n">every</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">Memory</span> <span class="n">matrix</span> <span class="p">:</span> 
+   <span class="n">hd</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">hamming_distance</span><span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+   
+<span class="c1">#find the closest   </span>
+<span class="n">win_idxs</span> <span class="o">=</span> <span class="n">argsort</span><span class="p">(</span> <span class="n">hd</span> <span class="p">)[:</span> <span class="n">winners_count</span> <span class="p">]</span>
+
+<span class="c1">#the indexes tells us which bits of the output SDR will be ON</span>
+<span class="n">make_SDR</span><span class="p">(</span><span class="n">win_idxs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Bingo !! That is the whole magic when we want to convert a value, it flashes the closest bits and that tells us which columns of TM get activated.</p>
+<p>The learning process guarantees that 1000 values from 2^100 possible ones are best represented by the closest bits (2% of n in general case).</p>
+<p>Also as the new values come in the bits will drift to represent the most recent values better. You can also stop learning or slow down the rates of learning at some point if you don’t want drifting/adaptation.</p>
+<hr class="docutils" />
+<div class="section" id="lets-test-it">
+<h2>Lets test it<a class="headerlink" href="#lets-test-it" title="Permalink to this headline">¶</a></h2>
+<p>In the <a href='bbHTM.html' target='_blank'>TM document</a> I described a scenario where we passed the information directly from the <strong>Encoder to the TM</strong>, but now that we have <em>Spatial Mapper</em> figured out we can build full chain <strong>Encoder =&gt; SM =&gt; TM</strong>.</p>
+<p>I already did that and integrated it into the Test framework, you just have to pass <strong>ttype=’sp_enc’</strong> parameter when creating the test and <strong>enc_data_size</strong> if you have differing in-out sizes. (take time to look at the code, by default in this implementation SM is set to learn from the first 1000 elements and then it stops learning. I did this just for the expediency of the need to start testing asap to confirm my theory.).</p>
+<p>In this first try we will use SM just as pass-trough i.e. the inputs/outputs have the same dimension :</p>
+<blockquote>
+<div><p><strong>[ :Encoder: 500]&gt;—–&lt;[500 :SM: 500]&gt;—–&lt;[500 :TM: ]</strong></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">DataTest</span><span class="p">(</span><span class="n">data_set</span><span class="o">=</span><span class="s1">&#39;ny&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">new_test</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;5x500&#39;</span><span class="p">,</span> <span class="n">ttype</span><span class="o">=</span><span class="s1">&#39;enc_sp&#39;</span><span class="p">,</span> <span class="n">data_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Adding data metrics with name : 5x500 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">plot_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/spatial_mapper_8_0.png" src="../../_images/spatial_mapper_8_0.png" />
+</div>
+</div>
+<p>Make sure you look at the full picture when you run it. There are cases when I get drop outs!!, haven’t found the reason yet, could be SC.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">sp</span><span class="o">.</span><span class="n">memory</span><span class="o">.</span><span class="n">show_mem</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/spatial_mapper_10_0.png" src="../../_images/spatial_mapper_10_0.png" />
+</div>
+</div>
+<p>Let’s now create a test where the sizes of the SDR between modules differ.</p>
+<blockquote>
+<div><p><strong>[ :Encoder: 300]&gt;—–&lt;[300 :SM: 500]&gt;—–&lt;[500 :TM: ]</strong></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">new_test</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;5x500e&#39;</span><span class="p">,</span> <span class="n">ttype</span><span class="o">=</span><span class="s1">&#39;enc_sp&#39;</span><span class="p">,</span> <span class="n">enc_data_size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">data_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s double check the signal input/output dimensions (n) :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="s1">&#39;5x500e&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">se</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Scalar encoder -----
+min-max/range : 0-30000/30000
+buckets,width,n : 291,10,300
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thing to note which I haven’t explained before is how Scalar classifier works by going trough all the values (in the range of what Scalar Encoder can transform) and generate the corresponding SDR.
+Later when we need to do reverse match i.e. convert from SDR back to Scalar we use overlap to decide which is the closest match.
+The small tweak I added recently is that if Scalar-classifier detect Spatial Mapper is in use it will first encode the value and then will pass it trough the mapper. The reverse process is unaffected. neato …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="s1">&#39;5x500e&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Scalar Classifier ==============================
+range,step: 0 - 30000 , 10
+
+&gt; Scalar encoder -----
+min-max/range : 0-30000/30000
+buckets,width,n : 291,10,300
+
+&gt; 2D Bitmap -----
+Dims in bits : 3000,500
+Mem use : 0.18Mb
+Fill %: 0.02%
+Avg item % fill: 0.02%
+Max item % fill: 0.02%
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="s1">&#39;5x500e&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sp</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Spatial pooler =========================================
+I =&gt; O size : 300 =&gt; 500
+Rows, Cols : 500, 300
+segment-size, in winc, out winc : 1, 6, 10
+nudge : 5
+&gt; Memory =========================================
+Data size : 300
+rows,cols : 500, 300
+win count : 6
+
+&gt; 2D Bitmap -----
+Dims in bits : 500,300
+Mem use : 0.02Mb
+Fill %: 0.03%
+Avg item % fill: 0.03%
+Max item % fill: 0.04%
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="s1">&#39;5x500e&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sp</span><span class="o">.</span><span class="n">memory</span><span class="o">.</span><span class="n">show_mem</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/spatial_mapper_18_0.png" src="../../_images/spatial_mapper_18_0.png" />
+</div>
+</div>
+<p>Do you see how the X-axis is 300 bits (input) and the Y-axis output is 500 bits (output).</p>
+<p>Let’s check that TM is also 500 bits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="s1">&#39;5x500e&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tm</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Temporal Memory =========================================
+Data size | number of columns : 500
+Memory dims (rows,cols) : 5, 500
+winc : 10
+
+&gt; Memory =========================================
+Data size : 2500
+rows,cols : 2500, 2500
+win count : 50
+
+&gt; 2D Bitmap -----
+Dims in bits : 2500,2500
+Mem use : 0.75Mb
+Fill %: 0.01%
+Avg item % fill: 0.01%
+Max item % fill: 0.02%
+</pre></div>
+</div>
+</div>
+</div>
+<p>I think this is convincing enough for starters ;).</p>
+<hr class="docutils" />
+<div class="section" id="elaborations">
+<h3>Elaborations<a class="headerlink" href="#elaborations" title="Permalink to this headline">¶</a></h3>
+<p><strong>First</strong> of all Spatial Mapper has almost no code !! The whole algorithm was moved to the Memory class (which is also very tiny), which can now use two different modes of representation and learning via OVERLAP or HAMMING DISTANCE ;).
+The more I dig the better abstractions I seem to find.</p>
+<p><strong>The bad news</strong>, for now is that I have only tested the system with just Scalar Encoder (which is in reality still only Integer encoder :() and Scalar Classifier seems abit ad-hoc. I would have to figure better way of doing this especially when I add more Encoders, because there won’t be always such an easy way to go back and forth. But one reason I postponed delving into it was that I needed the plumbing SM provides first, so that I can splice Encoders together to make compound types.</p>
+<p><strong>Very interesting</strong>, SM solves the impedance-mismatch. now we can do the following :</p>
+<ul class="simple">
+<li><p>dimensional reduction or expansion anywhere in the chain.</p></li>
+<li><p>Chain multiple SM’s with decreasing or increasing size.</p></li>
+<li><p>Splice outputs of Encoders, TM’s or combinations of both anywhere in the hierarchy.</p></li>
+<li><p>Probably in some “permutation” SM can do or aid the job of the Temporal pooler.</p></li>
+<li><p>with small change to the algorithm you can pack multiple “interleaved” SM into single memory, thus doing complex information mixing. What about single SM acting in two directions, got ya :)</p></li>
+</ul>
+<p>Not bad.</p>
+<p><strong>Now</strong> let’s talk about the similarity between SM and SOM.
+SM is essentially SOM for the binary space. SOM has several tunable parameters :</p>
+<ul class="simple">
+<li><p>learning range (look code : nudge_step)</p></li>
+<li><p>faded learning rate (code : fade)</p></li>
+<li><p>learning rate decay</p></li>
+<li><p>learning range decay</p></li>
+</ul>
+<p>Currently I only implemented the first two, the other ones require us to know in advance how “long” is the signal i.e. time steps, but HTM is streaming system so we don’t know that.
+It will be easy to add different behaviors, learn for up to <strong>t</strong> steps then decay and so on …. I leave this as exercise to the reader.</p>
+<p>I don’t know about you but <strong>Spatial pooler</strong> as defined in the papers to me look alot like SOM too, lets compare.</p>
+<ul class="simple">
+<li><p>The original SOM uses real values for data, real values for weights, and euclidean distance.</p></li>
+<li><p>The SP uses binary values for data, real values for permanence, and ?overlap? distance.</p></li>
+<li><p>The SM uses binary values for data, binary values for connection existence, and hamming distance.</p></li>
+</ul>
+<p><strong>I will</strong> probably add capability to represent column-bit by multiple seeker-SDR’s instead just one, but haven’t decided yet on the selection-algorithm for the winners. Currently “segment_size” option is unused, don’t set it to anything different than 1 yet. Also “drifting” towards the value is randomly flipping bits that don’t match between the two, may be we can use some more directed method (something like Stochastic gradient descent in NN to do it faster. We may not need it ! dunno.).</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>The way the code is structured, look at it. Did you ?</p>
+<p>May be you can probably guess the next logical step ! Right! No ?</p>
+<blockquote>
+<div><p>What if we implement TM using <strong>hamming distance</strong>, instead of <strong>union-SDR</strong> :).</p>
+</div></blockquote>
+<p>No more need for forgetting-mechanism.
+Also we will consolidate the algorithm and probably merge SM and TM into single implementation Spatio-Temporal Memory. You heard it here first :)</p>
+<p>I wish I can dig into this asap, but I’m sort of behind on more sophisticated testing.
+The testing framework is sort of ad-hoc-ish, I’ve build it on the fly as the needs arise.<br />
+And there are so many ways now to chain multiple modules, so many combinations to test and testing is boring, urghhh ….</p>
+<p>But even before that may be I should add some more Encoders first !!! Decisions, decisions …</p>
+<p><em>On another note, is the SM output stable enough so we can use it in/as TP ?</em></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bbhtm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="bmap2D.html" title="previous page">2D binary map</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

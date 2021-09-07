@@ -1,0 +1,1095 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three-nsitions &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Wordnet pipes" href="../misc/piped_wordnet.html" />
+    <link rel="prev" title="Multi regex" href="../multi-regex/multi-regex.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Three-nsitions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-series-and-chains">
+   Time series and chains
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markov-chain-order-1">
+     Markov chain order-1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markov-chain-order-n">
+     Markov chain order-n
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hidden-markov-model">
+     Hidden Markov model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#htm">
+     HTM
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#autoregressive-models">
+     Autoregressive models
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Three-nsitions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#buffer-model">
+       Buffer model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sparse-cube-counter-model">
+       Sparse/Cube counter model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#self-organized-maps-som">
+       Self Organized Maps (SOM)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilistic-model">
+       Probabilistic model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#musings">
+     Musings
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#permutation-transformation-problem">
+       Permutation Transformation problem
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#far-ahead-prediction">
+       Far-ahead prediction
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="three-nsitions">
+<h1>Three-nsitions<a class="headerlink" href="#three-nsitions" title="Permalink to this headline">¶</a></h1>
+<p>What follows is explanation and implementation of an idea I have of a method of handling Time Series, at least slightly different than traditional methods.</p>
+<p><em>I’m approaching the problem from a programmer rather than mathematical point of view. It is astonishing how little there is out there for programmers. Mostly math papers. Which is good for reference, but for learning the ideas seems to me very contra productive. So I’m tailoring this towards programmers and mere mortals :).</em></p>
+<p>In addition with this article I’m trying to provide you with the process of creating a meta-model i.e.  <strong>Assumptions =&gt; Building model =&gt; Assessment</strong>, rinse and repeat.</p>
+<p>So here goes ….</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline 
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">threensition_ts</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">threensition_3d_ts</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1">#those DataSets are not available in the repo, it is external library and will take me some time to integrate it</span>
+<span class="c1"># ... for now what you need is to load your data-set in 1D numpy array by some other means. Sorry..</span>
+<span class="kn">from</span> <span class="nn">data_sources.data_sets</span> <span class="kn">import</span> <span class="n">DataSet</span>
+<span class="n">ny_taxi</span> <span class="o">=</span> <span class="n">DataSet</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;../data/nyc_taxi.csv&#39;</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="s1">&#39;passenger_count&#39;</span><span class="p">)</span>
+<span class="n">hot_gym</span> <span class="o">=</span> <span class="n">DataSet</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;../data/rec-center-hourly.csv&#39;</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="s1">&#39;kw_energy_consumption&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="time-series-and-chains">
+<h1>Time series and chains<a class="headerlink" href="#time-series-and-chains" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>What is <strong>three-nsition</strong> ? Glad you asked :)</p>
+<p>In two words it is a way to do prediction of Time Series.
+Normally you would use Markov chains or Autoregressive models to do that.
+Three-nstion is sort of Markov chain with a twist.</p>
+<p>But first before we go into the details we need to understand what is Markov chain in the first place.</p>
+<div class="section" id="markov-chain-order-1">
+<h2>Markov chain order-1<a class="headerlink" href="#markov-chain-order-1" title="Permalink to this headline">¶</a></h2>
+<p>Graphically the model looks something like this :</p>
+<p><img alt="order 1" src="../../_images/order1.png" /></p>
+<p>Where every time step is represented by separate variable <strong>x</strong> which can take one of many possible values often called states <strong>S={s1,s2,s3, …..,s_m}</strong>.
+The arrows describe dependencies between those variables.</p>
+<p>If we forget the arrows for a moment, what would the best possible model be using those variables ? Well, it would be best to know the dependencies between all variables, this way we can build the perfect model.
+But that is not practical to do.</p>
+<p>Let’s think about it for a moment if we pick the simplest case where the variables can take only two values/states i.e. <strong>{0,1}</strong>. The number of possible dependencies will be <strong>(2^n - 1)</strong>. Above 20 time steps things start to get really, really rough from computational perspective.</p>
+<p><em>So what is the solution ?</em></p>
+<p>Easy, find a way to represent the sequence by using less dependency between variables.
+The easiest and most natural choice would be to use the so called Markov chain of order-1 (the one we already saw in the image above) i.e. make a model where every variable depend only on the previous time-step in the sequence.</p>
+<p>How would a model of Markov chain order-1 look like :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>s1</p></th>
+<th class="head"><p>s2</p></th>
+<th class="head"><p>s3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>s1</p></td>
+<td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>s2</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>s3</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here is a model for a time series that have 3 possible states <strong>S={s1,s2,s3}</strong>. The numbers inside the table are simply counters of how many times event <strong>Xt+1</strong> happened after event <strong>X_t</strong>. F.e. the number 5 on <em>row 2</em>, <em>col 3</em>, tells us that we had <em>5 transitions</em> so far i.e. <strong>2 =5=&gt; 3</strong>, also the models tells us that when we see <strong>state:2</strong> we can assume the the best next state (i.e. prediction) will be <strong>state:3</strong>.</p>
+<p><em>(Using counters is easier to visualize, but they are synonymous to probabilities. In the current case we can just divide every cell by the sum of all counters and we will have probabilities. Probabilities also have the drawback that over time become very very small, causing floating point underflow. Especially when the table become sparse. The solution is to start using log-of-probabilities. On the other hand probabilities are very good for reasoning about models)</em></p>
+<p>What we did seems good, the problem though is that this model is very simplistic, we can see that once in a while we have to predict <strong>state:2</strong> after <strong>state:2</strong>, <strong>2 =1=&gt; 2</strong>. A thing we can do to resolve this problem is to randomly generate state 1,2 or 3 with a higher tendency (probability) of predicting the state with the higher counter.</p>
+</div>
+<div class="section" id="markov-chain-order-n">
+<h2>Markov chain order-n<a class="headerlink" href="#markov-chain-order-n" title="Permalink to this headline">¶</a></h2>
+<p>But probably better approach would be if we use more complex model. F.e. we can use Markov chain model of <strong>order-2</strong>.
+What this mean is that now every variable will depend on the previous two states, rather than on just one.</p>
+<p><img alt="order 2" src="../../_images/order2.png" /></p>
+<p>To make this work instead of using 2D table as a model we would have to use 3D cube to store the transition counters/probabilities … for every increase of the  markov-order we have to add one more dimension. We see that this puts us on the same path of information explosion as before.</p>
+<p>So here is a conundrum how can we <em>“have a cake and eat it too”</em> i.e. have complex enough model capturing as many dependencies as possible without this combinatorial explosion of information we need to store.</p>
+<p><em>One abstract way to think about is to imagine it as a sort of “compression”</em></p>
+</div>
+<div class="section" id="hidden-markov-model">
+<h2>Hidden Markov model<a class="headerlink" href="#hidden-markov-model" title="Permalink to this headline">¶</a></h2>
+<p>Another more complex model is the so called <strong>Hidden Markov model (HMM)</strong>. The idea here is to limit the dependencies but capture the information with a hidden variable (which does not necessarily use the same states as the original variables).</p>
+<p><img alt="hmm" src="../../_images/hmm.png" /></p>
+<p>(<strong>h</strong> are the hidden states)</p>
+<p>Here the next time step depends on only one hidden variable, but this time instead of building N-dimensional “table”, we depend on dynamic process that calculates the hidden variable at every time step.
+The model can be represented by 2 transitional 2D arrays.
+From the diagram we can see that :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ p(x_t) = p(x_t|h_t) * p(h_t|h_{t-1})\]</div>
+</div></blockquote>
+<p>The assumption here is that the second probability was calculated before hand, that is why I said it is a process. The two 2D arrays are called transition and emission tables (distributions).</p>
+<p>HMM are not very applicable to time series, but more to tasks like the following :</p>
+<p>Given a sequence X and trained HMM model tell me how probable the sequence X is to be generated by this model ?</p>
+<p>So to generate a prediction you need to generate all possible context+future_state sequences, then pick the most probable one.
+Also because it is not one simple table the learning process is much more involved.</p>
+</div>
+<div class="section" id="htm">
+<h2>HTM<a class="headerlink" href="#htm" title="Permalink to this headline">¶</a></h2>
+<p>Yet another approach is what Numenta does with their <strong>Temporal memory</strong>.</p>
+<p>Here the Memory stores markov order-1 transitions, but because the states themselves are firstly dynamically spawned (not preset in advance, so you can have practically unlimited number of states) and secondly encoded as Sparse Distributed Representation what happens is that order-1 transition on the fly get connected in higher-order chains, depending on the incoming time series data.
+They are in a sense data dependent Variable-Order markov chains.</p>
+<p>The model is not 2D real numbers table, but sort of virtual ~2D bit array~, where each state is represented by multiple indexes, rather than single index like in the markov models. I’m simplifying abit, so that I can make the comparison.</p>
+<p>You can read in more detail about it in my test TM implementation <a class="reference external" href="http://ifni.co/bbHTM.html">Bare bones HTM</a> or at <a class="reference external" href="http://numenta.org">Numenta site</a>.</p>
+</div>
+<div class="section" id="autoregressive-models">
+<h2>Autoregressive models<a class="headerlink" href="#autoregressive-models" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>….. TODO …..</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2>Three-nsitions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<blockquote>
+<div><p>** Give me the place to stand, and I shall move the earth. ~Archimedes**</p>
+</div></blockquote>
+<p>Now that we explored the landscape lets get back to our original question : What the hell is threensition ?</p>
+<p>It is sort of Higher order Markov chain where we have only 3 Super states : <strong>PAST =&gt; PRESENT =&gt; FUTURE</strong>.</p>
+<p><img alt="ppf" src="../../_images/ppf.png" /></p>
+<ol class="simple">
+<li><p>The <strong>PAST (p)</strong> super-state is a placeholder for a multiple states that happened in the past just before the present : <strong>p1, p2, p3, …, pl</strong> where <em>L</em> is the number of past states we will consider for the calculation. I normally call it <em>context</em> in the code.</p></li>
+<li><p>The <strong>PRESENT|NOW (n)</strong> super-state is the fulcrum of the system. We use it as mechanism to lower the amount of information we need to store for the model.</p></li>
+<li><p>The <strong>FUTURE (f)</strong> super-state is the prediction and dependent only on state <strong>n</strong>.</p></li>
+</ol>
+<p><img alt="threensition" src="../../_images/3nsition.png" /></p>
+<p>As it can be seen by the graphic model all predictions happen trough the <strong>PRESENT|NOW</strong> state.
+If you stretch it visually it may look like NN neuron, but functionally it will be more like ensamble (lateral-row not column) of HTM-neurons, where the Present state is the <strong>column-selector</strong> (i.e which neuron is activated) and the Past is the pattern that comes at the <strong>distal-dendrites</strong>. I hope those familiar with HTM can visualize it.</p>
+<p>I should mention one additional property of Markov models before we continue : stationarity.
+A model is stationary if the dependent-variables are not themselves dependent on time.</p>
+<blockquote>
+<div><p>stationary     : $<span class="math notranslate nohighlight">\(p(x_{t+1}=s_2 | x_t=s_1) = function(s_1,s_2)\)</span><span class="math notranslate nohighlight">\(
+non-stationary : \)</span><span class="math notranslate nohighlight">\(p(x_{t+1}=s_2 | x_t=s_1) = function(s_1,s_2,time)\)</span>$</p>
+</div></blockquote>
+<p>I have so far two different implementations of this scheme and I’m thinking of a third one.
+We will start with the easier one first, so that you can understand the idea better.</p>
+<div class="section" id="buffer-model">
+<h3>Buffer model<a class="headerlink" href="#buffer-model" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p><img alt="sin" src="../../_images/sin2.png" /></p>
+<p>The first algorithm is based on holding in a buffer large enough data points of the time series.
+It goes something like this (keep looking at the diagram):</p>
+<ol class="simple">
+<li><p><strong>Prediction step</strong> :
+- look-back for states that match the PRESENT (<strong>n</strong>) state , lets call them <strong>mn</strong>
+- for every match <strong>mn</strong> compare the PAST <strong>p[1], p[2] .. p[l]</strong> states with the past matched states,
+<strong>mp[1], mp[2], … mp[l]</strong>, pick one or many future states : <strong>future_state = mf</strong></p>
+<ul class="simple">
+<li><p>for every matching pair  <strong>p == mp</strong> increase the corresponding counter of <strong>score[future_state]</strong></p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- after reaching the beginning of the buffer pick the **future_state** with maximum score, this is the prediction      
+</pre></div>
+</div>
+<ol class="simple">
+<li><p><strong>Learning step</strong> :
+- Update the buffer with the current state (roll/shift the buffer to the left)</p></li>
+</ol>
+<p>It is essentially look-back search with counting.
+For this sinusoid the value of <strong>mf</strong> will always be the same, but if the signal is irregular different future values/states will get different scores ergo different predictions.</p>
+<p>The Buffer model is of the non-stationary kind i.e. p[x] == mp[x] counts, but p[x] == mp[y] does not.
+Position relative to the PRESENT state in the comparison matter.</p>
+<p>One very important thing about those models I have not mentioned yet is <strong>smoothing</strong>.</p>
+<p>As you will see in the next model too, the time series values normally are real numbers, but we know that we have limited number of states to represent them.</p>
+<p>There are three ways to solve this problem.</p>
+<ol class="simple">
+<li><p>Use fuzzy matching, which complicates the algorithm.</p></li>
+<li><p>Second option is to use representation which naturally handless fuzziness, example of this is Sparse Distributed Representation (SDR), which is the project I’m still thinking about and probably will be the final best model, I hope !! if I can invent it ;), anyway this has always been my target from the beginning (I just happened to invent threensitions as I was thinking about it ).</p></li>
+<li><p>And the third and easiest option is to <strong>smooth</strong> the signal which is what we are doing here.</p></li>
+</ol>
+<p>There are also different ways to do smoothing in this <strong>Buffer model</strong> we will use resolution method f.e. resolution=5,  mean that before processing every data entry will be encoded in such a way that the values can take only specific values in this case 2.5, 7.5, 12.5, 17.5… this guarantees us that we can match them effortlessly.</p>
+<hr class="docutils" />
+<p><strong>Pros and cons :</strong></p>
+<ol class="simple">
+<li><p>The benefit of this model are :</p></li>
+</ol>
+<ul class="simple">
+<li><p>Easy to understand and implement</p></li>
+<li><p>Can do prediction multiple steps ahead, which is not true for other methods</p></li>
+<li><p>Fast, because we first search for match for <strong>n</strong> state and then do the expensive operation of comparing <strong>p == mp</strong></p></li>
+</ul>
+<ol class="simple">
+<li><p>Drawbacks are :</p></li>
+</ol>
+<ul class="simple">
+<li><p>Not very good to reason about.</p></li>
+<li><p>In essense copy&amp;paste, you can see this if you predict multiple steps ahead.</p></li>
+</ul>
+<p>Let’s now experiment with the code.
+Quickly let explore the data properties.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;min:&quot;</span><span class="p">,</span> <span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;max:&quot;</span><span class="p">,</span> <span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;size:&quot;</span><span class="p">,</span> <span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>min: 16
+max: 39205
+size: 17520
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Ok.. the procedure is very easy we have to create TTS (threensition time series) object. The meaning of the parameters are :</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>buffer_len</strong> : what part of the signal we would use to “gather” statistics (look back length).</p></li>
+<li><p><strong>ctx_len</strong> : how much of the Past data we should consider matching. It is not always good to use big number. It depends on the time series.</p></li>
+<li><p><strong>smooth</strong> : this almost definitely has to be true, otherwise this model would work only on clean signals.</p></li>
+<li><p><strong>resolution</strong> : defines the steps between smoothed state values.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Now we have to train the model. Simply passing the data (1D numpy array) to batch_train() will be enough.</p></li>
+<li><p>Print the statistics to see how well the model behaves. If you want to see what stats functions do check the source of stats class.</p></li>
+</ol>
+<ul class="simple">
+<li><p>You can provide skip=X to skip the first X data point when calculating the stats. You may wanna do that because it takes a while for the model to settle.</p></li>
+<li><p>original=True instruct the object to calculate statistics against the original signal, not against the smoothed one.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Finally you  can plot the  graph. The smoothed signal is blue color, the predicted is in green.</p></li>
+</ol>
+<ul class="simple">
+<li><p>original=True means that it will draw in yellow the original signal.</p></li>
+</ul>
+<blockquote>
+<div><p>BTW, both model can run in batch and online mode w/o problem, you just have to call different methods : batch_train() vs train(). If you decide to use the models for online mode you have to probably remove all statistics related arrays, so that the object don’t eat all the memory over time.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">TTS</span><span class="p">(</span><span class="n">buffer_len</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">ctx_len</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">smooth</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">batch_train</span><span class="p">(</span><span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="mi">1000</span><span class="p">])</span>
+<span class="n">t</span><span class="o">.</span><span class="n">stats</span><span class="p">(</span><span class="n">skip</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== MODEL stats ==============
+mape:  0.167461405158
+mae :  2461.43174251
+rmse:  4797.93674441
+r2:  0.473038553909
+nll:  4.20139469566
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">original</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/threensition_9_0.png" src="../../_images/threensition_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">.</span><span class="n">stats</span><span class="p">(</span><span class="n">skip</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">original</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== MODEL stats ==============
+mape:  0.0941093757526
+mae :  1470.28542914
+rmse:  2345.4659973
+r2:  0.874378479485
+nll:  0.389619223192
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sparse-cube-counter-model">
+<h3>Sparse/Cube counter model<a class="headerlink" href="#sparse-cube-counter-model" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>The second implementation is more probabilistic, later I will try to provide mathematical description.</p>
+<p>If you remember for Markov chain of order-1 we have 2 variables <strong>PARENT =&gt; CHILD</strong> so we used a 2D transition table as a model.
+As you may suspect for 3 variables <strong>PAST =&gt; PRESENT =&gt; FUTURE</strong>, we would need 3D cube.</p>
+<p><img alt="cube" src="../../_images/cube.png" /></p>
+<p>In the visualization above the <strong>y-axis(rows)</strong> represent PAST states, <strong>x-axis(cols)</strong> represent PRESENT states, <strong>z-axis(depth)</strong> represents FUTURE states.</p>
+<p>All variables accept the same number of states … f.e. 100x100x100 cube allows us to store counters for 100 states/values. (<em>I was worried the memory consumption will prohibit using this specific implementation, but was pleasantly surprised to find that 200 states are more than enough in my test cases.</em>)</p>
+<p>The algorithm is very easy :</p>
+<ol class="simple">
+<li><p>Prediction : What we have as input is the context (i.e. past) and the present state</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>p</strong> states (not a single state) select the rows <strong>y</strong> coordinates.</p></li>
+<li><p><strong>n</strong> selects the column <strong>x</strong> coordinate (this is the slice in the picture)</p></li>
+<li><p>This operation picks stripes of the 2D slice, which we sum vertically along Y-axis.</p></li>
+<li><p>The result is array of scores, the index of the max score is the prediction.</p></li>
+<li><p>Here is how it looks in python :
+<strong>future = map[past,present,:].sum(axis=0).argmax()</strong></p></li>
+</ul>
+<ol class="simple">
+<li><p>Learning : for every time step</p></li>
+</ol>
+<ul class="simple">
+<li><p>increase the cross section given by the coordinates  : <strong>map[ past, now, future ] += 1</strong></p></li>
+</ul>
+<p>Which means this : <strong>map[ [p1,p2,p3..], now, future ]</strong></p>
+<hr class="docutils" />
+<p><strong>Pros :</strong></p>
+<ol class="simple">
+<li><p>Easy to implement</p></li>
+<li><p>The cube normally is very sparse, which means there is possibility for memory optimization. F.e. using tree instead of 3D array. (BTW don’t try to use python based dict-tree, 2% sparse cube when converted required just half the memory size. If the cube sparsity grows abit it it will probably become bigger than 3D cube. Plus tree access will be slower. C++ based tree class may be better, because you can control the memory structure explicitly.)</p></li>
+<li><p>There are some tricks that we can use to overcome the limit on the number of possible states by using SOM or on-the-fly averaging (mimicing HTM Spatial pooler).</p></li>
+<li><p>Fast</p></li>
+<li><p>No need to use probabilities, counters do fine.</p></li>
+<li><p>Did I say it is fast ~20000+ data points in a sec on my slow laptop</p></li>
+</ol>
+<p><strong>Cons :</strong></p>
+<ol class="simple">
+<li><p>More than couple of hundred states is unfeasible, because of memory consumption.</p></li>
+<li><p>Can predict only one n-step forward, if 3D.</p></li>
+</ol>
+<p>Let’s check the properties of the signal. This time we will need the information.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;min:&quot;</span><span class="p">,</span> <span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;max:&quot;</span><span class="p">,</span> <span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;size:&quot;</span><span class="p">,</span> <span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>min: 16
+max: 39205
+size: 17520
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again like the previous model we have <strong>ctx_len</strong>, but this time we have to provide <em>number of states</em> , <em>minimum</em> and <em>maximum</em> value. The reason for this is because the <strong>smoothing</strong> in this model is based on the range of the values. The resolution step is basically <strong>resolution = range/nstates</strong>. If you look below in the stats you can see the resolution for this range is 150.</p>
+<p>What is different than the previous model is also <strong>“zero_freqs=True”</strong>, we cheat somewhat to solve the so called <em>zero-frequency problem</em> (<em>for which you can read at the end of this article</em>).</p>
+<p>Whenever we get as prediction 0 or max state we substitute for it with the previous time series value (you can easily change the code to use the last predicted instead).
+If you look at the graph of the <em>Buffer model</em>, those are the abrupt drops to zero in the graph. To give you some idea how often this happen if you provide <strong>nope=True</strong> when you plot the signal those cases will show as a red dots.</p>
+<p>I was surprised that more <strong>nstates</strong> and/or <strong>ctx_len</strong> is not always a good idea, it seems that my tests behave well with around 200 states. Probably some sort of over/under fitting. Because the cube is very sparse increasing the number of states may be makes it so sparse that there is not enough statistics to distinguish the winning state vs noise.</p>
+<p><em>Also in this tutorial I limit the data points that are trained for visual purposes, so you can see clearer graph.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">t3</span> <span class="o">=</span> <span class="n">TDTTS</span><span class="p">(</span><span class="n">nstates</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">ctx_len</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30000</span><span class="p">,</span> <span class="n">zero_freqs</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">t3</span><span class="o">.</span><span class="n">batch_train</span><span class="p">(</span><span class="n">ny_taxi</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="mi">1000</span><span class="p">])</span>
+<span class="n">t3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">original</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">nope</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== MODEL stats ==============
+mape: 9.024% 
+mae : 1328.004
+rmse: 1851.882
+r2: 92.170%
+nll:  0.995
+resolution: 150.0
+======== TDSM =================
+MLL: 23
+MLL ix: (past, present, future) (199, 124, 120)
+sparsity: 0.46%
+mem: 15.26 MB
+</pre></div>
+</div>
+<img alt="../../_images/threensition_14_1.png" src="../../_images/threensition_14_1.png" />
+</div>
+</div>
+<p>Let’s try the hot-gym data set … we plot after the 500th step, just for test.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;min:&quot;</span><span class="p">,</span> <span class="n">hot_gym</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;max:&quot;</span><span class="p">,</span> <span class="n">hot_gym</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;size:&quot;</span><span class="p">,</span> <span class="n">hot_gym</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>min: 88
+max: 953
+size: 4390
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">t4</span> <span class="o">=</span> <span class="n">TDTTS</span><span class="p">(</span><span class="n">nstates</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">ctx_len</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">zero_freqs</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">t4</span><span class="o">.</span><span class="n">batch_train</span><span class="p">(</span><span class="n">hot_gym</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="mi">1000</span><span class="p">])</span>
+<span class="n">t4</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skip</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">original</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">nope</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== MODEL stats ==============
+mape: 13.868% 
+mae : 45.146
+rmse: 77.412
+r2: 76.539%
+nll:  0.503
+resolution: 5.66666666667
+======== TDSM =================
+MLL: 2482
+MLL ix: (past, present, future) (6, 6, 6)
+sparsity: 0.89%
+mem: 6.44 MB
+</pre></div>
+</div>
+<img alt="../../_images/threensition_17_1.png" src="../../_images/threensition_17_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="self-organized-maps-som">
+<h3>Self Organized Maps (SOM)<a class="headerlink" href="#self-organized-maps-som" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>As I already mentioned because of the memory usage we can not use too many states.
+So we have to find a way to utilize better the available ones. (Btw. less states is also good from another perspective it takes care of the noise if we have enough states for the general underlying signal).</p>
+<p>We did this with <strong>resolution smoothing</strong> for the Buffer model and <strong>range smoothing</strong> for the 3D cube model, but there is one more improvement we can do.</p>
+<p>We can have range smoothing, but instead hard coded values we can allow the numbers to “float” within their range depending on the incoming data. F.e. let say that the range forces us to use state-1 with value 5 and state-2 with value 15, but very often in the data we have 7 and 8, rather than 5, wouldn’t be better if we can change state-1 to to use value 7.5 instead.</p>
+<p>That is what we can do with SOM i.e. as the data comes it nudges the state-values towards better resembling the incoming data. You can read more about SOM in my test implementation of <a class="reference external" href="http://ifni.co/spatial_mapper.html">Spatial-mapper</a>.</p>
+<p>Did I say Spatial mapper :). Functionally SOM is a Spatial Mapper. The difference is that this one is real-numbers based  and the other one is SDR based.</p>
+<p><em>I’m currently still testing my real-numbers SOM implementation as a standalone piece, but will soon fold it in the 3D cube model.</em></p>
+</div>
+<div class="section" id="probabilistic-model">
+<h3>Probabilistic model<a class="headerlink" href="#probabilistic-model" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>I’m new with this mathematization of computer algorithms and probabilities, so give me some slack and definitely ping me if you see some mistake. So here goes …</p>
+<p>Normally a probabilistic model requires the definition of the so called <strong>joint distribution</strong>. If you have 2 variables, let say x and y you can imagine it as a table where we know the probability for every combinations.</p>
+<p>f.e. as <strong>counters</strong> :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>y\x</p></th>
+<th class="head"><p>s1</p></th>
+<th class="head"><p>s2</p></th>
+<th class="head"><p>s3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>s1</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>s2</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>s3</p></td>
+<td><p>10</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>So given this table we know that :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(x=s_3,y=s_2) = 9/30 = 30\%\]</div>
+</div></blockquote>
+<p>the sum of all elements is 30.</p>
+<p>and the same table as probabilities <strong>p(x,y)</strong> :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>y\x</p></th>
+<th class="head"><p>s1</p></th>
+<th class="head"><p>s2</p></th>
+<th class="head"><p>s3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>s1</p></td>
+<td><p>0.06</p></td>
+<td><p>0.17</p></td>
+<td><p>0.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>s2</p></td>
+<td><p>0.00</p></td>
+<td><p>0.03</p></td>
+<td><p>0.30</p></td>
+</tr>
+<tr class="row-even"><td><p>s3</p></td>
+<td><p>0.33</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+<p>from this we can calculate any other probability we may need f.e. :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(y=s_2) = 0.00 + 0.03+0.30 = 0.33 =&gt; 33\%\]</div>
+<div class="math notranslate nohighlight">
+\[p(y=s_1|x=s_2) = 0.17/(0.17+0.03+0.00) = 0.85 =&gt; 85\%\]</div>
+<div class="math notranslate nohighlight">
+\[p(y=s_1|x) = [0.15, 0.85, 0.25]\]</div>
+</div></blockquote>
+<p>and so on …. you get the point.
+So if we know the joint distribution it means we know the content of every cell in the table.</p>
+<p>The problem is most often it is impossible to have the full joint distribution either because we don’t have enough data to collect the statistics or because it is computationally very expensive, especially if we have more than two variables.
+For every new variable we have to add one more dimension.</p>
+<p>What we try to do with the graph models is to state dependencies explicitly which in turn allows us to disregard the rest and lower the complexity of the model.
+F.e. the threensition model is defacto L+2 variables, but with the Past=&gt;Present=&gt;Future simplification we were able to bring it down to 3 variables, on top of that on the tests I’ve done so far only 2-5% of the cube contains counters the rest are zeros.</p>
+<p>Let’s see again the threensition model.</p>
+<p><img alt="ppf" src="../../_images/ppf.png" /></p>
+<p>We would use the canonical formulas in probabilities :</p>
+<blockquote>
+<div><p>Marginalization: $<span class="math notranslate nohighlight">\(p(x) = \sum_y p(x,y)\)</span><span class="math notranslate nohighlight">\(
+Product rule : \)</span><span class="math notranslate nohighlight">\(p(x,y) = p(x|y)p(y) = p(y|x)p(x)\)</span><span class="math notranslate nohighlight">\(
+Three variables : \)</span><span class="math notranslate nohighlight">\(p(x,y,z) = p(x|y,z)p(y,z) = p(x|y,z)p(y|z)p(z) \)</span>$</p>
+</div></blockquote>
+<p>We said we have 3 variables :</p>
+<blockquote>
+<div><p>Past(P), Present(N), Future (F)</p>
+</div></blockquote>
+<p>Also the Past is a abstraction of multiple variables <strong>p1,p2,p3, …, pl</strong>, which implies that our <strong>joint distribution</strong> look like this <strong>p(p1,p2,p2,…,pl,N,F)</strong>, which will indicate we would need L+2 dimensional cube, but … we substitute all <em>p’s</em> with single “instantaneous” variable P.</p>
+<p>By this I make the model assumption that all <em>p’s</em> select single N state i.e. <strong>p(N|P) = (N|p1,p2, …,pl)</strong>.
+It is important to note that I made an <strong>assumption</strong>. This was not obvious to me at the beginning when I was exploring machine learning models i.e. we make trade-off between complexity of the meta-model and the process we are trying to model. Then we test and if we don’t get satisfactory results we either scrap the meta-model or make different assumptions and start again. By meta models I mean Markov chains, HMM, AR, SVM, Regression, NN …</p>
+<p>The assumption I made here seem to work that is why I stuck with it.</p>
+<p>Now at last our joint distribution p(P,N,F) will be modeled by 3D transition cube.</p>
+<p>Let see if it will work mathematically.</p>
+<blockquote>
+<div><p><strong>What is our final goal ? Predict a Future state.</strong></p>
+</div></blockquote>
+<p>Which in this case is the marginal.</p>
+<p>According to the PNF-graph it is :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(F) = p(F|N)* p(N|P) = p(F|N) * p(N|p1,p2,p3, ... pl)\]</div>
+</div></blockquote>
+<p>Where <strong>L</strong> is the number of context states.</p>
+<p>Let see if that is true, by applying Marginal rule and then the production rule, if we have the joint p(F,N,P) and we want to calculate the marginal :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(F) = \sum_{N,P} p(F,N,P) = \sum_{N,P} p(F|N,P) p(N|P) p(P)\]</div>
+</div></blockquote>
+<p>But we made the assumption that F depends only on N and is independent of P, so we can remove it from p(F|N,~~P~~).</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(F) = \sum_{N,P} p(F|N) p(N|P) p(P)\]</div>
+</div></blockquote>
+<p>huh… we got one additional item i.e. <strong>p(P)</strong>, why is that ?
+If we take our assumptions into account then :</p>
+<blockquote>
+<div><p>p(P=s_n) &lt;=&gt; function(state_n, ctx_state) = ctx_state == 1 and state_n == ctx_state ? 1 : 0</p>
+</div></blockquote>
+<p>i.e. if context state and the state we are checking are the same and the context state is 1, then p(P=s_n) = 1 otherwise it is zero.</p>
+<p>Let’s try specific example with three states  <strong>S={s1,s2,s3}</strong>, and let say this is the <strong>context={s1=1, s2=0, s3=1}</strong> :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(F=s_1) = \sum_{n=1}^{L} p(F=s_1|N=s_n) p(N=s_n|P=s_n) p(P=s_n) \]</div>
+<div class="math notranslate nohighlight">
+\[ = p(F=s_1|N=s_1) p(N=s_1|P=s_1) p(P=s_1) + p(F=s_1|N=s_2) p(N=s_2|P=s_2) p(P=s_2) + p(F=s_1|N=s_3) p(N=s_3|P=s_3) p(P=s_3) \]</div>
+<div class="math notranslate nohighlight">
+\[ = p(F=s_1|N=s_1) * p(N=s_1|P=s_1) * 1 + p(F=s_1|N=s_3) * p(N=s_3|P=s_3) * 1 \]</div>
+</div></blockquote>
+<p>but <strong>p(P=s2)</strong> is zero, so this means we can remove the sub expression that uses state s2.
+Aaaa, so this term is a sort filter that tells us which subexpressions to exclude from the calculation. Make sense ?</p>
+<p>Remember when I was explaining the 3D cube I mentioned we use only “stripes” from the PRESENT-sheet, not the whole sheet.</p>
+<hr class="docutils" />
+<p>So lets state again our final Probability model is :</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[p(F) = argmax \sum_{n=1}^{L} p(F|N) p(N|P) p(P)\]</div>
+</div></blockquote>
+<p>Here <em>argmax</em> is the requirement to pick the Future state with the best score.</p>
+</div>
+</div>
+<div class="section" id="musings">
+<h2>Musings<a class="headerlink" href="#musings" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>So far this and similar models are good for range-bound repeatable signals where the collected statistics get more and more relevant, and not so good for trending signals. What do I mean by that ?</p>
+<div class="section" id="permutation-transformation-problem">
+<h3>Permutation Transformation problem<a class="headerlink" href="#permutation-transformation-problem" title="Permalink to this headline">¶</a></h3>
+<p>In the literature subset of what I dubbed <strong>Permutation Transformation (PT)</strong> is the so called <strong>“zero-frequency”</strong> problem. I think mine definition is more abstract and explains possible avenue of attack as I will explain in a minute.</p>
+<p>So the <strong>zero-frequency</strong> problem as the names implies is what do we do in cases where we did not collect statistics yet i.e. new state show up for the first time (HTM bursing mode, anyone :)).</p>
+<p>Good example of this is a trending signal where new states/values not seen earlier pop-up all the time.
+I’m still exploring how this problem is handled in the literature. It is most often discussed in the Compression papers. <em>(if you’ve seen the red-dots on the graph I mentioned earlier, those are exactly zero freq. cases)</em></p>
+<p>Why did I call this <strong>Permutation Transformation</strong> problem.
+As we are processing a signal we are assuming we have no other external information so the only information we have is the signal itself. By collecting statistics we can predict with any certainty only states we already encountered.
+But if you stop and think for a moment we can transform the same signal in infinite ways f.e. we can scale it, skew it, FFT-it, find linear dependencies (that’s why AR can handle trending signals) and generate brand new states/values which are still only dependent on the signal itself.
+So if we can create a model that represent most probable <strong>transformations</strong> of the data not only the most probable <strong>known-transitions</strong> we can in theory predict most probable new states.</p>
+</div>
+<div class="section" id="far-ahead-prediction">
+<h3>Far-ahead prediction<a class="headerlink" href="#far-ahead-prediction" title="Permalink to this headline">¶</a></h3>
+<p>Threensition and most other models as we saw predict one n-step ahead, but with time series what we really want is to predict multiple steps ahead, as the Buffer model can do, but better. Like AR-models but better, the auto-correlation and trend extraction should happen automatically by Permutation-Transformation or some such.</p>
+<p>My current thinking on this is that this should be solved by external-forces.
+For example Reinforcement learning where Threensition+Permutation-Transformation is the model part of the algorithm and RL guides the most probable prediction path. The problem here as far as I understand it is that there is no obvious way to figure out a <strong>reward function</strong>. RL can do w/o other stuff, but the assumption is you have to have a reward function.</p>
+<p>If you are familiar with Trending analysis for Stock trading … stuff like shape, trend-lines and so on can be used as <strong>REWARDS</strong> in a RL algorithm.</p>
+<p>Then you chain together many of them in hierarchy and voila :)</p>
+<p>This also seems to tie well with HTM theory, where the TM is the model and the feedback mechanisms are sort of RL on steroids.</p>
+<p><em>Hope you liked this expose !</em></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/threensition"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="../multi-regex/multi-regex.html" title="previous page">Multi regex</a>
+    <a class='right-next' id="next-link" href="../misc/piped_wordnet.html" title="next page">Wordnet pipes</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,1542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bare bones HTM &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="TEST wrapper" href="TM_test.html" />
+    <link rel="prev" title="More OPS" href="../bi/More_Operations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bare bones HTM
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bare-bone-htm">
+   Bare-Bone HTM
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#babyhtm-bbhtm">
+     (babyHTM, bbHTM)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-sdr">
+     WHAT IS SDR ?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#so-what-is-sdr">
+       So what is SDR ?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-sdr-work">
+       Why SDR work ?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#properties-of-sdr">
+       Properties of SDR
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-htm-region-work">
+     How HTM region work !
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#semantic-extraction">
+     Semantic extraction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encoding">
+     Encoding
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-pooler-part-1">
+     Spatial pooler : part 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temporal-sequence-memory">
+     Temporal/Sequence Memory
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-implementation">
+     The implementation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-storage">
+       The storage
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#a-href-bmap2d-html-target-blank-bmap2d-a">
+         &gt;&gt;
+         <a href="bmap2D.html" target="_blank">
+          BMap2D
+         </a>
+         &lt;&lt;
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-process">
+       The process
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-it-works">
+       Why it works ?
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lets-try-it">
+         Lets try it !
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-href-tm-test-html-target-blank-test-framework-a">
+       <a href="TM_test.html" target="_blank">
+        Test Framework
+       </a>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-href-spatial-mapper-html-target-blank-spatial-pooler-mapper-a-part-2">
+       <a href="spatial_mapper.html" target="_blank">
+        Spatial pooler/mapper
+       </a>
+       : part 2
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#temporal-pooler">
+       Temporal pooler
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-href-http-ifni-co-home-a-a-href-http-ifni-co-toc-programming-programming-a-a-href-https-github-com-vsraptor-bbhtm-source-code-a">
+       ===[
+       <a href="http://ifni.co">
+        HOME
+       </a>
+       ]=====[
+       <a href="http://ifni.co/toc/programming">
+        Programming
+       </a>
+       ]=====[
+       <a href="https://github.com/vsraptor/bbhtm">
+        Source code
+       </a>
+       ]=====
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="bare-bones-htm">
+<h1>Bare bones HTM<a class="headerlink" href="#bare-bones-htm" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scalar_encoder</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">category_encoder</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">bmap2D</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">temporal_memory</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">pattern_lang</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bare-bone-htm">
+<h1>Bare-Bone HTM<a class="headerlink" href="#bare-bone-htm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="babyhtm-bbhtm">
+<h2>(babyHTM, bbHTM)<a class="headerlink" href="#babyhtm-bbhtm" title="Permalink to this headline">¶</a></h2>
+<p><em>Currently the main trend to solve the AI challenge is mostly based on mathematically inspired approach i.e. the perceptron-layered “neuro” networks.
+This approach achieved big success so far in solving very complex problems, even spectacularly beating human  in some narrow tasks.
+Still if the 60’s logic AI was brittle the new 2016 statistical AI is fragile.
+One alternative approach taken by Jeff Hawkins and his team at Numenta is human brain inspired approach.
+They have build a theory and framework to do that, called Hierarchical Temporal Memory (HTM).
+The following article uses a simplified and abstracted approach, stealing as much as possible from Numenta ideas at the same time trying some tweaks of my own.</em></p>
+<p><em>I hope you enjoy <strong>bbHTM</strong>.</em></p>
+<hr class="docutils" />
+<p>Before we start with the meat of the matter let’s explore somewhat the basic differences between the traditional approach and HTM.
+Traditional NN use as a basic building block artificial-neuron called <strong>Perceptron</strong>, which has almost nothing to do with the real neuron, but is just superficially similar. It will be more correct to call it <em>linear classifier</em> instead.
+In addition the output signal of this classifier is modified by a non-linear function, so that it can change within specific boundaries or to limit the behavior in some way.
+Here is schematic of the percepton :</p>
+<p><img alt="perceptron" src="../../_images/perceptron.png" /></p>
+<p>The perceptron works by multiplying the input signal by the weights.</p>
+<div class="math notranslate nohighlight">
+\[ out = \sum\limits_{i=1}^n  w_i * x_i \]</div>
+<p>The way to learn to classify data is to adjust the weights in such a way so as to predict correctly provided pairs of input and output data.
+Next those pseudo neurons are paired in a layer, when multiple layers are connected together you build a network.</p>
+<p><img alt="nn" src="../../_images/nn.png" /></p>
+<p>Now, the normal procedure is to train the NN with labeled data in a similar fashion that we do single Perceptron (this is the general approach, there is also unsupervised variants).
+You pass data on the input and then propagate the signal through, doing the necessary calculation in-between.
+Once the result is out (prediction) we compare it with correct output (i.e. the labeled data).</p>
+<p>There will be almost certainly a differences between predicted and labeled output, so we take this difference and propagate it backwards adjusting the weights and biases by a small amount so that next time when we do forward pass the prediction differ less and less.
+After that we pick another data-item or batch-of-data … rinse and repeat, until we get pretty close to the original labeled data.</p>
+<p>After doing this we have well-tuned network that can classify correctly data similar to the one we trained.</p>
+<p>The method of going backward trough the network is called <strong>Backward propagation</strong> and the slight adjustment made on the way is called <strong>Stochastic Gradient Descent</strong> (<em>there are variation on those too</em>).
+This simplified model suffer from a “small” problem which did not allow NN to be used widely up until ~10 years ago. (NN were first introduced in the dawn of AI).</p>
+<p>The problem is called <em>“the vanishing gradient problem”</em> and happens when we chain many layers together. Because different layers learn with different speeds it happen that layers close to the output learn alot faster, but layers at the beginning are stuck and learn almost nothing (the adjustments are smaller and smaller the deeper the network), so that NN can not be used to solve problems above specific “complexity”, no matter how many new layers we add.
+So adding more layers only increases the computation time without improving the prediction capability.</p>
+<p>There is need for more layers so that we can represent richer models and find deeper patterns in the data.
+The so called “deep networks” solved this problem by adding bottleneck (more or less) at some point inside the NN thus forcing the multi-layered network to act as multiple multi-layered networks.
+Further the NN proliferated even more by replacing the building block i.e. the Perceptron with more complex mathematical abstractions.</p>
+<p>Because most of NN are implemented using matrices, if you are more mathematically inclined you can think of NN as giant swarm of fine tuned linear equations.</p>
+<p>Basic characteristics of this NN approach are :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Batch learning
+2. Backpropagation
+3. SGD like fine tuning
+4. Real valued data
+5. Dense representation
+6. Static - no concept of time
+7. Computation
+8. Learns by connections weights
+</pre></div>
+</div>
+<p>The brain on the other hand does nothing like that, but :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Online learning
+2. Binary data
+3. Sparse representation
+4. Dynamic - time is integral part
+5. Pattern Memorization
+6. Learns by Existence or non-existence of connections 
+</pre></div>
+</div>
+<p>The HTM theory and framework from Numenta team is trying to mimic how the neuro-cortex of the brain works. The idea came because research showed that the neuro-cortex seem to be organized in a very uniform way. So if we can understand how the “basic” structure in the cortex work, then we can eventually use it as a template for building software that can do better AI.
+The first major difference of the HTM to NN is the building block, HTM implements more believable approximation of the brain-neuron.</p>
+<p><img alt="HTM neuron" src="../../_images/ann.png" /></p>
+<p>You can find more info <a href="http://arxiv.org/pdf/1511.00083.pdf" target="_blank">here</a>, but in general here are some details :</p>
+<ul class="simple">
+<li><p>HTM-neuron uses <strong>permanence</strong>, instead of <strong>weights</strong>:
+Which act more like a switch rather than a continuous function. Above specific threshold the input switch from 0 to 1. I.e. permanences are still real numbers like weights, but they “generate” binary result.</p></li>
+<li><p>There are also at least two categories of inputs <strong>proximal</strong> and <strong>distal</strong> (modeled on the neuron dendrites).
+Proximal inputs are summed, much like those in the perceptron (<em>this is the linear component</em>), but distal are combined in separate groups and act as signal detectors (<em>this is the non-linear component</em>).</p></li>
+<li><p><em>Distal</em> inputs/dendrites do not cause the HTM-neuron to ‘fire’, but only predispose it to ‘fire’. This is essential for prediction.</p></li>
+</ul>
+<p>Because the HTM-neurons is not an exact copy of the real one and also so that we don’t get confused with current terminology, Numenta are calling them <strong>“cells”</strong>.</p>
+<p>The other difference is the way the cells are organized. Instead of <strong>network</strong>, we use <strong>region</strong>.
+Each region consist of cells organized in <strong>columns</strong>, “spliced” together.
+(Here I will use 2D analogy, because that’s how I did the implementation, but in Numenta videos they sort of use 3D regions.)
+So you can think of <em>region</em> as 2D-table, where the building block is the <strong>cell</strong>, but the main organizational unit is the <strong>column</strong>.
+This is not coincidence that is how more or less neuro-cortex works (which is the thing HTM tries to model).</p>
+<p><img alt="region" src="../../_images/region.jpg" /></p>
+<p>Next organizational unit is the <strong>layer</strong>, every layer consist of multiple regions. A region can connect with region in another layer.</p>
+<p><em>There is not much details on this yet, current theory does not cover exactly how the hierarchy of layered regions will work, but they are working on it.</em></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="what-is-sdr">
+<h2>WHAT IS SDR ?<a class="headerlink" href="#what-is-sdr" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>The data representation used in the cortex and in the HTM is not real-valued-dense vectors, but binary <strong>Sparse Distributed Representation</strong> aka <strong>SDR</strong>. This is a major difference to any other approach of doing  computing and the reason is that it is not a representation well suited for Computation, but representation very well suited to Memorization. The brain is memory not calculator.</p>
+<p>This presents some problems because we have to figure out how to convert our data to SDR, but also allows us to do things naturally almost impossible with the computational approach.</p>
+<div class="section" id="so-what-is-sdr">
+<h3>So what is SDR ?<a class="headerlink" href="#so-what-is-sdr" title="Permalink to this headline">¶</a></h3>
+<p>First thing SDR is binary i.e combination of 1|0, yes|no, not real-valued 2.33, 4.68, 222.567.</p>
+<p>Second it is sparse and distributed. This guarantees that if a small number of bits change randomly it wont impact the overall meaning of the data.</p>
+<p>To get better idea what SDR mean it is best to see how the opposite work i.e. <strong>Dense</strong> representation.
+One very good example very often cited is the ASCII code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0b1000001&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>if we change just one bit, f.e. the second one :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;0b1000011&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>the result is different character. The meaning of how the characters are encoded in ASCII is totally arbitrary and changing even a bit changes the meaning i.e. different character. The bits have no meaning.</p>
+<p>In SDR changing single bit doesn’t change the overall meaning.
+The meaning of a bit is not assigned, but is learned.
+Also as the name <em>sparse</em> implies the number of ones is just small percentage of the whole bit-string.
+For example in typical SDR with size 2048 bits the number of ON bits is at most 40 bits on i.e. just 2% of the total number of bits.</p>
+<blockquote>
+<div><p>01000100000000000000000000000000000000000000100 ….. 000000000000000000000000000000000000000100010000000</p>
+</div></blockquote>
+<p>Dense representation have the advantage of being able to utilize all bits, and enormous amount of permutations <strong>2^n</strong> to be precise.
+But the way we solve this problem with SDR is to use much much larger bit-strings, the accepted rule of thumb is at least 1000 bits.</p>
+</div>
+<div class="section" id="why-sdr-work">
+<h3>Why SDR work ?<a class="headerlink" href="#why-sdr-work" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>=== TODO ===
+I will fill this part as I have some more time …</p>
+</div></blockquote>
+</div>
+<div class="section" id="properties-of-sdr">
+<h3>Properties of SDR<a class="headerlink" href="#properties-of-sdr" title="Permalink to this headline">¶</a></h3>
+<p>Let’s explore some of the major properties of SDR, so you can understand the theory and code better.
+The following paper is the best source if you want to dig down :
+<a href="http://arxiv.org/abs/1503.07469" target="_blank">Properties of Sparse Distributed Representations and their Application to Hierarchical Temporal Memory</a>,
+but I will do quick overview.</p>
+<p>SDR have 3 major properties :</p>
+<ol class="simple">
+<li><p>Sub-sampling</p></li>
+<li><p>Classification</p></li>
+<li><p>Union</p></li>
+</ol>
+<p>Before we start we need to make some definitions.
+SDR is a binary vector.
+We determine similarity between two SDR vectors we use <strong>overlap score</strong>, which is simply the number of ON bits which match.</p>
+<div class="math notranslate nohighlight">
+\[ overlap(x,y) = sum(x &amp; y) \]</div>
+<p>Compare that to Hamming distance which measure how much both vectors differ (HTM do not use hamming distance in any of its algorithms, so far).</p>
+<div class="math notranslate nohighlight">
+\[ hammingDistance(x,y) = sum(x  \hat{}  y) \]</div>
+<p><strong>Matching :</strong> We decide that two vector match if their overlap is above specific threshold.</p>
+<div class="math notranslate nohighlight">
+\[ match(x,y) = overlap(x,y) &gt;= thresh \]</div>
+<p>To understand SDR properties we will have to also understand what <strong>“Overlap set”</strong> is.
+Overlap set is the number of combinations of vectors we can get that have exactly <strong>b</strong> bits of overlap WITH a vector <strong>x</strong> with size <strong>n</strong> and number of <strong>ON</strong> bits <strong>w</strong>.</p>
+<p>So the number of those combinations is given by the formula :</p>
+<div class="math notranslate nohighlight">
+\[ |O_x(n,w,b)| = {w_x \choose b} * {n - w_x \choose w - b} \]</div>
+<blockquote>
+<div><p>TODO …..</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Sub sampling</strong> : This property allows us to figure out if specific pattern is contained in an SDR, by comparing just small number of all bits that comprise the pattern.
+(A group of distal dendrites do that to discriminate if specific pattern to which a neuron have to react has occurred.)</p></li>
+<li><p><strong>Classification</strong> : Let say we have a bunch of unique SDR’s (where unique means they don’t match according to specific threshold). Given that, how reliably we can say if a new SDR is part of this list or not i.e. classify.</p></li>
+<li><p><strong>Union</strong> : Is a property of SDR that allows us to store reliably a list of patterns (by OR-ing them together) and consequently ask if new SDR is a part of that list.
+(Allows us to do classification without the need to store all the patterns)</p></li>
+</ul>
+<p>You should look at the paper to see numerical examples of reliability of those properties for different values of n,w,b and threshold. Suffice to say as long as the vectors are Large &gt; 1000, Sparse &lt; 5% and Distributed the properties hold pretty well.</p>
+<p>My current implementation uses exclusively the UNION property of SDR.</p>
+<p>The big benefit of the union-property is that it allow us to store multiple SDRs in fixed-length bit-string.
+Standardly we would use some structure like array or hash to store multiple elements, but the properties of SDR make it possible to achieve similar result with fixed structure.
+This is possible because as the SDR size grow linearly the possibility of not getting false-positive grows exponentially.</p>
+</div>
+</div>
+<div class="section" id="how-htm-region-work">
+<h2>How HTM region work !<a class="headerlink" href="#how-htm-region-work" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><a href='http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-en.pdf' target='_blank'>HTM theory</a></p>
+<p>The main function which neuro-cortex as we understand it now is to memorize and replay sequence of sequences (time-patterns) stored in hierarchical layered structures.</p>
+<p>Said in another way : find patterns coming from the senses, build models of reality and do predictions.
+Prediction is intelligence.</p>
+<p>The HTM theory provides the framework to do all this and here are the steps how you do that for a single HTM-region.</p>
+<ol class="simple">
+<li><p><strong>Semantic extraction (human) :</strong> Pick the semantic information from the data.</p></li>
+<li><p><strong>Encoder :</strong> Dense to Sparse. Convert semantic info to positions in a sparse bit-string.</p></li>
+<li><p><strong>Spatial pooler :</strong> from Sparse to Sparse Distributed. Find Spatio-temporal patterns.</p></li>
+<li><p><strong>Temporal/Sequence Memory :</strong> Discover, store and reply temporal patterns. (nth-step ahead)</p></li>
+<li><p><strong>Temporal pooler :</strong> Stabilize the output temporal patterns, aggregate.</p></li>
+</ol>
+<p>I started this project with the idea to implement Spatial Pooler and Temporal Memory on my own as exercise to understand the technology.
+If my code or implementation does not seem to follow very close the Numenta NuPic application or theory there is good reasons for this.
+First I wanted to do it in more abstract and simplified way, second I’ve not used NuPic application at all and have not read the code, so I had to come up with my own solutions to solve the problems I created for myself not following the exact recipe ;).</p>
+<p>My other excuse is that HTM is in flux :), so it is a moving target anyway.</p>
+<p>The source of guidance for me were the published papers and videos, some of which I linked in this article.
+What I currently describe is the 2-3rd rewrite of the code. My first version of both SP and TM was very close to one described in the paper using mostly numpy, but as you will see in a while I had to scrap the TM for good reason, as for the SP I want to base it on the ideas I got from my current TM implementation.</p>
+<p>Let’s now go in more details …..</p>
+</div>
+<div class="section" id="semantic-extraction">
+<h2>Semantic extraction<a class="headerlink" href="#semantic-extraction" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>This is the part for which I have the least clear idea yet how to automate. May be once we have full working HTM we can use it to do this task for us ;)</p>
+<p>So what it is all about ? Normally we get data which can be in many different formats : <em>real numbers, integers, categories ; numbers, date, time, color, weight, height …</em>
+In the NN world you can sometimes use the data as it is or slightly reshape it and you are ready to go.
+But in HTM as we saw we need to convert the data to <strong>SDR</strong>.
+The tricky part is we can not do this mechanically. We have to extract the semantic information or explore hidden ‘relations’ and then encode them with bits at specific positions in the SDR. Remember every bit has a meaning, bunch of bits builds a spatial or temporal relation, a concept.
+This has to be done by human, so far I don’t know of a general way to extract the semantic information out of any type of source data.</p>
+<p>Once we figure the semantics of the data we build Encoders to do convertion to SDR format.</p>
+</div>
+<div class="section" id="encoding">
+<h2>Encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><a href='http://arxiv.org/abs/1602.05925' target='_blank'>Encoding Data for HTM Systems</a></p>
+<p>Encoders are normally built once per data type and then reused. The basic goal as we mentioned already is to capture the best we can the semantics of the data.</p>
+<p>Let’s think of some examples …. let say we want to find patterns about flowers, one semantic characteristic would be color.
+We can represent it in two ways : as a category (red,green,blue,violet) or as RGB color.
+If we do category we may decide to stick with 10 discrete colors.
+These are our categories and their bits don’t overlap (unless we want to also represent red-greenish, blue-reddish ….etc ).
+So if we have n=100 bits as our input vector we can dedicate 10 bits per color.</p>
+<p>Another example is numbers. Let say we measure the flowers sizes and they range from 10 cm to 100 cm.
+So our specs will be :</p>
+<p>** n=20, start=10 , end=100, width=10 **</p>
+<p>Number of bits is n=20, width=10 is how many ON bits we would use at any given time.
+It is obvious we can not use a bit for every number, because the number of available bits is smaller than the numbers we want to represent. Also we don’t want the meaning to change when we change just single bit, remember ASCII.
+So we would use multiple bits to represent range of numbers.
+We also slide those bits to represent overlapping ranges.</p>
+<p>Lets give it a try, I built the Scalar encoder so we will just use it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">scalar_encoder</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">se</span> <span class="o">=</span> <span class="n">ScalarEncoder</span><span class="p">(</span><span class="n">minimum</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">nbits</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">se</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Scalar encoder -----
+min-max/range : 10-100/90
+buckets,width,n : 11,10,20
+</pre></div>
+</div>
+</div>
+</div>
+<p>as we can see we use 10 bits for a range. And “buckets” here describes how many ranges we have in total.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">se</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">se</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>do you see the sliding window… now for something surprising.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">se</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">se</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">33</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>it looks wrong, but is not … remember we are in fuzzy territory.
+In this case it is particularly jumpy because “n” is too small. Try bigger one.</p>
+<p>Let’s try color categories we mentioned earlier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">category_encoder</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">ce</span> <span class="o">=</span> <span class="n">CategoryEncoder</span><span class="p">(</span><span class="n">nbits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">ncats</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ce</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Category encoder -----
+Num of categories : 5
+Num of bits : 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">ce</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 1, 1, 0, 0], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>You have to have Encoder for every data type, but again you have to build it only once. Also you can splice together different bit arrays to built your compound SDR. There is module in the repo for that.</p>
+<blockquote>
+<div><p>I would like to do separete doc on Encoders if I find time. There are several other implemented in the repo, if you are interested.</p>
+</div></blockquote>
+</div>
+<div class="section" id="spatial-pooler-part-1">
+<h2>Spatial pooler : part 1<a class="headerlink" href="#spatial-pooler-part-1" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Here I will just describe the requirements for Spatial pooler. In <strong>SP : part 2</strong> we will look at the implementation.</p>
+<p><em>The reason I’m spliting this in two is because SP will be implemented with the ideas we develop during TM discussion.</em></p>
+<p>The goal of Spatial pooler is to make the Sparse result from the Encoder a Sparse-Distributed.
+In addition there are several constraints which has to be met.</p>
+<ol class="simple">
+<li><p><strong>Similarity</strong> : Preserve similarity f.e. if we encode with ScalarEncoder two numbers and they have 5 bits overlap, we should expect the SP to preserve similar count of overlapping bits.</p></li>
+<li><p><strong>Uniquiness</strong> : Unsimilar values should have as small overlap as possible.</p></li>
+<li><p><strong>Distributed</strong> : The SP should use the availible bits as much as possible.</p></li>
+</ol>
+<p>This makes the SDR robust to noise and loss of information (bits).</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="temporal-sequence-memory">
+<h2>Temporal/Sequence Memory<a class="headerlink" href="#temporal-sequence-memory" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Temporal memory (TM) is the core component of the HTM framework, the heart of the system.
+Our brain constantly receives sensory data and at the same time does prediction of what will happen next.
+If the prediction is incorrect it self-adjusts to incorporate the new information.
+In a similar manner NN adjust its weight via Stochastic gradient descent and Back-propagation.
+The big difference is that the brain does this “online” every single datum for every single time-sequence, all the time, every time on every level of the hierarchy from neuron to column to region to layer … did I say time is integral part of the learning process.
+The implication is that we need some structure and process to implement such system.
+That is exactly what <strong>TM region</strong> is for.</p>
+<p>First the structure: as I already mentioned we use a <strong>region</strong> (you can visualize this as 2D table), with main organizational unit the <strong>column</strong>, constituted of <strong>cells</strong>.
+Every cell can be in one of three possible states <strong>active/on</strong>, <strong>predicted</strong>, <strong>inactive/off</strong>.</p>
+<p>The signals flow <strong>vertically</strong> or <strong>laterally</strong> (compared to NN forward and backward).
+The <em>input signal</em> comes from the bottom (or the top, if this is easier for you to visualize).
+What is the input signal ? It is the SDR generated by the <strong>Spatial pooler</strong> or <strong>Encoder</strong> (if you don’t use SP).</p>
+<p>The cells transition between those different states constantly. Here is the algorithm from birds eye view.
+I will discuss it from the point view that is necessary for my implementation, for more details look at the <a href='http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-en.pdf' target='_blank'>paper</a>.</p>
+<p>So at every time step :</p>
+<ul class="simple">
+<li><p>Fetch the next SDR from Spatial pooler and pass it to the columns (vertically)</p></li>
+<li><p>For every column for which the SDR have value of <strong>1</strong></p></li>
+<li><p>If a cell in the column is in <strong>predictive</strong> state, change the state to <strong>active</strong> for the best candidate cell in the column.</p></li>
+<li><p>If there is no <strong>predicted</strong> cell in a column, change the state of all cells in this column to <strong>active</strong> (bursting)</p></li>
+<li><p>Propagate the signal from all active cells laterally.</p></li>
+<li><p>Decide which cells should switch to <strong>predictive</strong> state based on the lateral flow of information.</p></li>
+<li><p>Rinse and repeat</p></li>
+</ul>
+<p>There are several things to understand here, first we can think of every “lateral-row” of cells as virtual SDR with the same size as the input SDR.
+Also by lateral I don’t mean horizontal-row.
+Horizontal-row mean every cell on a single specific row f.e. first-row-of-cells.
+By <strong>lateral-row</strong>, I mean one cell per column from a different or the same row i.e. in this case horizontal-row is just a special case of lateral-row.</p>
+<hr class="docutils" />
+<p><img alt="tm" src="../../_images/tm.jpg" /></p>
+<hr class="docutils" />
+<p>What this allows us do is to represent gazillion different combinations of the input-SDR. Why would we need such a thing ? Simply put, every <strong>lateral-row</strong> describe the same concept represented by the input-SDR in many different contexts. This is called variable-order memory.</p>
+<p>The <em>second</em> mechanism <strong>bursting</strong> represents the case when new information arrives, making all the cells in a column <strong>active</strong> expresses the condition that any option is possible, because nothing was predicted in the preceding step for this column. So this is the way we are saying we expect every possibility for this column.</p>
+<p>The <em>third</em> thing to mention is that the flow of information <em>flip-flops</em> between vertical and lateral, the reason to do this is so that we protect from self reinforced activation of all the cells. Our goal is sparse activation.</p>
+<p><em>Forth</em> we also don’t want to have more than one cell per column activated. (May be in some experimental TM implementation we can allow this, so that we can do probabilistic outcome. In the current implementation we need exact prediction)</p>
+<p>At the end of the process we can interpret the result in several different ways.</p>
+<ul class="simple">
+<li><p><strong>How many bits ?</strong></p></li>
+<li><p>use the whole region as output SDR</p></li>
+<li><p>aggregate “vertically” by columns</p></li>
+<li><p><strong>Which bits ?</strong></p></li>
+<li><p>use only the active cells as 1’s</p></li>
+<li><p>use only the predicted cells as 1’s</p></li>
+<li><p>use both active and predicted cells as 1’s</p></li>
+</ul>
+<p>My implementation uses <em>vertical aggregation</em> and only cells in <em>predictive state</em> are 1 in the output SDR.
+The benefit doing it this way is that both input and output SDR have the same size, so in theory will be easy to chain multiple regions. BTW this behavior is easily overridable.
+(In future incarnation of the software I may use multiple representations. I can see some use cases.)</p>
+</div>
+<div class="section" id="the-implementation">
+<h2>The implementation<a class="headerlink" href="#the-implementation" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>So how do we implement TM. One approach is to implement some approximation of HTM-neuron (cell) and then build a full region of them … and so on, more or less following what I just explained. I have not looked at Numenta source code in any detail, but it is my impression that this is how they do it.
+I wanted to do it slightly differently.</p>
+<p>One big benefit of the mathy NN-approach is the ability to vectorize the calculations, which is the reason that today NN are all the rage. Just single NVidia video card beats the pants of massively multi-core CPUs machines, just because the perceptron-inspired NN are very easily vectorizable and video cards are built to do that very fast compared to multi-functional CPU.</p>
+<p>As you may suspected already I want to capture this ability, but still preserve the core HTM theory and in my humble opinion I  think at least partially I succeeded :), fingers crossed.</p>
+<hr class="docutils" />
+<p><img alt="tm" src="../../_images/region.svg" /></p>
+<hr class="docutils" />
+<p>OK then, decided ! We will abstract the HTM-neuron and will also use matrices. How would we do that ?
+Look at the region picture, what we see is cells, and many cells have to be connected laterally using distal-dendrites (look out HTM-neuron picture), so that we can pass information and determine which cells should switch to <strong>predictive</strong> state. Look also at hierarchical indexing [66] and [6,3] are the same cell.</p>
+<p>For the vertical connection every index of bit that is 1 in the input SDR, shows us which column in the region should become ON.</p>
+<p>The standard way of doing this would be to create <strong>class Cell</strong>, which have bunch of attributes of <strong>class Synapse</strong>, then combine those in array of Cells to build <strong>class Region</strong>.
+But then it is impossible to store those instances in compact arrays to do fast calculations i.e. it will take alot of space and cpu time, instead we would create three numpy 2D arrays (my first implementation used numpy).</p>
+<div class="section" id="the-storage">
+<h3>The storage<a class="headerlink" href="#the-storage" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>To emulate region we need one binary array for active state, and another one for predictive state.</p>
+<p>F.e. let see how would state array with 3 rows and 10 columns look like :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">region</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,(</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">region</span>
+<span class="k">print</span> <span class="s2">&quot;Size : </span><span class="si">%s</span><span class="s2"> bytes&quot;</span> <span class="o">%</span> <span class="n">region</span><span class="o">.</span><span class="n">nbytes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 0 0 1 1 1 0 1 0 0]
+ [0 0 1 1 0 1 0 0 1 1]
+ [0 1 1 1 0 0 1 1 1 1]]
+Size : 30 bytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>So it takes 30 bytes, one byte per cell state.</p>
+<p>The third array is the so called adjacency matrix (used mainly in graph theory, look it out).</p>
+<p>The idea is that value at coordinate [i,j], represents the <em>permanence</em>  between <strong>cell i</strong> and <strong>cell j</strong> (remember permanence tells us if the connection is ON or OFF, not like weights which describes how much signals attenuates passing trough the connection ).</p>
+<p>We will be copious and allow to potentially connect every cell with every other cell.
+(In the cortex neuron on average connects to 10_000 other neurons).</p>
+<p>Let say we have region with 2 rows and 3 columns, this means 6 cells total, we need to create 6x6 matrix to store lateral permanences between all cells.</p>
+<p>Example :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">adj_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">adj_matrix</span>
+<span class="k">print</span> <span class="s2">&quot;Size : </span><span class="si">%s</span><span class="s2"> bytes&quot;</span> <span class="o">%</span> <span class="n">adj_matrix</span><span class="o">.</span><span class="n">nbytes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.16516113  0.64257812  0.56103516  0.39526367  0.14111328  0.01410675]
+ [ 0.55126953  0.30419922  0.87597656  0.75390625  0.82324219  0.6953125 ]
+ [ 0.6953125   0.35595703  0.86132812  0.84375     0.75439453  0.88134766]
+ [ 0.19897461  0.55908203  0.31518555  0.58935547  0.38842773  0.46191406]
+ [ 0.42602539  0.35302734  0.13208008  0.36987305  0.68945312  0.3203125 ]
+ [ 0.64941406  0.1940918   0.05511475  0.61083984  0.86035156  0.96972656]]
+Size : 72 bytes
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>This is important!</strong>
+So the connection permanence between cell at 2D coord region[0,2] and region[1,1] will be adj_matrix[2,4].
+Indexes in numpy start from zero, so [0,2] is first row, second column i.e. pos 2 AND
+[1,1] is second row, second column i.e. pos 4.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">adj_matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.75439
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is one more way of doing it, using numpy view().</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">region2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">view_1D</span> <span class="o">=</span> <span class="n">region2</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<span class="n">view_1D</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="k">print</span> <span class="n">region2</span>
+<span class="k">print</span> <span class="n">region2</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">view_1D</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 1 1]
+ [0 1 0]]
+1
+1
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>… and this too !</strong> Did you see what we did here ? Converted cell 2D coordinate to 1D index, so that we can get the correct permanence from the adjacent matrix.
+This is the first trick that will save us alot of trouble i.e. looking at an array under different dimensionality in different situations. I dubbed this <strong>hierarchical array</strong>.
+We will use it more explicitly later as you will see.</p>
+<p>There is one disadvantage of using this type of full connectivity, we have no ability to have multiple segments for every HTM-neuron (see the picture, “context”). Segmentation of distal dendrites in the brain is necessary, so that the neuron can detect and react differently on different separate incoming patterns i.e. coincidence detection.
+There are several workarounds to this problem, by introducing more complexity, but at this initial stage I decided to dismiss this problem and deal with it later i.e. when I get a working implementation.</p>
+<p>So we have two 2D arrays for <em>active</em> and <em>predictive</em> states and <em>adjacent matrix</em> for connectivity and that is enough for HTM region.
+At this point I wrote a prototype and it seemed to be working as far as I could test it at that time. What this showed me that I’m on the right path.</p>
+<p>BUT there was still one giant problem staring me in the face which I knew about but choose to ignore so far… !! <strong>memory consumption</strong> !! … the adjacent matrix is OK as long as you play with 200-300 hundred columns in a region, but remember we are targeting at minimum 1000 columns.
+Let’s do the calculations … for a region 10x300 = 3000 cells, 2 bytes for each permanence we need 3000x3000 adjacency matrix i.e. 17 MB:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> MBytes&quot;</span> <span class="o">%</span> <span class="p">((</span><span class="mi">3000</span><span class="o">*</span><span class="mi">3000</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17 MBytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>for 10x1000 region we need 190 MB, but we most probably will want 10x2000 which is 762 MB thats huugee :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> MBytes&quot;</span> <span class="o">%</span> <span class="p">((</span><span class="mi">20000</span><span class="o">*</span><span class="mi">20000</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>762 MBytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>At this point I got disparate and started rereading everything I could find to help me out solve the dilemma. One idea was to forget of full connectivity and instead use one smaller matrix for partial connectivity and second matrix to hold a group index, this way I could also implement segmentation.
+But this would increase the complexity of the code.
+So I continued searching … I had to brute force the issue, what if I use just a single bit instead of 16 bit real number for permanence. This meant I could have only : connection OR no-connection.</p>
+<p>If I could pull this off the memory requirement will drop 16 times from 762MB to 47MB, which is manageable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> MBytes&quot;</span> <span class="o">%</span> <span class="p">((</span><span class="mi">20000</span><span class="o">*</span><span class="mi">20000</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47 MBytes
+</pre></div>
+</div>
+</div>
+</div>
+<p>I had to find something that is binary and provide capabilities to be selective, so that I can simulate segmentation. My first stop was Bloom filters, they allow discrimination based on hash function, so If I can find the correct one, I can instead of list of permanences (a row in the adjacent matrix) use row of zeros and ones which is generated by bloom filter.</p>
+<p>After some experimentation which didn’t seem to have a good chance of working, I thought really hard :! …
+hmmm… Isn’t Bloom filters just a wacky SDR :).
+Remember the <strong>union</strong> property, it is very similar to bloom filter.
+What the union does for us is it allows us to store a number of SDR patterns and then ask if a new SDR is part of this union, but isn’t this exactly what we need ? YES IT IS !!</p>
+<p>Now we can use two abstractions for the <em>Connection matrix</em>.</p>
+<ul class="simple">
+<li><p>Cell to Cell full connectivity.</p></li>
+<li><p>Every row with idx X is union-SDR, representing a distal dendrite. Because of the properties of union-SDR (if you remember) we also get segmentation(as in pattern-discrimination) for free.</p></li>
+</ul>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>So this is my solution to the problem i.e. treat every row of the connection matrix as union-SDR, which behaves like distal dendrite - coincident detector.</strong></p>
+</div></blockquote>
+<hr class="docutils" />
+<div class="section" id="a-href-bmap2d-html-target-blank-bmap2d-a">
+<h4>&gt;&gt; <a href='bmap2D.html' target='_blank'>BMap2D</a> &lt;&lt;<a class="headerlink" href="#a-href-bmap2d-html-target-blank-bmap2d-a" title="Permalink to this headline">¶</a></h4>
+<p>Side benefit of this recognition is that we don’t need to use numpy at all, because the three matrices a pure binary matrices. Python have module called <strong>bitarray</strong> which handles 1D bit-strings, but I needed 2D bit array.
+For this reason I had to create a module to handle those &gt;<a href='bmap2D.html' target='_blank'>kind</a>&lt; of arrays for this project.
+Here are some examples :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bmap2D</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">bm</span> <span class="o">=</span> <span class="n">BMap2D</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">bm</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">bm</span><span class="o">.</span><span class="n">rand_bmap</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">bm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0| 10010010000011111001
+1| 11100001001100011100
+2| 10110111101011110000
+3| 00110010001001100101
+4| 11000000001110111100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">bm</span><span class="o">.</span><span class="n">bmap</span>  <span class="c1">#1D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bitarray(&#39;1001001000001111100111100001001100011100101101111010111100000011001000100110010111000000001110111100&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">bm</span><span class="p">[</span><span class="mi">2</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0| 10110111101011110000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">bm</span><span class="p">[</span><span class="mi">3</span><span class="p">,:]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">print</span> <span class="n">bm</span><span class="p">[</span><span class="mi">3</span><span class="p">,:]</span> <span class="c1">#2D</span>
+<span class="k">print</span> <span class="n">bm</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#1D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0| 00000000000000000000
+
+bitarray(&#39;0&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>As I said before the BMap2D support hierarchical indexing.</p>
+<blockquote>
+<div><p><strong>bm[3,:]</strong> - accesses the forth row</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>bm[3]</strong> - accesses the bit at position 4 (if you look at the array as 1D)</p>
+</div></blockquote>
+<p>So if your array index uses comma it is 2D index, otherwise it is 1D index. BMap2D supports other nifty things, <a href='bmap2D.html' target='_blank'>check it out</a>.</p>
+</div>
+</div>
+<div class="section" id="the-process">
+<h3>The process<a class="headerlink" href="#the-process" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>Ok so far so good, we solved the data storage problem.
+How are we going to implement the algorithm.
+But before we start :</p>
+<blockquote>
+<div><p>Temporal memory is only 1 forward n-step prediction memory. We can decide to predict any forward step let say 10th or 13th, but it is always this specific step. Of course you can create multiple TM’s and then do multiple step by combining the results, but I will leave this as exercises for the reader.
+Anyway this approach would be expensive, that is what Hierarchical part of the theory is. Once we have it :)</p>
+</div></blockquote>
+<blockquote>
+<div><p>Don’t confuse also variable-order memory, which means that you take into account all possible contexts that happened in the past for the current one n-step prediction.</p>
+</div></blockquote>
+<p>OK… I made schematic overview in the graph below, but we will go trough all the steps.</p>
+<hr class="docutils" />
+<p><img alt="tm" src="../../_images/temporal_memory.png" /></p>
+<hr class="docutils" />
+<p><strong>First step</strong> is to copy the active bitmap for later use. Phew … that was easy</p>
+<hr class="docutils" />
+<p><strong>Second step</strong> We have to figure out which cells should become active. For this we need the current input data and the cells which are in predictive state.
+The input-data will tell us which columns should become active. For every column as we said in the overview we will check if there is predicted cell, then we will activate it. If there is no predicted cell then we will activate all cells in the column.
+In this <em>selection</em> process we look at the Data as 1D array which describes the columns of the Active state 2D array. Predicted state is also 2D.</p>
+<hr class="docutils" />
+<p><strong>Third step</strong> If the learning mode is ON, then we have to update somehow the connection-matrix.
+We have all the information we need. Present active cells are stored in <em>Active</em> 1D-bitmap and the previous active cells are stored in the <em>Past</em> 1D-bitmap. Prediction is Past =to=&gt; Active, which means row indexes of the Connection matrix (time t) would be set only if the bit at this position in the Active state is 1 and the row-content (SDR) would be set by the Past state (time t-1).</p>
+<p>So we do a <strong>union</strong> for every row for which the Active 1D-bitmap cell has value of 1 (row).
+Because both bitmaps are Sparse only very small percent of the rows will be unionized with the past 1D-bitmap.</p>
+<p>You can see how both abstraction for the Connection matrix work …. on the level of connection between two cells as <strong>adj_matrix[i,j]</strong> and on the level of cells at position active_idxs as distal-dendrites <strong><code class="docutils literal notranslate"><span class="pre">adj_matrix[active_idxs,:]</span> <span class="pre">|=</span> <span class="pre">past</span></code></strong>.</p>
+<blockquote>
+<div><p>So the learning operation is simply a union operation : <strong><code class="docutils literal notranslate"><span class="pre">adj_matrix[active_idxs,:]</span> <span class="pre">|=</span> <span class="pre">past</span></code></strong></p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>Forth step</strong> The last step of the process is to predict what will happen next.
+We need the <em>Active</em> 1D-bitmap and the Connection matrix (the memory).
+Here we do <strong>AND</strong> operation of Active 1D-bitmap against every row of Connection matrix.
+Then we count the numbers of ones for every row of the results. The bigger the count the bigger the overlap between the Active SDR and the Memory row.</p>
+<p>So the prediction process is :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">every</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ConnMatrix</span> <span class="p">:</span> <span class="n">overlap</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">adj_matrix</span><span class="p">[</span><span class="n">row</span><span class="p">,:]</span> <span class="o">&amp;</span> <span class="n">active</span>
+</pre></div>
+</div>
+<p>After all this we pick small percent of the indexes with the top overlap-score and set the cells with those same indexes in Predicted 1D-bitmap to 1.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">win_idxs</span> <span class="o">=</span> <span class="n">argsort</span><span class="p">(</span><span class="o">-</span><span class="n">overlap</span><span class="p">)[</span> <span class="p">:</span> <span class="n">winners_count</span> <span class="p">]</span>
+<span class="n">predicted</span><span class="p">[</span><span class="n">win_idxs</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#1D</span>
+</pre></div>
+</div>
+<p>By default this percent is 2%, but you can change it when creating the TM object.
+By default we use <strong>winner-takes-all</strong> method, but nothing stops us to use different approaches.</p>
+<p><em>That was all : 4 bitmaps, 4 simple steps, 2 operations union (OR) and overlap (AND), winner-takes-all.</em></p>
+<p>Step 3 and 4 can be swapped and it won’t change things much.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="why-it-works">
+<h3>Why it works ?<a class="headerlink" href="#why-it-works" title="Permalink to this headline">¶</a></h3>
+<p>Here I will lay out my theory it is mostly intuition, but I think it is correct. Some more mathy guy can prove me wrong ;) or most probably right.</p>
+<p>Remember the union property of SDR, it is robust, but still after may be hundred of random writes it will fill up and will start to give <strong>false positives</strong>. From what I was able to test so far this does not happen. Why ?
+The reason is three fold, first we are not using single SDR, but in the case of 5x2000 region, we have 10_000 to  spare.</p>
+<p>Second reason is that the memory is <strong>self-selective</strong>, what do I mean by that ? new “past-state” is stored only in 2% of the rows, on top of that if there is repeated transition-pattern in the signal it will be saved in approximately the same rows i.e. we are in fact changing the memory very little.
+You can think of it as storing “transition-patterns”, rather than random data i.e. the data seeks its destination automatically.</p>
+<p>I think this <strong>self-selective</strong> behavior is profound observation.
+I mentioned that HTM is Memorization not Computation and now you can clearly see the power, the way we are storing patterns.</p>
+<p>Third in 5x2000 region a connection row is 10_000 bits not 2000, so the sparseness is not 2% but 0.4% which makes union property even more robust.
+(This is why in my tests even 5x300 regions seems to behave well. In fact I think they behave better.).</p>
+<p>I like to use the following abstraction : storing the same image on a file system will occupy new file every time we try to save it or we have to scan all the files pixel by pixel to decide do we have it already (in the pure case, where file names don’t tell us anything), that is how computer memory works in its basic form.
+But in the case of the brain in a sense the image itself is both the storage space and the search algorithm, it occupies automatically the same space. if we get similar image it will again seamlessly blend with what is already stored.
+I hope you can imagine what I just described :), it is like a hologram.</p>
+<p>Also we have the option at some point to start turning some bits off when the memory start to fill up i.e. implementing some sort of “forgetting” mechanism.</p>
+<p>I have not done that yet, cause I have not needed it … I just wanted to have at least partially working TM so I can see if my idea works at all, share it with the community and then go further.</p>
+<hr class="docutils" />
+<div class="section" id="lets-try-it">
+<h4>Lets try it !<a class="headerlink" href="#lets-try-it" title="Permalink to this headline">¶</a></h4>
+<p>OK, too much talk let see how we can use TM.
+We will start w/o using Spatial pooler i.e. just direct Encoder ==&gt; TM, because it is easier to illustrate and it works :). TM does not 100% require SP, it should work with any binary data, even with not so sparse data, but don’t rely much on the results if you are not using at least Sparse data.</p>
+<p>(For example when using Encoder =&gt; TM and the ScalarClassifier there are some corner cases where the result is very jumpy, if the range of the data is too big and ScalarClassifier can not have good granularity. the “euro-dollar” is case in point. So keep this in mind. This is one of the problem SP is supposed to solve, by using the available combinations of bits cleverly. The other option is to use better classifier.).</p>
+<p>First we create ScalarEncoder and TemporalMemory, take note of “data_size”, the encoded value has to be the same as the  number of columns in TM.</p>
+<p>Second it is good idea if TM active bits equals the number of ON bits the scalar encoder will use.
+(<em>tm.winners_count</em> : It should probably work OK if they differ, but I haven’t tested that scenario)</p>
+<p>We will pick small sizes so it does not exceeds the page size too much.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">data_size</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#20 bits</span>
+<span class="c1">#usually you also want to pass randomize=0.01 to add noise to the Memory</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="n">TemporalMemory</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="n">data_size</span><span class="p">,</span><span class="n">winp</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">#normally 0.02</span>
+<span class="n">se</span> <span class="o">=</span> <span class="n">ScalarEncoder</span><span class="p">(</span><span class="n">minimum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">maximum</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">nbits</span><span class="o">=</span><span class="n">data_size</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">tm</span><span class="o">.</span><span class="n">winners_count</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s2">&quot;Sparsity count : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">tm</span><span class="o">.</span><span class="n">winners_count</span>
+<span class="k">print</span> <span class="n">se</span><span class="o">.</span><span class="n">info</span>
+<span class="k">print</span> <span class="n">tm</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sparsity count : 2
+&gt; Scalar encoder -----
+min-max/range : 0-100/100
+buckets,width,n : 19,2,20
+None
+&gt; Temporal Memory =========================================
+Data size | number of columns : 20
+Memory dims (rows,cols) : 5, 20
+winc : 2
+&gt; Memory =========================================
+Data size : 100
+rows,cols : 100, 100
+win count : 10
+&gt; 2D Bitmap -----
+Dims in bits : 100,100
+Mem use : 0.00Mb
+Fill %: 0.00%
+Avg item % fill: 0.00%
+Max item % fill: 0.00%
+None
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">utils</span><span class="o">.</span><span class="n">np2bits</span><span class="p">(</span><span class="n">se</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># TM works with bitarrays not with numpy arrays</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bitarray(&#39;11000000000000000000&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">pl</span> <span class="o">=</span> <span class="n">PatternLang</span><span class="p">()</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;0:100:5&#39;</span><span class="p">)</span>
+<span class="n">sequence</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">sequence</span> <span class="p">:</span> <span class="n">tm</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">np2bits</span><span class="p">(</span><span class="n">se</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>That is the whole enchelada, you just pass the encoded data and TM does all the complicated processes we were talking about. There is also second method <strong>via()</strong> which skips the learning step i.e. does not have impact on the memory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; Temporal Memory =========================================
+Data size | number of columns : 20
+Memory dims (rows,cols) : 5, 20
+winc : 2
+&gt; Memory =========================================
+Data size : 100
+rows,cols : 100, 100
+win count : 10
+&gt; 2D Bitmap -----
+Dims in bits : 100,100
+Mem use : 0.00Mb
+Fill %: 0.01%
+Avg item % fill: 0.01%
+Max item % fill: 0.03%
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see the “fill” statistics.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span><span class="o">.</span><span class="n">memory</span><span class="o">.</span><span class="n">mem</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0| 1100000000000000000000000000000000 ... 0000000000000000000000000000000000
+1| 1100000000000000000000000000000000 ... 0000000000000000000000000000000000
+2| 1110000000000000000000000000000000 ... 0000000000000000000000000000000000
+3| 0111000000000000000000000000000000 ... 0000000000000000000000000000000000
+4| 0000000000000000000000000000000000 ... 0000000000000000000000000000000000
+5| 0000000000000000000000000000000000 ... 0000000000000000000000000000000000
+6| 0000001000000000000000000000000000 ... 0000000000000000000000000000000000
+7| 0000001100000000000000000000000000 ... 0000000000000000000000000000000000
+8| 0000001110000000000000000000000000 ... 0000000000000000000000000000000000
+9| 0000000111000000000000000000000000 ... 0000000000000000000000000000000000
+10| 0000000011100000000000000000000000 ... 0000000000000000000000000000000000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span><span class="o">.</span><span class="n">memory</span><span class="o">.</span><span class="n">show_mem</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/bbHTM_74_0.png" src="../../_images/bbHTM_74_0.png" />
+</div>
+</div>
+<p>Current code also has capability to animate the Active and Predictive maps as the TM is learning.
+The problem is that there seems to be some memory leak in Matplotlib! and it consumes quickly ~35 Mb per 20 steps.</p>
+<p>I have in the /bin directory <strong>anim_test.py</strong> to test it, if you can figure out the reason don’t hesitate to ping me.</p>
+<p>Here is how you do it using DataTest object:
+**
+<code>
+DataTest_obj.run_test(test_name, anim=True)
+</code>
+**
+<a href='TM_test.html' target='_blank'>check testing</a></p>
+<p>Bursting won’t be visible because the code clears it up before the plotting happen.
+That was one of the tweaks that made my code predict better (TM.predict_best_bursted()), before that I used bursted columns in the learning phase. ( In the future update, I can even preempt bursting and it may make code slightly faster, but those are details you don’t have to worry for now.)</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="a-href-tm-test-html-target-blank-test-framework-a">
+<h3><a href='TM_test.html' target='_blank'>Test Framework</a><a class="headerlink" href="#a-href-tm-test-html-target-blank-test-framework-a" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Because this document became too large there is separate page on testing.. I have build simplified test framework : <a href='TM_test.html' target='_blank'>Try it out !</a>.</p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="a-href-spatial-mapper-html-target-blank-spatial-pooler-mapper-a-part-2">
+<h3><a href='spatial_mapper.html' target='_blank'>Spatial pooler/mapper</a>: part 2<a class="headerlink" href="#a-href-spatial-mapper-html-target-blank-spatial-pooler-mapper-a-part-2" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>You can read the details here : <a href='spatial_mapper.html' target='_blank'>Spatial pooler/mapper</a></p>
+</div>
+<div class="section" id="temporal-pooler">
+<h3>Temporal pooler<a class="headerlink" href="#temporal-pooler" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<blockquote>
+<div><p>todo explanation, implementation …</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h1>
+<p>There is much more to be done and especially tested.
+Those are the initial breakthroughs of the HTM theory, the most important and hardest part how to build hierarchies of HTM-regions is still ahead, but what we have is promising.</p>
+<p>I think you now appreciate the difference between HTM and NN.
+Not from the standpoint of one is better, but the difference in approach.</p>
+<p><em>One of your disappointments could be</em> that TM predict only single step, but this is by design.
+For long term predictions I’ve seen Numenta videos they use separate Classifier which wraps around TM and keep tracks and probabilities of the “transitions”, so that it can make multi-step predictions.</p>
+<p>The other approach is to run multiple TM’s and splice the results (I will at some point add the capability to predict nth step, it will be simple parameter when creating TM object).</p>
+<p>The third option is using TM.forward() method (TM feeds itself, look at the code), which of course very quickly goes out of whack, but may be you can average multiple forward() prediction and it may work!! doubt it, but give it a try.
+Of course the real way to do it is to build TM hierarchies, which we don’t have yet.</p>
+<p><strong>What are the benefits of this implementation :</strong></p>
+<ol class="simple">
+<li><p>It is all binary, zeros and ones</p></li>
+<li><p>The bulk of the algorithm are simple operations : OR, AND, count-bits, 1D &lt;=&gt; 2D view</p></li>
+<li><p>Not much parameters to tune</p></li>
+<li><p>Very friendly to optimizations, both in software (C,C++) and hardware (new type of memories, video cards). I can’t stress this enough hardware acceleration will be a blast :).</p></li>
+<li><p>Have found it to work satisfactory on test data-sets with small region sizes : 5x300, because connection matrix row (SDR-union) is 1500 bits</p></li>
+<li><p>Very light on resources compared to full-blown implementation, so I expect it will be cheaper to build hierarchies.</p></li>
+<li><p>Easy to parallelize, I think you can literally change every bit asynchronously and it will still work.</p></li>
+</ol>
+<p><strong>What are the disadvantages :</strong></p>
+<ol class="simple">
+<li><p>If I missed something obvious it may be wrong !!! doubt it, but you never know :)
+My biggest concern is if I messed up the sequence of the steps when coding, which may invalidate the results, even that I replied them many time in my mind.</p></li>
+<li><p>Not good to research HTM theory details, but this is an abstraction anyway.</p></li>
+<li><p>Anything I have not thought about ?</p></li>
+<li><p>Have not seen a performance library for doing Fast bit arrays that is tailored to the specific CPU ?!</p></li>
+</ol>
+<hr class="docutils" />
+<p>The whole package is self-contained and will be easy to integrate in other projects.
+I have not played with interaction between multiple TM’s yet, because I’m still exploring the theory and there are many unimplemented parts of the system (more Encoders, SP, TP, multi-step/thats easy/).
+I did my best for the limited time I had to test as much behaviors as I can, but there are so much variations, so I hope you will enjoy finding corner cases where current setup does not work.</p>
+<p>Welcome any feedback, like where in the theory I got it wrong for example.
+I will be grateful if somebody can compare the performance against NuPic or other approaches like NN, Arima …etc.</p>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a href='https://github.com/vsraptor/bbhtm'>bbHTM Source code</a></p></li>
+<li><p><a href='bmap2D.html' target='_blank'>BMap2D</a></p></li>
+<li><p><a href='TM_test.html' target='_blank'>Testing</a></p></li>
+<li><p><a href='http://ifni.co/articles/programming/recursion' target='_blank'>PatternLang()</a></p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><a href='http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-en.pdf' target='_blank'>HTM theory</a></p></li>
+<li><p><a href="http://arxiv.org/pdf/1511.00083.pdf" target="_blank">HTM neuron</a></p></li>
+<li><p><a href="http://arxiv.org/abs/1503.07469" target="_blank">Properties of SDR</a></p></li>
+<li><p><a href='http://arxiv.org/abs/1602.05925' target='_blank'>Encoding Data for HTM Systems</a></p></li>
+<li><p><a src='www.youtube.com/watch?v=qZM9JREjnp4&spfreload=5' target='_blank'>Intelligence and Machines: Creating Intelligent Machines by Modeling the Brain with Jeff Hawkins</a></p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="a-href-http-ifni-co-home-a-a-href-http-ifni-co-toc-programming-programming-a-a-href-https-github-com-vsraptor-bbhtm-source-code-a">
+<h3>===[ <a href='http://ifni.co'>HOME</a>  ]=====[ <a href='http://ifni.co/toc/programming'>Programming</a>  ]=====[ <a href='https://github.com/vsraptor/bbhtm'>Source code</a> ]=====<a class="headerlink" href="#a-href-http-ifni-co-home-a-a-href-http-ifni-co-toc-programming-programming-a-a-href-https-github-com-vsraptor-bbhtm-source-code-a" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bbhtm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="../bi/More_Operations.html" title="previous page">More OPS</a>
+    <a class='right-next' id="next-link" href="TM_test.html" title="next page">TEST wrapper</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

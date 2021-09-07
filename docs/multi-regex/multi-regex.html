@@ -1,0 +1,1077 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi regex &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Three-nsitions" href="../threensition/threensition.html" />
+    <link rel="prev" title="Content with notebooks" href="../../notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bi/More_Operations.html">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Multi regex
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#searching-sequences-using-regex-language">
+     Searching sequences using RegEx language
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multi-sequence-regex-engine">
+     Multi Sequence REGEX engine
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#features">
+     Features
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zero-or-one">
+       <strong>
+        Zero or One : ?
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#one-or-more">
+       <strong>
+        One or More : +
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#from-n-to-m-occurrences-n-m">
+       <strong>
+        From n to m occurrences : {n,m}
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#character-class-abc">
+       <strong>
+        Character class : [abc]
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#match-any-item">
+       <strong>
+        Match any item : .
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multi-match">
+       <strong>
+        Multi-match
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#words-example">
+   <strong>
+    WORDS example
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="multi-regex">
+<h1>Multi regex<a class="headerlink" href="#multi-regex" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="searching-sequences-using-regex-language">
+<h2>Searching sequences using RegEx language<a class="headerlink" href="#searching-sequences-using-regex-language" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> ../lib
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/my/dev/github/multi_regex/lib
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/my/dev/github/multi_regex/lib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;../lib&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">regex_nfa</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-sequence-regex-engine">
+<h2>Multi Sequence REGEX engine<a class="headerlink" href="#multi-sequence-regex-engine" title="Permalink to this headline">¶</a></h2>
+<p>I have a project where I’m storing <strong>Sequences</strong> in a graph database which for the outside apps are opaque.
+So I needed to some way to query the data. I tried a sort of template-search-language, but it quickly became clear it is unmanageable.
+After some experimenting I decided to adopt Regex-like language for searching.</p>
+<p>I found a very nice tutorial for implementing RegEx using finite automata (NFA).</p>
+<p><a class="reference external" href="https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/">Implementing a Regular Expression Engine</a></p>
+<p>Of course this implementation is very basic and is written in java-script, I need one written in python.
+But second and more important problem is that this engine matches a single string against the regex.</p>
+<p>What I require is the ability to apply regex against thousands or may be millions of sequences at once.
+I meant SEQUENCE not just a STRINGS /which is just sequence of characters/.
+I also need a support for Sequences where the items can be integers, characters, words, sentences … etc.</p>
+<p>The major difference between basic regex matching (BRM) and this more advanced multi-sequence-regex (MSRM) is that in BRM we advance one step (all parallel states) and one character (single sequence) at a time which is much more simple to implement.</p>
+<p>In MSRM the advance is still one-step for the regex, but for every parallel-state there are multiple sequences that can match.</p>
+<p>For example lets see if we search the words file in linux :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>   &gt; grep ^w /usr/share/dict/words | wc -l
+   2329
+   &gt; grep ^wh /usr/share/dict/words | wc -l
+   360
+</pre></div>
+</div>
+<p>if we match against the following regex <strong>/wh.+/</strong>, the first step will return 2329 sequences/words (which is alot, for BRM it will be just one), the second step we get back 360.</p>
+<p>The expectation is that incremental search will be faster than a loop that match every sequence one by one.</p>
+<p>BTW there is option to set upper <strong>limit</strong> on how many items to select at every step, so if you get too many results you can cap them up.</p>
+<p>There is one more option which allows you to start matching after a specific prefix/head, the idea here is to match the <strong>head</strong> as a normal match and the rest of the sequence using the regex. This way we lower the the number of comparisons dramatically, because the biggest number of results are normally at the beginning.</p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>The tutorial mentioned above provides implementation only for basic operations i.e. <strong>concatenation, closure:*, union:|</strong></p>
+<p>But to have usable RegEx engine we need at least :  <strong>.,?,+,{n,m} and [abc]</strong></p>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>Before I code the main engine I would need a functionality to convert the regex from infix to postfix which is required input by the Thomphson NFA algorithm described above. I use modified version of the following code :</p>
+<p><a class="reference external" href="https://github.com/TheAlgorithms/Python/blob/9316e7c0147a84b9b549094a5b8c70f95a0cd3a1/data_structures/stacks/infix_to_postfix_conversion.py">infix to postfix</a></p>
+<p>Once in postfix format I parse the expression to NFA which is then used to guide the matching process.</p>
+<p>Here is the process :</p>
+<ol class="simple">
+<li><p>Input: Regex string</p></li>
+<li><p>Insert concatenation operator where needed and return the result as a List (we are matching sequences not just strings) : <strong>insert_concat()</strong></p></li>
+<li><p>Convert Infix expression to Postfix : <strong>infix2postfix()</strong></p></li>
+<li><p>Convert Postfix expression to NFA structure : <strong>to_nfa()</strong></p></li>
+<li><p>Walk over the NFA states guided by the matched sequence : <strong>match_one()</strong></p></li>
+</ol>
+<p>Here are the new operations that I implemented in addition to the basic ones.</p>
+<div class="section" id="zero-or-one">
+<h3><strong>Zero or One : ?</strong><a class="headerlink" href="#zero-or-one" title="Permalink to this headline">¶</a></h3>
+<p><img alt="?" src="../../_images/zero-one.png" /></p>
+<p>If you read the tutorial above you would know a state can be either <strong>intermediate</strong> or <strong>end state</strong> and the transitions can be <strong>Symbol</strong> or <strong>Epsilon</strong>.</p>
+<p>So to implement Zero or One item match, we need two end-states with Symbol transition.
+This way if we can exit trough the first state we cover the zero match case OR we can match one Symbol and exit, which covers the second case.</p>
+</div>
+<div class="section" id="one-or-more">
+<h3><strong>One or More : +</strong><a class="headerlink" href="#one-or-more" title="Permalink to this headline">¶</a></h3>
+<p><img alt="?" src="../../_images/one-more.png" /></p>
+<p>Here we need the first node to be <em>non-end-node</em>, so that we get at least one match.</p>
+<p>My implementation uses Symbol match followed by closure(*) operator which is similar to the above diagram but more general.</p>
+</div>
+<div class="section" id="from-n-to-m-occurrences-n-m">
+<h3><strong>From n to m occurrences : {n,m}</strong><a class="headerlink" href="#from-n-to-m-occurrences-n-m" title="Permalink to this headline">¶</a></h3>
+<p><img alt="?" src="../../_images/n2m.png" /></p>
+<p>For this operator and character-class I had to modify infix to postfix conversation to treat ‘{n,m}’ and ‘[abc]’ sub-strings in the regex as atom instead of a list of characters. Once this is handled the postfix to nfa conversation have access to the whole operator parameters and can build the correct sub-graph.</p>
+<p>This implementation relies on the Union operator f.e.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a{1,3}  is implemented as a|aa|aaa
+a{2,4} is implemented as  aa|aaa|aaaa
+</pre></div>
+</div>
+<p>so what we see from this example {1,3} is that we need 1 non-end state followed by 2 end states.
+And for {2,4} we need 2 non-end states followed by 3 end states.</p>
+<p>In other words {n,m} case have to have <strong>N-non-end</strong> states followed by <strong>(M+1-N) end-states</strong>.</p>
+</div>
+<div class="section" id="character-class-abc">
+<h3><strong>Character class : [abc]</strong><a class="headerlink" href="#character-class-abc" title="Permalink to this headline">¶</a></h3>
+<p><img alt="?" src="../../_images/char-class.png" /></p>
+<p>For character class again we use a Union. F.e.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> [abc] is implemented as a|b|c
+</pre></div>
+</div>
+<p>The diagram this time is parallel i.e. either of the Symbol transitions will be a match.
+My implementation differs abit, because I need just one final node not three, so …..</p>
+<p>I changed the 3 Symbols to <strong>non-END-nodes</strong>.
+Connected to all three Symbol nodes is one additional END-node using Epsilon-transitions.
+This way I keep the functionality described above and have one start and one end node, which is required to interconnect nfa-states.</p>
+</div>
+<div class="section" id="match-any-item">
+<h3><strong>Match any item : .</strong><a class="headerlink" href="#match-any-item" title="Permalink to this headline">¶</a></h3>
+<p>One thing the basic regex misses is a way to “match any character” i.e. the <strong>dot operator</strong>.
+It is not implemented as separate operator but as condition in the nodes walk algorithm.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`if not state.hasT or (symbol not in state.T and state.sym != ANY ) : continue`
+</pre></div>
+</div>
+<p>Now that I explained some details in the implementation lets see how they work in practice.</p>
+<p>There are two methods you can use, the first one is <strong>match_one()</strong> which implement the original basic algorithm with the extensions I discussed by providing functionality to match single sequence.
+The second one simply called <strong>match()</strong> does the multi-sequence matching.</p>
+<p>Lets try some examples :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">Regex</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;abcd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">(</span><span class="s1">&#39;a+&#39;</span><span class="p">,</span> <span class="s1">&#39;aaaa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">(</span><span class="s1">&#39;(a|b)+&#39;</span><span class="p">,</span> <span class="s1">&#39;abab&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">(</span><span class="s1">&#39;a{1,3}&#39;</span><span class="p">,</span> <span class="s1">&#39;aa&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">(</span><span class="s1">&#39;[abc]+&#39;</span><span class="p">,</span> <span class="s1">&#39;ababac&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now lets try sequences :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is also a shortcut format for sequences … instead of quoting every item, just create a list with single item that is a string … here is the normal way :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;|&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>… and here is the shortcut way :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="s1">&#39;1,|,2,|,3&#39;</span><span class="p">],[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="s1">&#39;(,1,|,2,|,3,),+&#39;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="s1">&#39;(,1,|,2,|,3,),+&#39;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>or we can match words …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">],[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match_one</span><span class="p">([</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span><span class="s1">&#39;?&#39;</span><span class="p">],[</span><span class="s1">&#39;hi&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-match">
+<h3><strong>Multi-match</strong><a class="headerlink" href="#multi-match" title="Permalink to this headline">¶</a></h3>
+<p>The multi match algorithm is similar to the basic one. The difference is in the last step :</p>
+<ol class="simple">
+<li><p>Input: Regex string</p></li>
+<li><p>Insert concatenation operator where needed and return the result as a List (we are matching sequences not just strings) : <strong>insert_concat()</strong></p></li>
+<li><p>Convert Infix expression to Postfix : <strong>infix2postfix()</strong></p></li>
+<li><p>Convert Postfix expression to NFA structure : <strong>to_nfa()</strong></p></li>
+<li><p>Walk over the NFA states guided by function, which given a prefix returns a list of sequences of the format  <strong>prefix+next_item</strong> : <strong>match()</strong></p>
+<ul class="simple">
+<li><p>it is a three-step-loop of walking over regex-states, matching-sequences and filtering</p></li>
+</ul>
+</li>
+</ol>
+<p>First we need a sequence data source and function that provides prediction given prefix.
+The data store that imitate a database in our case will be simple lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">seqs_store</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;who&#39;, &#39;why&#39;, &#39;when&#39;, &#39;where&#39;, &#39;whom&#39;, &#39;which&#39;, &#39;what&#39;, &#39;word&#39;, &#39;while&#39;, &#39;whole&#39;, &#39;whammy&#39;, &#39;with&#39;, &#39;woman&#39;, &#39;work&#39;, &#39;abc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seqs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3], [1, 2, 3, 4], [1, 3, 4], [1, 2, 5, 6], [1, 2, 5, 7], [1, 2, 3, 4, 5], [1, 1, 3, 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sents</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;hi&#39;, &#39;world&#39;], [&#39;hello&#39;, &#39;world&#39;], [&#39;howdy&#39;, &#39;world&#39;], [&#39;hi&#39;, &#39;buddy&#39;], [&#39;hey&#39;, &#39;ho&#39;], [&#39;hi&#39;, &#39;hi&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>To search we provide a prefix and the db-list. So when the prefix is ‘w’ we expect to get first two characters of every string that starts with ‘w’ … in the regex matching we use this function to walk step by step trough the matching sequences.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;wh&#39;, &#39;wo&#39;, &#39;wi&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;wh&#39;</span><span class="p">,</span> <span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;whe&#39;, &#39;why&#39;, &#39;wha&#39;, &#39;whi&#39;, &#39;who&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;why&#39;</span><span class="p">,</span> <span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;why.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;whe&#39;</span><span class="p">,</span> <span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;when&#39;, &#39;wher&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also do the same with sequences repsented with lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">seqs</span><span class="o">=</span><span class="n">seqs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 3], [1, 1], [1, 2]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">seqs</span><span class="o">=</span><span class="n">seqs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3], [1, 2, 5]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>… or search sentences</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_search</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hi&#39;</span><span class="p">],</span> <span class="n">seqs</span><span class="o">=</span><span class="n">sents</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;hi&#39;, &#39;hi&#39;], [&#39;hi&#39;, &#39;buddy&#39;], [&#39;hi&#39;, &#39;world&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we will use this function to represent a DataBase which stores sequences ..</p>
+<p>Now we can call match() against this “data store” for this we provide regex and the function.</p>
+<p>We should use lambda or functools.partial() when passing the function, because the prefix is provided later by the match-process not directly here.</p>
+<p>It looks like this :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;w.+&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;why.&#39;, &#39;who.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>… with the ‘end’ option we specify a symbol that marks the end of the sequence. We need this so that the engine can distinguish full sequences vs partial ones, as we are progressing with the search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;wh..&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;what$&#39;, &#39;whom$&#39;, &#39;when$&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">],</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">seqs</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 1, 3, 4, &#39;.&#39;], [1, 2, 3, 4, &#39;.&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>One drawback on the current implementation is the the match() is non-greedy i.e. it stops matching once it finds the first correct match.
+Greedy match may “explode” the search.</p>
+<p>To counter that …..</p>
+<p>I added two more options to limit the explosion of results as the program walks trough the regex.</p>
+<p>Using the “limit” option as the name implies limits the maximum number of matched items at every step.
+The drawback of this option is that it may cut some results you may expect from the final results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;wh..&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">),</span> <span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;what.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The other option is “head” which does straight (non-regex) match on the initial characters/items and the regex starts matching after that.
+This way you can skip result-exploision which is most probable in the beginning.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;h..&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">words</span><span class="p">),</span> <span class="n">head</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;what.&#39;, &#39;whom.&#39;, &#39;when.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="words-example">
+<h1><strong>WORDS example</strong><a class="headerlink" href="#words-example" title="Permalink to this headline">¶</a></h1>
+<p>Lets use the words file as example tests :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/usr/share/dict/words&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span> <span class="p">:</span> <span class="n">ww</span> <span class="o">=</span> <span class="p">[</span> <span class="n">l</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;wh..&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">ww</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;what.&#39;, &#39;whir.&#39;, &#39;whet.&#39;, &#39;whip.&#39;, &#39;when.&#39;, &#39;whey.&#39;, &#39;whim.&#39;, &#39;wham.&#39;, &#39;whoa.&#39;, &#39;whom.&#39;, &#39;whew.&#39;, &#39;whys.&#39;, &#39;whit.&#39;, &#39;whiz.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;wh.+&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">ww</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;why.&#39;, &#39;who.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;w(h|o).&#39;</span><span class="p">,</span> <span class="n">match_prefix_fun</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">db_search</span><span class="p">,</span><span class="n">seqs</span><span class="o">=</span><span class="n">ww</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;wok.&#39;, &#39;won.&#39;, &#39;why.&#39;, &#39;woo.&#39;, &#39;who.&#39;, &#39;woe.&#39;, &#39;wot.&#39;, &#39;wow.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="todo">
+<h1>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h1>
+<p>Currently regex like these are not supported, yet :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  /(ab){1,3}/, /[abc]{1,3}/
+</pre></div>
+</div>
+<p>One easy addition will be to add support for real numbers. It will require a ‘range-checker’ that will match close numbers as equals.</p>
+<p>This idea can be enchanced with a similarity function passed as parameter.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/multi-regex"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="../../notebooks.html" title="previous page">Content with notebooks</a>
+    <a class='right-next' id="next-link" href="../threensition/threensition.html" title="next page">Three-nsitions</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

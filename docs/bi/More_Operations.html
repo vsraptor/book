@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More OPS &#8212; My book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bare bones HTM" href="../bbhtm/bbHTM.html" />
+    <link rel="prev" title="More CUPS" href="More_CUPS.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../intro.html">
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../markdown.html">
+  Markdown Files
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notebooks.html">
+  Content with notebooks
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../multi-regex/multi-regex.html">
+  Multi regex
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../threensition/threensition.html">
+  Three-nsitions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/piped_wordnet.html">
+  Wordnet pipes
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../misc/keyvi-index.html">
+  Keyvi index
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference external nav-link" href="https://gist.github.com/vsraptor">
+  Random code gists
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/whatis.html">
+  <strong>
+   What is iHTM ?
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sdp_explained.html">
+  SDP:SDR vs SDP:BSC
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/isdp.html">
+  iSDP : indexed Semantic Distributed Pointers aka Symbols
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/misc.html">
+  MED
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/lexicon.html">
+  Lexicon
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/sequence_learning.html">
+  <strong>
+   Sequence learning
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/theory.html">
+  <strong>
+   HTM Theory : short intro
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/encoders.html">
+  <strong>
+   Encoders
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/spatial_mapper.html">
+  <strong>
+   Spatial Pooler/Mapper
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/tm_design.html">
+  <strong>
+   TM design
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/segmented_memory.html">
+  <strong>
+   Segmented memory (Classifier)
+  </strong>
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/temporal_memory.html">
+  Temporal memory
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="What_is_Bi.html">
+  What is Bi
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_framework.html">
+  Bi Framework
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Bi_language.html">
+  Language
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="Integration.html">
+  Integration
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="More_CUPS.html">
+  More CUPS
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  More OPS
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bbHTM.html">
+  Bare bones HTM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/TM_test.html">
+  TEST wrapper
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/bmap2D.html">
+  Bitmap 2D
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bbhtm/spatial_mapper.html">
+  Spatial mapper
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   More OPS
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analogy-mapping">
+   Analogy mapping
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#categorization">
+   Categorization
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#round-two">
+     Round two
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compared-to-python-solution">
+     … compared to Python solution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="more-ops">
+<h1>More OPS<a class="headerlink" href="#more-ops" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../lib&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>We spoke about the basic operations like <strong>binding</strong> and <strong>bundling</strong>, but the <strong>sub-symbolic</strong> level allows us to do other operations which are “composite” and have no equivalent in non VSA architecture, that is because we can use SDP Algebra as I mentioned.</em></p>
+</div>
+<div class="section" id="analogy-mapping">
+<h1>Analogy mapping<a class="headerlink" href="#analogy-mapping" title="Permalink to this headline">¶</a></h1>
+<p>Humans use analogy all the time, it is integral part of intelligence. What if I told you we can mimic a proto form of analogy on syb-symbolic level via vector math. Nooo waaay ! …. way!</p>
+<p>Here is the idea :</p>
+<p><span class="math notranslate nohighlight">\( analogy\_map = relation * reverse\_relation \)</span></p>
+<p>if we do the algebraic manipulation :</p>
+<p><span class="math notranslate nohighlight">\( analogy\_map * relation = reverse\_relation \)</span></p>
+<p>because the <strong>bind</strong> operation is two way street.</p>
+<p>Now we can use the first equation for a <strong>training</strong> operation and the second as <strong>predicting/testing</strong> operation.
+The important part is that we can do this operation on a whole <strong>structure</strong> too, not just on single term i.e. holistically.
+Plus this is <strong>one-shot</strong> learning, something you can’t do with Neuro-networks.</p>
+<p>Lets concretize the idea, the relations we will pick are <strong>“above”</strong> and correspondingly the reverse <strong>“below”</strong>. We will train <strong>“analogical map”</strong> that will virtually “swap” the position of two relations i.e. make one relation transform to the other.
+Here is what we have :</p>
+<p>– <em>circle above a square</em> –</p>
+<p><span class="math notranslate nohighlight">\( cas = above + a\_role1 * circle + a\_role2 * square \)</span></p>
+<p>Let see the reverse :</p>
+<p>– <em>square below a circle</em> –</p>
+<p><span class="math notranslate nohighlight">\( sbc = below + b\_role1 * square + b\_role2 * circle \)</span></p>
+<p>Now we learn the mapping (one-shot learning) :</p>
+<p><span class="math notranslate nohighlight">\( map = cas * sbc \)</span></p>
+<p>and then we can apply it to unknown (not trained with) objects. Lets define them, so that we can do the comparison.</p>
+<p><span class="math notranslate nohighlight">\( sat = above + a\_role1 * star + a\_role2 * triangle \)</span></p>
+<p><span class="math notranslate nohighlight">\( tbs = below + b\_role1 * triangle + b\_role2 * star \)</span></p>
+<p>So if we want to transform the “triangle” above the “star’ =to=&gt; ‘star’ below ‘triangle’, we will bind it with the learned map. Of course it is approximate match. That is vectors for you.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tbs</span> <span class="pre">&lt;=~=&gt;</span> <span class="pre">map</span> <span class="pre">*</span> <span class="pre">sat</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sat</span> <span class="pre">&lt;=~=&gt;</span> <span class="pre">map</span> <span class="pre">*</span> <span class="pre">tbs</span></code></p>
+<p>The operation works both ways.</p>
+<p>If you want it to work only in one direction you should use permutation-bind when defining (have not tested it).</p>
+<p>These kind of operations are also called <strong>holistic transformations</strong> where one compositional structure is mapped onto another compositional structure without having to first decompose the source representation into its components</p>
+<p>Ok now that we know the theory, let’s try it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bi</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">lexicon</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">lex</span><span class="p">()</span>
+<span class="n">x</span><span class="o">.</span><span class="n">add_items</span><span class="p">([</span><span class="s1">&#39;above&#39;</span><span class="p">,</span> <span class="s1">&#39;below&#39;</span><span class="p">,</span> <span class="s1">&#39;a1&#39;</span><span class="p">,</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span> <span class="s1">&#39;b1&#39;</span><span class="p">,</span> <span class="s1">&#39;b2&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;star&#39;</span><span class="p">,</span> <span class="s1">&#39;triangle&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We should use sdp.bundle(), instead of <strong>+</strong>, because of the even-oddity I mentioned earlier /adds too much noise and it may not work/.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1">#training data</span>
+<span class="n">cas</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;above&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">],</span>   <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">sbc</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;below&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">],</span>   <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">]</span> <span class="p">])</span>
+
+<span class="c1">#novel/testing data</span>
+<span class="n">sat</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;above&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;star&#39;</span><span class="p">],</span>     <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;triangle&#39;</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">tbs</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;below&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;triangle&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;star&#39;</span><span class="p">]</span> <span class="p">])</span>
+
+<span class="c1">#partially closer to the training data : &#39;square&#39; is used in both at the same position</span>
+<span class="n">sas</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;above&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;star&#39;</span><span class="p">],</span>     <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">sbs</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;below&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">],</span>   <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;star&#39;</span><span class="p">]</span> <span class="p">])</span>
+
+<span class="c1">#misplased &#39;square&#39; i.e. novel data</span>
+<span class="n">sas2</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;above&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">],</span>     <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;star&#39;</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">sbs2</span> <span class="o">=</span> <span class="n">sdp</span><span class="o">.</span><span class="n">bundle</span><span class="p">([</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;below&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;star&#39;</span><span class="p">],</span>   <span class="n">x</span><span class="p">[</span><span class="s1">&#39;b2&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;square&#39;</span><span class="p">]</span> <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets learn the map (one-shot learning) :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">cas</span> <span class="o">*</span> <span class="n">sbc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>now test it against the <strong>training</strong> example (measuring distance, btw). Seems OK.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">M</span> <span class="o">*</span> <span class="n">cas</span><span class="p">)</span> <span class="o">%</span> <span class="n">sbc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now lets try against the <strong>test</strong> structure, which we did not use in training :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">M</span> <span class="o">*</span> <span class="n">sat</span><span class="p">)</span> <span class="o">%</span> <span class="n">tbs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3779
+</pre></div>
+</div>
+</div>
+</div>
+<p>In our case as we mentioned the mapping is bi-directional, so :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">M</span> <span class="o">*</span> <span class="n">tbs</span><span class="p">)</span> <span class="o">%</span> <span class="n">sat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3779
+</pre></div>
+</div>
+</div>
+</div>
+<p>The same using sdp.dist()</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">((</span><span class="n">M</span> <span class="o">*</span> <span class="n">sat</span><span class="p">),</span> <span class="n">tbs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3779
+</pre></div>
+</div>
+</div>
+</div>
+<p>The distance is ~38%, but we said that a distance below ~42% means that the symbols are similar (sdp.true_thresh).</p>
+<p>And the same this time the-boolean way :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">sdp</span><span class="o">.</span><span class="n">sim</span><span class="p">((</span><span class="n">M</span> <span class="o">*</span> <span class="n">sat</span><span class="p">),</span> <span class="n">tbs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets also test it with data that <strong>partially</strong> match with the training data :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">((</span><span class="n">M</span> <span class="o">*</span> <span class="n">sas</span><span class="p">),</span> <span class="n">sbs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2498
+</pre></div>
+</div>
+</div>
+</div>
+<p>The distance as expected is smaller ~25%.</p>
+<p>Once more but this time ‘square’ is placed in the ‘wrong’ position i.e. it will represent again in a sense novell data, ergo distance again becomes ~37%.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">((</span><span class="n">M</span> <span class="o">*</span> <span class="n">sas2</span><span class="p">),</span> <span class="n">sbs2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3852
+</pre></div>
+</div>
+</div>
+</div>
+<p>And finally lets test against random SDP, to see if they are orthogonal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">sdp</span><span class="o">.</span><span class="n">dist</span><span class="p">((</span><span class="n">M</span> <span class="o">*</span> <span class="n">sat</span><span class="p">),</span> <span class="n">sdp</span><span class="o">.</span><span class="n">rand</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5009
+</pre></div>
+</div>
+</div>
+</div>
+<p>That ends our exploration of analogy mapping, but I suppose you can guess that there is big unexplored territory in the sub-symbolic space for other ways of building composite-operations on structures, if you follow the ideas described in this article.</p>
+<p>You can see more detailed test at <strong>‘test/analogy_mapping.py’</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="categorization">
+<h1>Categorization<a class="headerlink" href="#categorization" title="Permalink to this headline">¶</a></h1>
+<p>Another common human trait is <strong>Categorization</strong> or said it otherwise <strong>Concept formation</strong>.
+Here again <strong>sub-symbolic</strong> operations can help us.
+Lets try very rudimentary categorization.</p>
+<p><strong>Categorization</strong> is complex process and can be divided to at least two sub-phases.</p>
+<ul class="simple">
+<li><p>pattern recognition / grounding : were we associate the external pattern or behavior to a symbol.</p></li>
+<li><p>symbol/s adjustments : were we adjust the meaning of the symbol making it similar or dissimilar to other symbols i.e. clustering.</p></li>
+</ul>
+<p>In the current tutorial we are interested of the simplified second phase.
+Also the examples below happen to follow the two complementary theories for categorization, namely :</p>
+<ul class="simple">
+<li><p>Prototype theory : emphasizes that we construct summary representations. In our case that is ad-hoc summary-symbol for the category e.g. ‘chair’.</p></li>
+<li><p>Exemplar model : emphasize that categories are grounded in our experience and that we store individual and concrete items. We have multiple instances of a category which we adjust to more closely resemble it.</p></li>
+</ul>
+<p>For the purpose of this example we have several instances of chairs and we want to crystallize from them the concept of ‘chairs’. (BTW we can ground those symbols on NN-Labels as we did with the ‘summing’ example).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">add_items</span><span class="p">([</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">,</span> <span class="s1">&#39;metal_chair&#39;</span><span class="p">,</span> <span class="s1">&#39;special_chair&#39;</span><span class="p">,</span> <span class="s1">&#39;wooden_table&#39;</span><span class="p">,</span> <span class="s1">&#39;chair&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a prerequisite we know those chairs have to be ‘closer’, but by default all the symbols are orthogonal on instantiation. We need a way to make them more similar, for this reason we will use an <strong>anchor</strong> that serves the purpose of the <strong>category</strong> of <strong>chairs</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1">#initially chairs are orthogonal to the concept</span>
+<span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+
+<span class="c1">#the instances themselves are also dissimilar by default, the goal: make them similar</span>
+<span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">sim</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4929
+4946
+5025
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>We know that the <strong>bundle</strong> operation aside from bundling also result in a vector closer to its operands (by hamming distance).</p>
+<p>So if we bundle every type of chair with the ‘chair-category’-SDP we will move the vectors towards it, making them at the same time more similar themselves. (Of course if we use lexicon as we do here we have to update them using the <strong>.set()</strong> method).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">new_wc</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">,</span> <span class="n">new_wc</span><span class="p">)</span>
+
+<span class="n">new_mc</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">,</span> <span class="n">new_mc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets compare again the updated chairs :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">sdp</span><span class="o">.</span><span class="n">sim</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3776
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now the distance shrunk, both towards the other chairs and the chair-concept.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2498
+2508
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also the modified chairs are still orthogonal to the rest of the symbols.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_table&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal_chair&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wooden_table&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5044
+4994
+</pre></div>
+</div>
+</div>
+</div>
+<p>As I said this is rudimentary categorization, just to give you yet another idea of how to use the <strong>sub-symbolic  algebra</strong>. As I’m experimenting, I’m also contemplating a ways to integrate the SDP-algebra into the higher levels, such as the Prolog syntax, this way the symbols themselves can morph to more closely resemble the problem we are trying to solve.</p>
+<div class="section" id="round-two">
+<h2>Round two<a class="headerlink" href="#round-two" title="Permalink to this headline">¶</a></h2>
+<p>Lets try it differently.</p>
+<p>This time we would use SDP <strong>structures</strong> to represent different types of chairs i.e. we will build them from more basic atoms, rather than being atomic in the first place.</p>
+<p>Remember SDPs less that <strong>42%</strong> apart are counted similar. I normally use dollar-symbols as a slot-name when building structures (or role if we think in role-filler terms), unless there is better way to describe the bind-pair.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">erase</span><span class="p">()</span> <span class="c1">#clear all the symbols from the lexer</span>
+<span class="c1">#... and add the new basic atoms</span>
+<span class="n">x</span><span class="o">.</span><span class="n">add_items</span><span class="p">([</span><span class="s1">&#39;wood&#39;</span><span class="p">,</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="s1">&#39;table&#39;</span><span class="p">,</span> <span class="s1">&#39;chair&#39;</span><span class="p">,</span> <span class="s1">&#39;$1&#39;</span><span class="p">,</span> <span class="s1">&#39;$2&#39;</span><span class="p">,</span> <span class="s1">&#39;isa&#39;</span><span class="p">,</span> <span class="s1">&#39;furniture&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create wooden-chair symbol-structure</span>
+<span class="n">wc</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wood&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+<span class="c1"># create metal-chair symbol-structure</span>
+<span class="n">mc</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>both chairs should be similar because they both contain the ‘isa * chair’ bind category.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">wc</span> <span class="o">%</span> <span class="n">mc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3732
+</pre></div>
+</div>
+</div>
+</div>
+<p>but they will still be orthogonal to ‘chair’ itself, because it was included as bind-pair in the structure not as standalone item.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">wc</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the correct way to compare it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">wc</span> <span class="o">%</span> <span class="p">(</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="k">print</span> <span class="n">mc</span> <span class="o">%</span> <span class="p">(</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="c1"># or you can use best-match to get the symbol name</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">wc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2473
+2463
+chair
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now lets apply the first categorisation rule on the structured-chairs, namely make them super-category ‘furniture’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1">#furniture-wooden-chair</span>
+<span class="n">fwc</span> <span class="o">=</span> <span class="n">wc</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;furniture&#39;</span><span class="p">]</span>
+<span class="c1">#furniture-metal-chair</span>
+<span class="n">fmc</span> <span class="o">=</span> <span class="n">mc</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;furniture&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we expected ‘furniture-wooden-chair’ is close to ‘furniture-metal-chair’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fwc</span> <span class="o">%</span> <span class="n">fmc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3439
+</pre></div>
+</div>
+</div>
+</div>
+<p>and ‘furniture-wooden-chair’ is close to ‘wooden-chair’ too.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fwc</span> <span class="o">%</span> <span class="n">wc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2469
+</pre></div>
+</div>
+</div>
+</div>
+<p>But the important question to ask ourselves is did we ruined the initial structure i.e. can we still extract the roles and fillers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># does &#39;furniture-wooden-chair&#39; still contain &#39;wood&#39;</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">fwc</span><span class="p">)</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;wood&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">x</span><span class="o">.</span><span class="n">bm</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">fwc</span><span class="p">)</span>
+
+<span class="c1">#same for &#39;metal&#39; and &#39;chair&#39;</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">fmc</span><span class="p">)</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;metal&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">fmc</span><span class="p">)</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3715
+wood
+3809
+3805
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yes the structure seems to be still intact and we can query it. Of course the more ‘categorizations’ we apply the less probable is that we will succeed extracting information, but that is in sync with our expectations.</p>
+<p>It is important that we can peek even one level deep with single operation.
+The <strong>fuzziness</strong> and at the same time <strong>discreetness</strong> is one of the qualities we are looking for to bridge the gap between <strong>Connectionism</strong> and <strong>Symbolism</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="compared-to-python-solution">
+<h2>… compared to Python solution<a class="headerlink" href="#compared-to-python-solution" title="Permalink to this headline">¶</a></h2>
+<p>To more clearly see the difference, lets compare how would we eventually dos similar thing in normal programming language. For illustration lets use Python and dictionaries.
+First we will replicate the lexer :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;wood&#39;</span> <span class="p">:</span> <span class="s1">&#39;wood&#39;</span><span class="p">,</span> <span class="s1">&#39;metal&#39;</span> <span class="p">:</span> <span class="s1">&#39;metal&#39;</span><span class="p">,</span> <span class="s1">&#39;chair&#39;</span> <span class="p">:</span> <span class="s1">&#39;chair&#39;</span><span class="p">,</span> <span class="s1">&#39;$1&#39;</span> <span class="p">:</span> <span class="s1">&#39;$1&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;$2&#39;</span> <span class="p">:</span> <span class="s1">&#39;$2&#39;</span><span class="p">,</span> <span class="s1">&#39;isa&#39;</span> <span class="p">:</span> <span class="s1">&#39;isa&#39;</span><span class="p">,</span> <span class="s1">&#39;furniture&#39;</span> <span class="p">:</span> <span class="s1">&#39;furniture&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we create the chairs :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">wc</span> <span class="o">=</span> <span class="p">{</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;wood&#39;</span><span class="p">],</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span> <span class="p">}</span>
+<span class="n">mc</span> <span class="o">=</span> <span class="p">{</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;$1&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;metal&#39;</span><span class="p">],</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;isa&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;chair&#39;</span><span class="p">]</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So far look may be even easier than SDP, but the problem starts when we have to find similarity.
+What does similarity in the first place means in this case ? The easiest solution seems to be to count the key-value pairs that match and divide by total number of keys, much more cumbersome than simple XOR-count.</p>
+<p>Lets try it :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dist</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="c1">#in case structs have diff keys</span>
+   <span class="n">keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+   <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span> <span class="p">:</span> <span class="c1">#if key in both and values equal</span>
+     <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+   <span class="k">return</span> <span class="n">i</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span><span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here the closer the number to <strong>1</strong> the better. Lets see if we add ‘furniture’ category.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fwc</span> <span class="o">=</span> <span class="n">wc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">fwc</span><span class="p">[</span><span class="s1">&#39;$2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span><span class="p">[</span><span class="s1">&#39;furniture&#39;</span><span class="p">]</span>
+<span class="n">fwc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;$1&#39;: &#39;wood&#39;, &#39;$2&#39;: &#39;furniture&#39;, &#39;isa&#39;: &#39;chair&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span><span class="p">(</span><span class="n">fwc</span><span class="p">,</span><span class="n">wc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6666666666666666
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span><span class="p">(</span><span class="n">fwc</span><span class="p">,</span><span class="n">mc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3333333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<p>Keep in mind we made our life easier here by choosing flat dictionary structure. If we have to replicate SDP more truthfully then we have to use <strong>tuple</strong> for <strong>binding</strong> and a <strong>list</strong> for <strong>bundling</strong>, which would have complicated the matter by much.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./docs/bi"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="More_CUPS.html" title="previous page">More CUPS</a>
+    <a class='right-next' id="next-link" href="../bbhtm/bbHTM.html" title="next page">Bare bones HTM</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
