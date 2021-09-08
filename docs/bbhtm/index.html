@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What is iHTM ? &#8212; My book</title>
+    <title>bbHTM &#8212; My book</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="SDP:SDR vs SDP:BSC" href="sdp_explained.html" />
-    <link rel="prev" title="iHTM" href="index.html" />
+    <link rel="next" title="Bare bones HTM" href="bbHTM.html" />
+    <link rel="prev" title="More OPS" href="../bi/More_Operations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,8 +92,8 @@
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="index.html">
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../ihtm/index.html">
   iHTM
  </a>
 </li>
@@ -104,8 +104,8 @@
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../bbhtm/index.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   bbHTM
  </a>
 </li>
@@ -139,79 +139,25 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   <strong>
-    What is iHTM ?
-   </strong>
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bbHTM.html">
+   Bare bones HTM
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="sdp_explained.html">
-   SDP:SDR vs SDP:BSC
+  <a class="reference internal" href="TM_test.html">
+   TEST wrapper
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="isdp.html">
-   iSDP : indexed Semantic Distributed Pointers aka Symbols
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="misc.html">
-   MED
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lexicon.html">
-   Lexicon
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sequence_learning.html">
-   <strong>
-    Sequence learning
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="theory.html">
-   <strong>
-    HTM Theory : short intro
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="encoders.html">
-   <strong>
-    Encoders
-   </strong>
+  <a class="reference internal" href="bmap2D.html">
+   Bitmap 2D
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="spatial_mapper.html">
-   <strong>
-    Spatial Pooler/Mapper
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tm_design.html">
-   <strong>
-    TM design
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="segmented_memory.html">
-   <strong>
-    Segmented memory (Classifier)
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="temporal_memory.html">
-   Temporal memory
+   Spatial mapper
   </a>
  </li>
 </ul>
@@ -228,19 +174,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-not-just-use-nn">
-   Why not just use NN ??
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -260,42 +196,9 @@
               
               <div>
                 
-  <div class="section" id="what-is-ihtm">
-<h1><strong>What is iHTM ?</strong><a class="headerlink" href="#what-is-ihtm" title="Permalink to this headline">¶</a></h1>
-<p>This is Brain inspired modular framework which implements or purport to implement a system to solve problems in autonomous way.</p>
-<p>There are many way people try to do that. The most popular is the mathematical way used in Neuro Networks and other Machine Learning algorithms. Another one is to mimic the Brain at different level of abstraction in a projects such as Numenta HTM or systems like Nengo/NEF.
-Or yet another one like ACT-R and SOAR which represent the Symbolic trend.</p>
-<p>I’m looking to create a hybrid which allows Symbols and is inspired by the Brain but at some point can be mathematized.</p>
-<p>Starting with :</p>
-<ol class="simple">
-<li><p>Vector Symbolic Architecture (VSA)</p></li>
-<li><p>Adapted HTM theory implemented in a modular way</p></li>
-<li><p>Sparse Distributed : Reinforcement learning (still in idea/design stage)</p></li>
-<li><p>VSA based planning, leveraging HTM ?! (aspiration)</p></li>
-<li><p>if I reach this point the system will be ready to rock ;)</p></li>
-</ol>
-<p>VSA is symbolic architecture that is based on sparse binary vectors.
-Think about it as a sort of Brain Symbol Algebra.</p>
-<p>HTM is a theory of how brain neocortex works by Numenta.
-Numenta framework is replicating very close understood Brain mechanisms, what I’m doing is more in the Brain-inspired category, by leveraging the discoveries made by Numenta.</p>
-<p>I’m trying to build functional Modules that communicate via distributed vectors and are simple enough for lego practice, rather than direct neuron implementations.</p>
-<p>This has been an ongoing project of mine I’ve done parts in various ways.</p>
-<p>You can read about them here :</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://www.igrok.site/bbHTM.html">Bare bone HTM</a> (this one has a logical error in the implementation but otherwise is good documentation of some early ideas)</p></li>
-<li><p><a class="reference external" href="http://www.igrok.site/bi/TOC.html">Bi (VSA, Kanerva SDP:BSC, Prolog)</a></p></li>
-</ul>
-<hr class="docutils" />
-<div class="section" id="why-not-just-use-nn">
-<h2>Why not just use NN ??<a class="headerlink" href="#why-not-just-use-nn" title="Permalink to this headline">¶</a></h2>
-<p>But why not just use Deep NN and not bother about it ?</p>
-<p>First Deep NN are no fun :) and need too much hardware.</p>
-<p>Second DNN are nothing like the Brain ! Point-neuron is a mathematical-crutch.</p>
-<p>Third because of the way they are build NN can’t handle too many Output classes neither Local not Distributed output vectors. So it is not possible or easy to classify say 1000 classes.</p>
-<p>Forth Symbolic manipulation is non existent.</p>
-<p>Fifth : The entry into Research requires great math skills. I’m more interested in first Conceptually groking the ideas and only after that going with the math.
-It is more probable to discover something in area where less people are working.</p>
-<p>Six: It is an excuse to learn something about the brain.</p>
+  <div class="section" id="bbhtm">
+<h1>bbHTM<a class="headerlink" href="#bbhtm" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -311,21 +214,21 @@ It is more probable to discover something in area where less people are working.
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python2",
-            path: "./docs/ihtm"
+            kernelName: "python3",
+            path: "./docs/bbhtm"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python2'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">iHTM</a>
-    <a class='right-next' id="next-link" href="sdp_explained.html" title="next page">SDP:SDR vs SDP:BSC</a>
+    <a class='left-prev' id="prev-link" href="../bi/More_Operations.html" title="previous page">More OPS</a>
+    <a class='right-next' id="next-link" href="bbHTM.html" title="next page">Bare bones HTM</a>
 
               </div>
               
